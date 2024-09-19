@@ -1,16 +1,16 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
   @font-face {
-    font-family: 'Lato';
-    src: url('../../public/assets/fonts/Lato/Lato-Regular.ttf') format('truetype');
+    font-family: 'Tahoma';
+    src: url('../../public/assets/fonts/tahoma/Tahoma_Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
   }
   @font-face {
-    font-family: 'Lato-Black';
-    src: url('../../public/assets/fonts/Lato/Lato-Black.ttf') format('truetype');
-    font-weight: bold;
+    font-family: 'Tahoma Bold';
+    src: url('../../public/assets/fonts/tahoma/Tahomabd.ttf') format('truetype');
+    font-weight: normal;
     font-style: normal;
   }
   * {
@@ -19,7 +19,7 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
   body {
-    font-family: 'Lato';
+    font-family: 'Tahoma', 'Arial', 'Sans-serif';
   }
   a {
     text-decoration: none;
