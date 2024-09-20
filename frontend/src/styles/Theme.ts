@@ -8,5 +8,7 @@ export const colors = {
   opacityDarkGray_20: 'rgba(59,57,54,.2)',
   lightGray: '#D9D9D9',
   opacityWhite: 'rgba(255,255,255,.2)',
-  gradientDarkGray: 'linear-gradient(100deg, #363639, rgba(0,0,0,.95))',
+  gradientDarkGray: 'linear-gradient(100deg, #363639 30%, rgba(0,0,0,.95))',
+  gradientWhiteToGray: 'linear-gradient(to bottom, white 50%, #3B3936)',
+  gradientRed: 'linear-gradient(to bottom, rgba(132,3,22,.2) 40%, #A6041C, rgba(255,255,255,.5))',
 };
