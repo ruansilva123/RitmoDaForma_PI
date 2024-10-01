@@ -1,10 +1,15 @@
 import styled from "styled-components";
+import { colors } from "../../../styles/Theme";
 
 export const SidebarHomeStyle = styled.aside`
-    width: 80px;
+    position: fixed;
+    width: 65px;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: end;
+    mix-blend-mode: difference;
+    z-index: 10;
 `
 
 export const List = styled.ul`
@@ -19,6 +24,7 @@ export const List = styled.ul`
         width: 20px;
         height: 20px;
         cursor: pointer;
+        transition: all .2s ease-in-out;
         &:hover{
             background-color: rgba(255,255,255, .1);
             border: .5px solid rgba(255,255,255, .5);

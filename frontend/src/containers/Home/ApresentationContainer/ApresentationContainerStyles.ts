@@ -2,10 +2,12 @@ import styled from "styled-components";
 import { colors } from "../../../styles/Theme";
 
 export const ApresentationContainerStyle = styled.section`
+    padding-left: 85px;
     height: 90vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     position: relative;
+    caret-color: transparent;
 `
 
 export const DescriptionContainer = styled.div`
@@ -23,7 +25,7 @@ export const Title = styled.h1`
 `
 
 export const Description = styled.div`
-    margin-top: 50px;
+    margin-top: 30px;
     display: flex;
     max-width: 700px;
 
@@ -62,7 +64,7 @@ export const DaForma = styled.div`
     font-size: 45px;
     font-family: "RacingSansOne";
     text-align: center;
-    margin-top: -15px;
+    margin-top: -10px;
 `
 
 export const ImagesExample = styled.div`
