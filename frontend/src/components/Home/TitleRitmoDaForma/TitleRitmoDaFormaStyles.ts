@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { colors } from "../../../styles/Theme";
 
 export const Title = styled.h1`
+    caret-color: transparent;
     font-family: "Quicksilver";
 `
 
@@ -18,7 +19,7 @@ export const TitleRitmoDown = styled.div`
 `
 
 export const TitleRitmoUp = styled.div`
-    margin-bottom: -25px;
+    margin-bottom: -30px;
     background: ${colors.gradientWhiteToGray};
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

@@ -1,18 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as S from './HomeStyles';
 import Navbar from '../../components/global/Navbar';
 import ApresentationContainer from '../../containers/Home/ApresentationContainer/ApresentationContainer';
 import SidebarHome from '../../containers/Home/SidebarHome/SidebarHome';
+import MouseFollower from '../../components/Home/MouseFollower/MouseFollower';
+import PaymentPlansContainer from '../../containers/Home/PaymentPlansContainer/PaymentPlansContainer';
+import { useRef } from 'react';
 
 const Home = () => {
+  const sectionRefAboutUs = useRef<HTMLDivElement>(null);
+  const sectionRefPlans = useRef<HTMLDivElement>(null);
+  const sectionRefContacts = useRef<HTMLDivElement>(null);
+
   return (  
     <S.HomePageStyle>
+      <MouseFollower/>
       <Navbar/>
       <S.Main>
-        <SidebarHome></SidebarHome>
-        <ApresentationContainer/>
-        <div className="payment plans"></div>
-        <div className="contacts"></div>
+        <SidebarHome 
+          sectionRefAboutUs={sectionRefAboutUs} 
+          sectionRefPlans={sectionRefPlans}
+          sectionRefContacts={sectionRefContacts}
+        />
+        <S.ContentHome>
+          <ApresentationContainer ref={sectionRefAboutUs}/>
+          <PaymentPlansContainer ref={sectionRefPlans}/>
+          <div ref={sectionRefContacts}></div>
+        </S.ContentHome>
       </S.Main>
     </S.HomePageStyle>
   )

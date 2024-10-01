@@ -1,11 +1,12 @@
 import styled from "styled-components";
+import { colors } from "../../styles/Theme";
 
 export const NavbarContainer = styled.nav`
     display: flex;
     width: 100%;
     height: 10vh;
     padding-inline: 20px;
-` 
+`
 
 export const Nav = styled.nav`
     width: 40%;
@@ -24,8 +25,9 @@ export const Nav = styled.nav`
             display: flex;
             align-items: center;
             font-size: 14px;
+            transition: all .2s ease-in-out;
             &:hover{
-                color: #B9B9B9;
+                color: ${colors.lightRed};
             }
         }
     }
@@ -38,3 +40,7 @@ export const LogoContainer = styled.nav`
     width: 60%;
     align-items: center;
 ` 
+
+export const NavSelected = styled.li`
+    color: ${colors.darkRed};
+`
