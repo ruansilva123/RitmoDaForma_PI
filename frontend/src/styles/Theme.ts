@@ -13,4 +13,5 @@ export const colors = {
   gradientDarkGray: 'linear-gradient(100deg, #373532 30%, rgba(0,0,0,.95))',
   gradientWhiteToGray: 'linear-gradient(to bottom, white 50%, #3B3936)',
   gradientRed: 'linear-gradient(to bottom, rgba(132,3,22,.2) 40%, #A6041C, rgba(255,255,255,.5))',
+  gradientRed_20: 'linear-gradient(to bottom, rgba(166,4,28, .5) 1%, #A6041C, rgba(64,2,11))',
 };

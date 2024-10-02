@@ -1,5 +1,6 @@
 import React from 'react';
 import * as S from './ContainerTopStyles';
+import TitleTreinamentos from '../../../components/Treinamentos/TitleTreinamentos/TitleTreinamentos';
 import WaveWhite2 from "../../../../public/assets/svg/WaveWhite.svg";
 
 const ContainerTop = () => {
@@ -8,6 +9,8 @@ const ContainerTop = () => {
         <S.ContainerTop>
             <S.ImageWaveWhite src={WaveWhite2} alt="" />
             <S.BackgroundContainerTop>
+                <TitleTreinamentos>
+                </TitleTreinamentos>
             </S.BackgroundContainerTop>
         </S.ContainerTop>
 
