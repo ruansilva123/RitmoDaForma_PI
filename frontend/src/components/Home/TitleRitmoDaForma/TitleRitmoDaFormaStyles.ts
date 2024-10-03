@@ -4,6 +4,7 @@ import { colors } from "../../../styles/Theme";
 export const Title = styled.h1`
     caret-color: transparent;
     font-family: "Quicksilver";
+    cursor: default;
 `
 
 export const TitleRitmoDown = styled.div`
@@ -16,6 +17,7 @@ export const TitleRitmoDown = styled.div`
     -webkit-text-fill-color: transparent;
     filter: brightness(1.1);
     text-align: center;
+    cursor: default;
 `
 
 export const TitleRitmoUp = styled.div`
@@ -24,10 +26,12 @@ export const TitleRitmoUp = styled.div`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
+    cursor: default;
 `
 
 export const TitleRitmo = styled.div`
     font-size: 110px;
+    cursor: default;
 `
 
 export const DaForma = styled.div`
@@ -35,4 +39,5 @@ export const DaForma = styled.div`
     font-family: "RacingSansOne";
     text-align: center;
     margin-top: -15px;
+    cursor: default;
 `

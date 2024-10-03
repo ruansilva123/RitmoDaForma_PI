@@ -7,6 +7,13 @@ export const ApresentationContainerStyle = styled.section`
     width: 100%;
     display: flex;
     position: relative;
+    justify-content: center;
+`
+
+export const ApresentationContent = styled.div`
+    height: 100%;
+    display: flex;
+    position: relative;
     caret-color: transparent;
 `
 
@@ -18,53 +25,22 @@ export const DescriptionContainer = styled.div`
     justify-content: center;
     align-items: center;
     color: white;
+    
 `
 
 export const Title = styled.h1`
     font-family: "Quicksilver";
 `
 
-export const Description = styled.div`
+export const Description = styled.p`
     margin-top: 30px;
     display: flex;
-    max-width: 700px;
-
+    max-width: 1600px;
     justify-content: center;
-    &>p{
-        text-align: justify;
-        width: 55%;
-    }
-`
-
-export const TitleRitmoDown = styled.div`
-    transform: rotate(180deg);
-    transform: scaleY(-1);
-    margin: 0;
-    padding: 0;
-    background: ${colors.gradientRed};
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: brightness(1.1);
-    text-align: center;
-`
-
-export const TitleRitmoUp = styled.div`
-    margin-bottom: -25px;
-    background: ${colors.gradientWhiteToGray};
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-align: center;
-`
-
-export const TitleRitmo = styled.div`
-    font-size: 110px;
-`
-
-export const DaForma = styled.div`
-    font-size: 45px;
-    font-family: "RacingSansOne";
-    text-align: center;
-    margin-top: -10px;
+    text-align: justify;
+    width: 55%;
+    z-index: 1;
+    margin-bottom: 50px;
 `
 
 export const ImagesExample = styled.div`
@@ -116,4 +92,5 @@ export const ImageWaveWhite = styled.img`
     bottom: 0;
     right: 0;
     height: 35%;
+    z-index: 0;
 `

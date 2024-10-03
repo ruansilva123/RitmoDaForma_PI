@@ -6,6 +6,7 @@ import SidebarHome from '../../containers/Home/SidebarHome/SidebarHome';
 import MouseFollower from '../../components/Home/MouseFollower/MouseFollower';
 import PaymentPlansContainer from '../../containers/Home/PaymentPlansContainer/PaymentPlansContainer';
 import { useRef } from 'react';
+import ContactsContainer from '../../containers/Home/ContactsContainer/ContactsContainer';
 
 const Home = () => {
   const sectionRefAboutUs = useRef<HTMLDivElement>(null);
@@ -25,7 +26,7 @@ const Home = () => {
         <S.ContentHome>
           <ApresentationContainer ref={sectionRefAboutUs}/>
           <PaymentPlansContainer ref={sectionRefPlans}/>
-          <div ref={sectionRefContacts}></div>
+          <ContactsContainer ref={sectionRefContacts}/>
         </S.ContentHome>
       </S.Main>
     </S.HomePageStyle>

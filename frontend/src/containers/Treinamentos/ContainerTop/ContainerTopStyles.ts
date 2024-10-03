@@ -20,7 +20,5 @@ export const BackgroundContainerTop = styled.div`
     bottom: 12vh;
     height: 50vh;
     width: 100%;
-    padding: 10vh;
-
-
+    padding: 18vh;
 `
