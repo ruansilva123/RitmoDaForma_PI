@@ -1,11 +1,16 @@
 import React from "react";
 import * as S from "./TitleTreinamentosStyles";
 
-const TitleTreinamentos = () => {
+interface TitleTreinamentosProps {
+    subtTitle: string,
+    mainTitle: string,
+}
+
+const TitleTreinamentos: React.FC<TitleTreinamentosProps> = ({subtTitle, mainTitle}) => {
     return (
         <>
-            <S.SubTitle>Aprenda com nossos</S.SubTitle>
-            <S.MainTitle>Treinamentos!</S.MainTitle>
+            <S.SubTitle>{subtTitle}</S.SubTitle>
+            <S.MainTitle>{mainTitle}</S.MainTitle>
         </>
 
     );

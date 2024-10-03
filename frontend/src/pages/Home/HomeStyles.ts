@@ -3,6 +3,8 @@ import { colors } from '../../styles/Theme';
 
 export const HomePageStyle = styled.div`
   background-image: ${colors.gradientDarkGray};
+  background-repeat: no-repeat;
+  background-size: cover;
 `;
 
 export const Main = styled.main`

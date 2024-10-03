@@ -9,7 +9,7 @@ const ContainerTop = () => {
         <S.ContainerTop>
             <S.ImageWaveWhite src={WaveWhite2} alt="" />
             <S.BackgroundContainerTop>
-                <TitleTreinamentos>
+                <TitleTreinamentos subtTitle="Aprenda com nosso" mainTitle="treinamentos">
                 </TitleTreinamentos>
             </S.BackgroundContainerTop>
         </S.ContainerTop>
