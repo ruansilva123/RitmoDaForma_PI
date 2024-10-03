@@ -1,11 +1,11 @@
 import React from "react";
-import * as S from "./Search";
+import * as S from "./SearchStyles";
 
-const Search = () => {
-    return(
-        <>
-        </>
+
+const InputSearch = () => {
+    return (
+        <S.InputSearch placeholder="asdasddasasdsda" type="text"/>
     );
 };
 
-export default Search;
+export default InputSearch;
