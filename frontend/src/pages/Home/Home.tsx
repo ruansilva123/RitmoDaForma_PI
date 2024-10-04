@@ -16,14 +16,14 @@ const Home = () => {
   return (  
     <S.HomePageStyle>
       <MouseFollower/>
-      <Navbar/>
+      <Navbar/> 
       <S.Main>
-        <SidebarHome 
-          sectionRefAboutUs={sectionRefAboutUs} 
-          sectionRefPlans={sectionRefPlans}
-          sectionRefContacts={sectionRefContacts}
-        />
         <S.ContentHome>
+          <SidebarHome 
+            sectionRefAboutUs={sectionRefAboutUs} 
+            sectionRefPlans={sectionRefPlans}
+            sectionRefContacts={sectionRefContacts}
+          />
           <ApresentationContainer ref={sectionRefAboutUs}/>
           <PaymentPlansContainer ref={sectionRefPlans}/>
           <ContactsContainer ref={sectionRefContacts}/>

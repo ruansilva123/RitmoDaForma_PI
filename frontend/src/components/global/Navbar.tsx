@@ -3,6 +3,7 @@ import logo from "../../../public/assets/icons/logo.png";
 import { useLocation } from "react-router-dom";
 import React from "react";
 import { LocationInterface } from "../../constants/interfaces/global/HomeInterfaces";
+import { Link } from "react-router-dom";
 
 const Navbar:React.FC = () => {
   const location: LocationInterface = useLocation();
@@ -17,13 +18,35 @@ const Navbar:React.FC = () => {
             <ul>
               {
                 currentRoute == "/" ?
-                  <S.NavSelected>Sobre nós</S.NavSelected>
+                  <S.NavSelected>
+                    <Link to="/">Sobre nós</Link>
+                  </S.NavSelected>
                 : 
-                  <li>Sobre nós</li>
+                  <li>
+                    <Link to="/">Sobre nós</Link>
+                  </li>
+              }
+              {
+              currentRoute == "/aulas" ?
+                <S.NavSelected>
+                  <Link to="/aulas">Aulas</Link>
+                </S.NavSelected>
+              : 
+                <li>
+                  <Link to="/aulas">Aulas</Link>
+                </li>
+              } 
+              {
+                currentRoute == "/treinamentos" ?
+                  <S.NavSelected>
+                    <Link to="/treinamentos">Treinamentos</Link>
+                  </S.NavSelected>
+                : 
+                  <li>
+                    <Link to="/treinamentos" >Treinamentos</Link>
+                  </li>
               }
                 
-                <li>Aulas</li>
-                <li>Treinamentos</li>
             </ul>
         </S.Nav>
     </S.NavbarContainer>
