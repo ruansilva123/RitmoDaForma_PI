@@ -4,7 +4,7 @@ import { colors } from "../../../styles/Theme";
 
 export const ContainerCards= styled.div`
     position: relative;
-    top: 70vh;
+    top: 80vh;
     background-color: white;
     width: 100%;
     display: grid;
