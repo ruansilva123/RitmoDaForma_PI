@@ -14,30 +14,25 @@ const SidebarHome: React.FC<SidebarHomeProps> = ({ sectionRefAboutUs, sectionRef
   let currentScroll: number = 100;
 
   const smoothScroll = () => {
-    if(currentScroll > scrollAmout){
-      window.scrollBy(0, scrollStep);
-      currentScroll += scrollStep;
-      requestAnimationFrame(smoothScroll);
-    }else{
-      currentScroll = 100;
-    }
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
   }
 
   const scrollToSection = (sectionRef: React.RefObject<HTMLDivElement>) => {
     if (sectionRef.current) {
-      sectionRef.current.scrollIntoView(
-        { 
-          behavior: 'smooth',
-          block: 'start'
-        }
-      );
-
       if(sectionRef === sectionRefAboutUs){
-        setTimeout(() => {
-          smoothScroll();
-        }, 500)
+        smoothScroll();
+      }else{
+        sectionRef.current.scrollIntoView(
+          { 
+            behavior: 'smooth',
+            block: 'start'
+          }
+        );
       }
-      
     }
   };
   
