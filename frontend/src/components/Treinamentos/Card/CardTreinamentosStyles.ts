@@ -6,6 +6,7 @@ import { colors } from "../../../styles/Theme";
 export const ContainerCard = styled.div`
     border: 1px solid ${colors.lightGray}; 
     border-radius: 1vh;
+    margin: 5vh;
     width: 40vh;
     height: 35vh;
     display: flex;
@@ -13,7 +14,7 @@ export const ContainerCard = styled.div`
     align-items: center;
 `
 
-export const ImageCard = styled.div`
+export const ImageCard = styled.img`
     background-color: black;
     border-radius: 1vh;
     margin: 2vh;
@@ -22,6 +23,7 @@ export const ImageCard = styled.div`
 `
 export const ContentCard = styled.div`
     display: flex;
+    width: 35vh;
     flex-direction: column;
     align-items: right;
 `
@@ -34,6 +36,6 @@ export const TitleCard = styled.div`
 export const DescriptionCard = styled.div`
     margin-top: 1vh;
     font-family: 'Tahoma';
-    font-size: 15px;
-    color: ${colors.lightGray}
+    font-size: 14px;
+    color: ${colors.opacityDarkGray_60}
 `
