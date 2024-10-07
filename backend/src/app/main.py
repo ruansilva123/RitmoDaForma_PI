@@ -9,3 +9,6 @@ Base.metadata.create_all(bind=engine)
 
 
 app = FastAPI()
+
+
+# insert routers here
