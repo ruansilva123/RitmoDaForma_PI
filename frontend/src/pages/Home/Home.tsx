@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import * as S from './HomeStyles';
-import Navbar from '../../components/global/Navbar';
+import Navbar from '../../components/global/Navbar/Navbar';
 import ApresentationContainer from '../../containers/Home/ApresentationContainer/ApresentationContainer';
 import SidebarHome from '../../containers/Home/SidebarHome/SidebarHome';
 import MouseFollower from '../../components/Home/MouseFollower/MouseFollower';
@@ -15,20 +15,20 @@ const Home = () => {
 
   return (  
     <S.HomePageStyle>
-      <MouseFollower/>
-      <Navbar/> 
+      <Navbar/>
       <S.Main>
         <S.ContentHome>
           <SidebarHome 
             sectionRefAboutUs={sectionRefAboutUs} 
             sectionRefPlans={sectionRefPlans}
             sectionRefContacts={sectionRefContacts}
-          />
+            />
           <ApresentationContainer ref={sectionRefAboutUs}/>
           <PaymentPlansContainer ref={sectionRefPlans}/>
           <ContactsContainer ref={sectionRefContacts}/>
         </S.ContentHome>
       </S.Main>
+      <MouseFollower/>
     </S.HomePageStyle>
   )
 };

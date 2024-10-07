@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CardsPlansContainerStyle = styled.div`
-    margin-top: 10vh;
+    margin-top: 60px;
 `
 
 export const CardsList = styled.div`

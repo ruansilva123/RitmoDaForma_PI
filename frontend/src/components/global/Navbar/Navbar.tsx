@@ -1,8 +1,8 @@
 import * as S from "./NavbarStyles";
-import logo from "../../../public/assets/icons/logo.png";
+import logo from "../../../../public/assets/icons/logo.png";
 import { useLocation } from "react-router-dom";
 import React from "react";
-import { LocationInterface } from "../../constants/interfaces/global/HomeInterfaces";
+import { LocationInterface } from "../../../constants/interfaces/global/HomeInterfaces";
 import { Link } from "react-router-dom";
 
 const Navbar:React.FC = () => {
