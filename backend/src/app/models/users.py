@@ -7,5 +7,5 @@ class User(Base):
 
     id_user = Column(Integer, primary_key=True)
     username = Column(String(100), unique=True)
-    password = Column(String(16))
+    password = Column(String)
     is_manager = Column(Boolean, default=False)
