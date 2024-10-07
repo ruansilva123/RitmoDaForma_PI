@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-export const Follower = styled.div`
+interface FollowerProps {
+  opacity: number,
+}
+
+export const Follower = styled.div<FollowerProps>`
   position: fixed;
   width: 600px;
   height: 600px;
