@@ -134,3 +134,4 @@ __pycache__
 __pycache__.py
 db.sqlite3
 .sqlite3
+sqlite.db
