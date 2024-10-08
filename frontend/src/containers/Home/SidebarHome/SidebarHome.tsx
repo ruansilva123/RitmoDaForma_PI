@@ -11,7 +11,7 @@ const SidebarHome: React.FC<SidebarHomeProps> = ({ sectionRefAboutUs, sectionRef
 
   const scrollAmout: number = 0;
   const scrollStep: number = -10;
-  let currentScroll: number = 100;
+  const currentScroll: number = 100;
 
   const smoothScroll = () => {
     window.scrollTo({

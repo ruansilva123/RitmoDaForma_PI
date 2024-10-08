@@ -41,6 +41,7 @@ export const Description = styled.p`
     width: 55%;
     z-index: 1;
     margin-bottom: 50px;
+    font-size: 1.1rem;
 `
 
 export const ImagesExample = styled.div`
@@ -52,24 +53,16 @@ export const ImagesExample = styled.div`
 
     &>div{
         width: 80%;
-        max-width: 600px;
+        max-width: 650px;
         height: 90%;
         display: flex;
-        max-height: 500px;
+        max-height: 700px;
     }
 `
 
 export const ImageWomanTrainingContainer = styled.div`
     height: 100%;
     width: 100%;
-
-    &>img{
-        max-width: 200px;
-        width: 80%;
-        height: auto;
-        box-shadow: 5px 5px 5px rgba(0,0,0,.3);
-        border-radius: 30px;
-    }
 `
 
 export const ImageManTrainingContainer = styled.div`
@@ -77,14 +70,6 @@ export const ImageManTrainingContainer = styled.div`
     width: 100%;
     display: flex;
     align-items: end;
-
-    &>img{
-        max-width: 200px;
-        width: 80%;
-        height: auto;
-        box-shadow: 5px 5px 5px rgba(0,0,0,.3);
-        border-radius: 30px;
-    }
 `
 
 export const ImageWaveWhite = styled.img`

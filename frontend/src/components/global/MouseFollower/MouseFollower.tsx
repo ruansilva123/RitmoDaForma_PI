@@ -1,21 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import { Follower } from './MouseFollowerStyles.ts';
+import { useState, useEffect } from 'react';
+import { Follower } from './MouseFollowerStyles';
 
 const MouseFollower = () => {
     const [opacity, setOpacity] = useState<number>(0);
     let timer: number;
 
     useEffect(() => {
-        const handleMouseMove = (e) => {
+        const handleMouseMove = (e: MouseEvent) => {
             const follower = document.getElementById('mouse-follower');
             if (!follower) return;
 
-            const followerRadius = 240;
+            const followerRadius = 260;
 
-            follower.style.left = `${e.pageX - followerRadius}px`;
-            follower.style.top = `${e.pageY - followerRadius}px`;
+            follower.style.left = `${e.clientX - followerRadius}px`;
+            follower.style.top = `${e.clientY - followerRadius}px`;
             setOpacity(1);
-
+            
             clearTimeout(timer);
             timer = setTimeout(() => {
                 setOpacity(0);
@@ -29,7 +29,7 @@ const MouseFollower = () => {
         };
     }, []);
 
-    return <Follower id="mouse-follower" style={{ opacity }} />;
+    return <Follower id="mouse-follower" opacity={opacity} />;
 };
 
 export default MouseFollower;
