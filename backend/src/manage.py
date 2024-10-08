@@ -21,11 +21,17 @@ def createmanageruser(username : str, password : str):
     from app.apps.users.crud import create_user
     from app.schemas.users import UserCreate
     from app.utils.database_conn import connect_db
+    from sqlalchemy.orm import Session
+
+    from app.core.database import engine, Base
+    from app.models import users, videos, gym_plans, company_contacts, classes
+    
+    Base.metadata.create_all(bind=engine)
 
     user = UserCreate(username = username, password = password, is_manager = True)
-    db = ...
-
-    print('create new user')
+    db : Session = connect_db
+    user_generated = create_user(user, db)
+    print(user_generated)
 
 
 if __name__ == "__main__":
