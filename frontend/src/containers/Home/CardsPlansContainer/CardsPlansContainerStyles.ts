@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CardsPlansContainerStyle = styled.div`
-    margin-top: 10vh;
+    margin-top: 100px;
 `
 
 export const CardsList = styled.div`
@@ -21,5 +21,4 @@ export const ExtraTaxContainer = styled.div`
     gap: 10px;
     width: 77%;
     margin: auto;
-
 `

@@ -10,17 +10,18 @@ export const PaymentPlansContainerStyle = styled.section`
 `
 
 export const ContainerTitlePaymentPlans = styled.div`
-    padding-inline: 18vh;
-    padding-block: 24vh;
+    padding-inline: 120px;
+    padding-block: clamp(50px, 24vh, 24vh);
     width: 100%;
     max-width: 1500px;
 `
 
 export const ImageWaveWhite = styled.img`
     position: absolute;
-    bottom: -28%;
+    bottom: -27%;
     right: 0;
     height: 35%;
+    min-height: 315px;
     z-index: 0;
     transform: rotate(180deg);
     width: 100%;

@@ -30,12 +30,12 @@ export const TitleRitmoUp = styled.div`
 `
 
 export const TitleRitmo = styled.div`
-    font-size: 110px;
+    font-size: clamp(18px, 8vw, 164px); 
     cursor: default;
 `
 
 export const DaForma = styled.div`
-    font-size: 45px;
+    font-size: clamp(16px, 3vw, 64px); 
     font-family: "RacingSansOne";
     text-align: center;
     margin-top: -15px;

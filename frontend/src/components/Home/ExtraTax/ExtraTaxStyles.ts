@@ -11,6 +11,10 @@ export const ExtraTaxStyle = styled.div`
     align-items: center;
     border-radius: 10px;
     gap: 20px;
+    transition: color .2s ease-in-out;
+    &:hover{
+        background-color: ${colors.lightGrayGradient_40};
+    }
 `
 
 export const TitleTax = styled.p`
