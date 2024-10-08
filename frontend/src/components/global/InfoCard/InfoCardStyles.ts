@@ -5,21 +5,29 @@ export const BackgroundContainer = styled.div`
     width: 100%;
     height: 10vh;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    align-content: center;
+    position: absolute ;
     justify-content: center;
 
 `
 export const ContainerInfo = styled.div`
-    width: 10;
-    height: 10px;
+    
+    display: flex;
+    justify-content: center;
+    width: 80vh;
+    height: 6vh;
     border: solid 1px ${colors.lightGray};
     border-radius: 1vh;
     outline: none;
-    padding: 1vh;
+    padding: 2vh;
     color: ${colors.darkGray};
-    background-image: url('assets/svg/SearchIcon.svg');
+`
+
+export const IconInfo = styled.div`
+    position: relative;
+    left: 10vh;
+    bottom: 3vh;
+    width: 40px;
+    height: 40px;
+    background-image: url('/assets/svg/Halter.svg');
     background-repeat: no-repeat;
-    background-position: 75vh;
 `

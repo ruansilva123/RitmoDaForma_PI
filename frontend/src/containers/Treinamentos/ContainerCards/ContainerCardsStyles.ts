@@ -2,12 +2,15 @@ import styled from "styled-components";
 import { colors } from "../../../styles/Theme";
 
 
-export const ContainerCards= styled.div`
-    position: relative;
-    top: 89vh;
-    background-color: white;
+
+export const BackgroundCards = styled.div`
     width: 100%;
-    height: 100vh;
+    top: 98vh;
+    position: absolute;
+`
+
+export const ContainerCards= styled.div`
+    background-color: white;
     display: grid;
     justify-content: center;
     grid-template-columns: 24% 24% 24%;

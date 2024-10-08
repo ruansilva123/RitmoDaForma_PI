@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import * as S from "./CardTreinamentosStyles";
 import InfoCard from "../../global/InfoCard/InfoCard";
 import LittleBalls from "../../global/LittleBalls/LittleBalls";
+import Modal from "../Modal/Modal";
 
 interface CardProps {
     titulo: string;
@@ -26,6 +27,21 @@ const App = () => {
             descricao: "AAAAAA",
             imagem: "/assets/images/woman-halter.png",
         },
+        {
+            titulo: "Bicicleta Ergonômica",
+            descricao: "AAAAAA",
+            imagem: "/assets/images/woman-halter.png",
+        },
+        {
+            titulo: "Bicicleta Ergonômica",
+            descricao: "AAAAAA",
+            imagem: "/assets/images/woman-halter.png",
+        },
+        {
+            titulo: "Bicicleta Ergonômica",
+            descricao: "AAAAAA",
+            imagem: "/assets/images/woman-halter.png",
+        },
 
     ]);
 
@@ -41,13 +57,12 @@ const App = () => {
             ))}
         </>
     );
-
 };
 
 const Card = (props: CardProps) => {
     const { titulo, descricao, imagem } = props;
-
     return (
+        <>
             <S.ContainerCard>
                 <S.ImageCard src={imagem} alt={titulo} />
                 <S.ContentCard>
@@ -55,6 +70,8 @@ const Card = (props: CardProps) => {
                     <S.DescriptionCard>{descricao}</S.DescriptionCard>
                 </S.ContentCard>
             </S.ContainerCard>
+        </>
+
     );
 };
 
