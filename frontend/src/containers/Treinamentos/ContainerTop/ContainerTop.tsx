@@ -7,7 +7,6 @@ import { InputSearch } from '../../../components/Treinamentos/Search/SearchStyle
 
 const ContainerTop = () => {
     return (
-
         <S.ContainerTop>
             <S.ImageWaveWhite src={WaveWhite2} alt="" />
             <S.BackgroundContainerTop>
