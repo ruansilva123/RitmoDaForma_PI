@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Follower } from './MouseFollowerStyles.ts';
+import { useState, useEffect } from 'react';
+import { Follower } from './MouseFollowerStyles';
 
 const MouseFollower = () => {
     const [opacity, setOpacity] = useState<number>(0);

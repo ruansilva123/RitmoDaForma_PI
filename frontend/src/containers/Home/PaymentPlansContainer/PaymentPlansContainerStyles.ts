@@ -18,7 +18,7 @@ export const ContainerTitlePaymentPlans = styled.div`
 
 export const ImageWaveWhite = styled.img`
     position: absolute;
-    bottom: -28%;
+    bottom: -27%;
     right: 0;
     height: 35%;
     min-height: 315px;
