@@ -1,9 +1,19 @@
 import styled from "styled-components";
 import { colors } from "../../../styles/Theme";
 
-export const InputSearch = styled.input`
-    width: 80vh;
-    height: 5vh;
+export const BackgroundContainer = styled.div`
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
+`
+export const ContainerInfo = styled.div`
+    width: 10;
+    height: 10px;
     border: solid 1px ${colors.lightGray};
     border-radius: 1vh;
     outline: none;
@@ -12,9 +22,4 @@ export const InputSearch = styled.input`
     background-image: url('assets/svg/SearchIcon.svg');
     background-repeat: no-repeat;
     background-position: 75vh;
-    font-size: 18px;
-
-    &:focus{
-       background-color: ${colors.lightGrayGradient_20};
-    }
 `

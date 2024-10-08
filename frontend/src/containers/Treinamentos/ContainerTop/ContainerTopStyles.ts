@@ -15,8 +15,8 @@ export const ImageWaveWhite = styled.img`
 export const BackgroundContainerTop = styled.div`
     background-color: white;
     position: absolute;
-    bottom: 5vh;
-    height: 50vh;
+    bottom: 1vh;
+    height: 52vh;
     width: 100%;
     padding: 18vh;
 `
@@ -26,5 +26,6 @@ export const ContainerSearch = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
+    background-color: white;
     padding: 10vh;
 `

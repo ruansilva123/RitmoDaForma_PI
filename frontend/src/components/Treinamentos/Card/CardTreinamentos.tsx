@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import * as S from "./CardTreinamentosStyles";
+import InfoCard from "../../global/InfoCard/InfoCard";
+import LittleBalls from "../../global/LittleBalls/LittleBalls";
 
 interface CardProps {
     titulo: string;
@@ -12,7 +14,7 @@ const App = () => {
         {
             titulo: "Halteres",
             descricao: "Fortalecimento dos músculos e flexibilidade",
-            imagem: "/assets/images/woman-halter.png", 
+            imagem: "/assets/images/woman-halter.png",
         },
         {
             titulo: "Barra Olímpica",
@@ -24,6 +26,7 @@ const App = () => {
             descricao: "AAAAAA",
             imagem: "/assets/images/woman-halter.png",
         },
+
     ]);
 
     return (
@@ -45,13 +48,13 @@ const Card = (props: CardProps) => {
     const { titulo, descricao, imagem } = props;
 
     return (
-        <S.ContainerCard>
-            <S.ImageCard src={imagem} alt={titulo} />
-            <S.ContentCard>
-                <S.TitleCard>{titulo}</S.TitleCard>
-                <S.DescriptionCard>{descricao}</S.DescriptionCard>
-            </S.ContentCard>
-        </S.ContainerCard>
+            <S.ContainerCard>
+                <S.ImageCard src={imagem} alt={titulo} />
+                <S.ContentCard>
+                    <S.TitleCard>{titulo}</S.TitleCard>
+                    <S.DescriptionCard>{descricao}</S.DescriptionCard>
+                </S.ContentCard>
+            </S.ContainerCard>
     );
 };
 

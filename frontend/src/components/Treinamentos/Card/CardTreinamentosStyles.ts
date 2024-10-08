@@ -12,6 +12,11 @@ export const ContainerCard = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
+
+    &:hover{
+        border: 2px solid ${colors.lightRed}; 
+    }
 `
 
 export const ImageCard = styled.img`

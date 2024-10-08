@@ -6,7 +6,7 @@ import Card from '../../../components/Treinamentos/Card/CardTreinamentos';
 const ContainerCards = () => {
     return (
         <S.ContainerCards>
-            <Card/>
+            <Card></Card>
         </S.ContainerCards>
     );
 };
