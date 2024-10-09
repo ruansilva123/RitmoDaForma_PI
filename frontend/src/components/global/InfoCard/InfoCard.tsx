@@ -1,10 +1,18 @@
 import React, { useState } from "react";
-import * as S from './InfoCardStyles';
+import * as S from "./InfoCardStyles";
+import IconInfo from "../../../../public/assets/svg/Halter.svg";
 
-const InfoCard = () =>{
+interface InfoCardProps {
+    message: string,
+}
+
+const InfoCard: React.FC<InfoCardProps> = ({message}) =>{
     return(
         <S.BackgroundContainer>
-        <S.ContainerInfo> Todos os equipamentos acima estão disponíveis na academia Ritmo da Forma!<S.IconInfo></S.IconInfo></S.ContainerInfo>
+            <S.ContainerInfo>
+                {message}
+                <S.IconInfo src={IconInfo} />
+            </S.ContainerInfo>
         </S.BackgroundContainer>
     )
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import * as S from './AulasCalendarContainerStyles';
 import calendar from "../../../../public/assets/icons/calendar.png"
+import InfoCard from '../../../components/global/InfoCard/InfoCard';
 
 const AulasCalendarContainer = () => {
   return (
@@ -54,8 +55,8 @@ const AulasCalendarContainer = () => {
                     <td>Funcional</td>
                 </tr>
             </tbody>
-            <tfoot></tfoot>
         </S.AulasCalendarTable>
+        <InfoCard message="Fique atento nas mudanças de calendário de cada aula!"/>
     </S.AulasCalendarContainerStyle>
   );
 };

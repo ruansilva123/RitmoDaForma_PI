@@ -11,7 +11,7 @@ const ContainerCards = () => {
             <S.ContainerCards>
                 <Card></Card>
             </S.ContainerCards>
-            <InfoCard/>
+            <InfoCard message="Todos os equipamentos acima estão disponíveis na academia Ritmo da Forma!"/>
         </S.BackgroundCards>
     );
 };
