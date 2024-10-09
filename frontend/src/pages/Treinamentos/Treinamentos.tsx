@@ -7,19 +7,20 @@ import Modal from '../../components/Treinamentos/Modal/Modal';
 
 
 const Treinamentos = () => {
-    const [modalIsOpen, setModalIsOpen] = useState<boolean>(true);    
+    const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);    
 
     const openModal = () => {
         setModalIsOpen(!modalIsOpen)
     }
 
-
     return (
         <S.TreinamentoBackground>
+            
             {
                 modalIsOpen &&   
                 <Modal openModal={openModal}/>
             }
+
             <Navbar></Navbar>
             <ContainerTop></ContainerTop>
             <ContainerCards></ContainerCards>

@@ -18,7 +18,6 @@ const Aulas = () => {
             </S.WaveWhiteContainer>
         </S.ContentAulasContainer>
         <MouseFollower/>
-        
     </S.AulasBackground>
   );
 };
