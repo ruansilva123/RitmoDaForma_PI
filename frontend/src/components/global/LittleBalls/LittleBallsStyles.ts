@@ -1,13 +1,17 @@
 import styled from "styled-components";
 import { colors } from "../../../styles/Theme";
 
-export const ContainerBalls = styled.div`
+interface ContainerBallsProps {
+    isVertical: boolean,
+}
+
+export const ContainerBalls = styled.div<ContainerBallsProps>`
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 1vh;
-    width: 140vh;
     height: 5vh;
-    background-color: pink;
+    transform: ${ props => props.isVertical ? "rotate(90deg)" : "rotate(0deg)"};
 `
 
 export const Balls = styled.div`

@@ -1,12 +1,12 @@
 import React from 'react';
 import * as S from "./SubtitleContainerStyles";
-import WaveWhite2 from "../../../../public/assets/svg/WaveWhite.svg"
 import SubTitle from '../../../components/global/SubTitle/SubTitle';
+import ImageWaveWhite from '../../../components/global/ImageWaveWhite/ImageWaveWhite';
 
 const SubtitleContainer = () => {
   return (
     <S.SubtitleContainerStyle>
-        <S.ImageWaveWhite src={WaveWhite2} ></S.ImageWaveWhite>
+        <ImageWaveWhite bottom="52vh"/>
         <S.BackgroundSubTitleContainer>
           <div>
             <SubTitle subTitle="Participe das Nossas" mainTitle="Aulas Semanais"/>
