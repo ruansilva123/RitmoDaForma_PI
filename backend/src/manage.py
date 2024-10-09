@@ -9,11 +9,21 @@ def runserver():
     import uvicorn
     uvicorn.run("app.main:app", log_level="info", reload=True)
     # Remove reload true when back-end is deployed
+    # Add IP and port
 
 
 @app.command()
 def flush():
-    print('clean database')
+    from app.core.database import engine, Base
+    from app.models import users, videos, gym_plans, company_contacts, classes
+    
+    try: 
+        Base.metadata.drop_all(bind=engine)
+        Base.metadata.create_all(bind=engine)
+
+        print(f"\nDatabase cleaned with success!\n")
+    except Exception as e: 
+        print(f"\nError to clean database: {e}\n")
 
 
 @app.command()
@@ -22,16 +32,31 @@ def createmanageruser(username : str, password : str):
     from app.schemas.users import UserCreate
     from app.utils.database_conn import connect_db
     from sqlalchemy.orm import Session
+    from app.utils.validations import validate_new_password
 
     from app.core.database import engine, Base
     from app.models import users, videos, gym_plans, company_contacts, classes
     
     Base.metadata.create_all(bind=engine)
 
-    user = UserCreate(username = username, password = password, is_manager = True)
-    db : Session = connect_db
-    user_generated = create_user(user, db)
-    print(user_generated)
+    try:
+        db : Session = connect_db()
+        
+        if not validate_new_password(password):
+            raise Exception("\nThe password must have: \n \
+    - Between 8 and 12 characters; \n \
+    - Special characters -> !@#$%&*(){|}; \n \
+    - Number; \n \
+    - Uppercase and lowercase letters. ")
+
+        user = UserCreate(username = username, password = password, is_manager = True)
+        create_user(user, db)
+
+        print("\nManager user created with success!\n")
+    except Exception as e:
+        print(f"\nError to create manager user: {e}\n")
+    finally:
+        db.close()
 
 
 if __name__ == "__main__":

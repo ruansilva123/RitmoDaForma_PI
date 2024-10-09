@@ -15,4 +15,4 @@ class User(UserBase):
     id_user : int 
 
     class Config: 
-        orm_mode = True
+        from_attributes = True

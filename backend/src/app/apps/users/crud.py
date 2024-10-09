@@ -5,7 +5,7 @@ from app.utils.hash import generate_hash
 
 
 def create_user(user : users_schema.UserCreate, db : Session):
-    # user.password = generate_hash(user.password)
+    user.password = generate_hash(user.password)
     db_user = users.User(
         username = user.username, 
         password = user.password, 
@@ -14,5 +14,4 @@ def create_user(user : users_schema.UserCreate, db : Session):
     db.add(db_user)
     db.commit()
     db.refresh(db_user)
-    db.close()
     return db_user

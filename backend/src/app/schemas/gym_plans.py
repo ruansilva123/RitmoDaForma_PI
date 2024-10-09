@@ -16,4 +16,4 @@ class GymPlan(GymPlanBase):
     id_plan : int 
 
     class Config: 
-        orm_mode = True
+        from_attributes = True
