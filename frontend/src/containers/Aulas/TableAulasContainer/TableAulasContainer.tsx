@@ -6,10 +6,8 @@ import PricesTableContainer from '../PricesTableContainer/PricesTableContainer';
 const TableAulasContainer = () => {
   return (
     <S.TableAulasContainerStyle>
-      
       <AulasCalendarContainer/>
       <PricesTableContainer/>
-      
     </S.TableAulasContainerStyle>
   );
 };
