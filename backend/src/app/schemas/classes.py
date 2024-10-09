@@ -14,7 +14,7 @@ class AcademyClass(AcademyClassBase):
     id_class : int
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 
 # ===== Hour Schedule =====
@@ -30,7 +30,7 @@ class HourSchedule(HourScheduleBase):
     id_hour : int 
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 
 # ===== Calendar =====
@@ -48,7 +48,7 @@ class Calendar(CalendarBase):
     hour_id : int
 
     class config:
-        orm_mode = True
+        from_attributes = True
 
 # ===== Price =====
 class PriceBase(BaseModel):
@@ -66,4 +66,4 @@ class Price(PriceBase):
     class_id : int 
 
     class Config: 
-        orm_mode = True
+        from_attributes = True
