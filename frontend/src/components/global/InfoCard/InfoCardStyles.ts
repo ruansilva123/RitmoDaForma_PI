@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { colors } from "../../../styles/Theme";
+import breakpoints from "../../../styles/Breakpoints";
 
 export const BackgroundContainer = styled.div`
     display: flex;
@@ -15,6 +16,11 @@ export const ContainerInfo = styled.div`
     width: 700px;
     margin-block: 30px;
     position: relative;
+    
+    @media ${breakpoints.sm}{
+     width: 500px;
+     font-size: 13px;
+    }
 `
 
 export const IconInfo = styled.img`

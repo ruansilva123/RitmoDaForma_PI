@@ -4,7 +4,9 @@ import * as S from "./SearchStyles";
 
 const InputSearch = () => {
     return (
-        <S.InputSearch placeholder="asdasddasasdsda" type="text"/>
+        <S.InputBackground>
+            <S.InputSearch placeholder="asdasddasasdsda" type="text" />
+        </S.InputBackground>
     );
 };
 
