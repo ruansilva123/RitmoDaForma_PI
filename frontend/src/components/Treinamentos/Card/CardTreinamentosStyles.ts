@@ -1,6 +1,7 @@
 
 import styled from "styled-components";
 import { colors } from "../../../styles/Theme";
+import breakpoints from "../../../styles/Breakpoints";
 
 
 export const ContainerCard = styled.div`
@@ -17,6 +18,15 @@ export const ContainerCard = styled.div`
     &:hover{
         border: 2px solid ${colors.lightRed}; 
     }
+
+    @media ${breakpoints.bg}{
+        margin: 0;
+        width: 38vh;
+    }
+    
+    @media ${breakpoints.md}{
+        margin: 4vh;
+    }
 `
 
 export const ImageCard = styled.img`
@@ -25,12 +35,20 @@ export const ImageCard = styled.img`
     margin: 2vh;
     width: 35vh;
     height: 15vh;
+
+    @media ${breakpoints.bg}{
+        width: 33vh;
+    }
 `
 export const ContentCard = styled.div`
     display: flex;
     width: 35vh;
     flex-direction: column;
     align-items: right;
+
+    @media ${breakpoints.bg}{
+        width: 33vh;
+    }
 `
 export const TitleCard = styled.div`
     font-family: 'Tahoma Bold';
