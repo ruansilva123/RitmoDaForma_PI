@@ -1,46 +1,53 @@
 import React, { useState } from "react";
 import * as S from "./CardTreinamentosStyles";
-import InfoCard from "../../global/InfoCard/InfoCard";
-import LittleBalls from "../../global/LittleBalls/LittleBalls";
-import Modal from "../Modal/Modal";
+// import LittleBalls from "../../global/LittleBalls/LittleBalls";
+import { useModal } from "../../../contexts/modalProvider";
+import { contentModal } from "../../../types/types";
 
 interface CardProps {
-    titulo: string;
-    descricao: string;
-    imagem: string;
+    title: string;
+    desc: string;
+    image: string;
+    video: string;
 }
 
 const App = () => {
     const [treinos] = useState([
         {
-            titulo: "Halteres",
-            descricao: "Fortalecimento dos músculos e flexibilidade",
-            imagem: "/assets/images/woman-halter.png",
+            title: "Halteres",
+            desc: "Fortalecimento dos músculos e flexibilidade",
+            image: "/assets/images/woman-halter.png",
+            video: "",
         },
         {
-            titulo: "Barra Olímpica",
-            descricao: "Rebeca Andrade",
-            imagem: "/assets/images/woman-halter.png",
+            title: "Barra Olímpica",
+            desc: "Rebeca Andrade",
+            image: "/assets/images/woman-halter.png",
+            video: "",
         },
         {
-            titulo: "Bicicleta Ergonômica",
-            descricao: "AAAAAA",
-            imagem: "/assets/images/woman-halter.png",
+            title: "Bicicleta Ergonômica",
+            desc: "AAAAAA",
+            image: "/assets/images/woman-halter.png",
+            video: "",
         },
         {
-            titulo: "Bicicleta Ergonômica",
-            descricao: "AAAAAA",
-            imagem: "/assets/images/woman-halter.png",
+            title: "Bicicleta Ergonômica",
+            desc: "AAAAAA",
+            image: "/assets/images/woman-halter.png",
+            video: "",
         },
         {
-            titulo: "Bicicleta Ergonômica",
-            descricao: "AAAAAA",
-            imagem: "/assets/images/woman-halter.png",
+            title: "Bicicleta Ergonômica",
+            desc: "AAAAAA",
+            image: "/assets/images/woman-halter.png",
+            video: "",
         },
         {
-            titulo: "Bicicleta Ergonômica",
-            descricao: "AAAAAA",
-            imagem: "/assets/images/woman-halter.png",
+            title: "Bicicleta Ergonômica",
+            desc: "AAAAAA",
+            image: "/assets/images/woman-halter.png",
+            video: "",
         },
 
     ]);
@@ -50,9 +57,10 @@ const App = () => {
             {treinos.map((treino, index) => (
                 <Card
                     key={index}
-                    titulo={treino.titulo}
-                    descricao={treino.descricao}
-                    imagem={treino.imagem}
+                    title={treino.title}
+                    desc={treino.desc}
+                    image={treino.image}
+                    video={treino.video}
                 />
             ))}
         </>
@@ -60,14 +68,20 @@ const App = () => {
 };
 
 const Card = (props: CardProps) => {
-    const { titulo, descricao, imagem } = props;
+    const { title, desc, image, video } = props;
+    const { openModal } = useModal();
+
+    const handleCloseModal = (newContent: contentModal) => {
+        openModal(newContent);
+    }
+
     return (
         <>
-            <S.ContainerCard>
-                <S.ImageCard src={imagem} alt={titulo} />
+            <S.ContainerCard onClick={() => handleCloseModal({title, desc, video})}>
+                <S.ImageCard src={image} alt={title} />
                 <S.ContentCard>
-                    <S.TitleCard>{titulo}</S.TitleCard>
-                    <S.DescriptionCard>{descricao}</S.DescriptionCard>
+                    <S.TitleCard>{title}</S.TitleCard>
+                    <S.DescriptionCard>{desc}</S.DescriptionCard>
                 </S.ContentCard>
             </S.ContainerCard>
         </>
