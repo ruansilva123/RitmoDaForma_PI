@@ -5,12 +5,10 @@ import breakpoints from "../../../styles/Breakpoints";
 
 
 export const ContainerCard = styled.div`
+    display: flex;
     border: 1px solid ${colors.lightGray}; 
     border-radius: 1vh;
-    margin: 5vh;
-    width: 40vh;
     height: 35vh;
-    display: flex;
     flex-direction: column;
     align-items: center;
     cursor: pointer;
@@ -21,7 +19,6 @@ export const ContainerCard = styled.div`
 
     @media ${breakpoints.bg}{
         margin: 0;
-        width: 38vh;
     }
     
     @media ${breakpoints.md}{
@@ -33,22 +30,16 @@ export const ImageCard = styled.img`
     background-color: black;
     border-radius: 1vh;
     margin: 2vh;
-    width: 35vh;
     height: 15vh;
 
-    @media ${breakpoints.bg}{
-        width: 33vh;
-    }
+    width: 85%;
 `
 export const ContentCard = styled.div`
     display: flex;
-    width: 35vh;
     flex-direction: column;
     align-items: right;
 
-    @media ${breakpoints.bg}{
-        width: 33vh;
-    }
+    width: 85%;
 `
 export const TitleCard = styled.div`
     font-family: 'Tahoma Bold';

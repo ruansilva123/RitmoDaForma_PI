@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import { colors } from "../../../styles/Theme";
 import breakpoints from "../../../styles/Breakpoints";
-export const ContainerTop = styled.div`
 
+export const ContainerTop = styled.div`
+    margin-top: clamp(50px, 36vh, 36vh);
 `
 
 export const ImageWaveWhite = styled.img`
@@ -14,13 +15,9 @@ export const ImageWaveWhite = styled.img`
 
 export const BackgroundContainerTop = styled.div`
     background-color: white;
-    position: absolute;
-    bottom: 0vh;
-    height: 58vh;
     width: 100%;
-    padding: 18vh;
+    padding: 18vh 18vh 0vh 18vh;
 
-    
     @media ${breakpoints.sm}{
         padding: 4vh;
     }

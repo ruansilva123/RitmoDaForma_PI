@@ -7,12 +7,15 @@ import InfoCard from '../../../components/global/InfoCard/InfoCard';
 
 const ContainerCards = () => {
     return (
-        <S.BackgroundCards>
-            <S.ContainerCards>
-                <Card></Card>
-            </S.ContainerCards>
-            <InfoCard message="Todos os equipamentos acima estão disponíveis na academia Ritmo da Forma!"/>
-        </S.BackgroundCards>
+        <S.SectionCards>
+            <S.BackgroundCards>
+                <S.ContainerCards>
+                    <Card></Card>
+                </S.ContainerCards>
+                <InfoCard message="Todos os equipamentos acima estão disponíveis na academia Ritmo da Forma!"/>
+            </S.BackgroundCards>
+        </S.SectionCards>
+    
     );
 };
 
