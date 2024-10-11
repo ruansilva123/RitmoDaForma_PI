@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import * as S from "./CardTreinamentosStyles";
-// import LittleBalls from "../../global/LittleBalls/LittleBalls";
-import { useModal } from "../../../contexts/modalProvider";
+import { useModal } from "../../../contexts/ModalProvider";
 import { contentModal } from "../../../types/types";
 
 interface CardProps {
