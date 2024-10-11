@@ -2,40 +2,27 @@ import styled from "styled-components";
 import { colors } from "../../../styles/Theme";
 import breakpoints from "../../../styles/Breakpoints";
 
-
+export const SectionCards = styled.div`
+    background-color: white;
+`
 
 export const BackgroundCards = styled.div`
     width: 100%;
-    top: 102vh;
-    position: absolute;
-
-    @media ${breakpoints.bg}{
-        top: 105vh;
-    }
-
-    @media ${breakpoints.md}{
-        top: 97vh;
-    }
-    
-    @media ${breakpoints.sm}{
-        top: 85vh;
-    }
 `
 
 export const ContainerCards = styled.div`
-    background-color: white;
     display: grid;
     justify-content: center;
-    grid-template-columns: 24% 24% 24%;
-    gap: 20px;
+    grid-template-columns: 18% 18% 18%;
+    gap: 5vw;
 
     @media ${breakpoints.bg}{
-        grid-template-columns: 25% 25% 25%;
-        gap: 25px;
+        grid-template-columns: 22% 22% 22%;
+        gap: 5vw;
     }
-
+     
     @media ${breakpoints.md}{
-        grid-template-columns: 40% 40%;
+        grid-template-columns: 300px 300px;
         gap: 30px;
     }
 

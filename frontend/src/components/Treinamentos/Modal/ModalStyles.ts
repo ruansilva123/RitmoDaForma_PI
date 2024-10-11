@@ -2,16 +2,17 @@ import styled from "styled-components";
 import { colors } from "../../../styles/Theme";
 
 export const BackgroundBlur = styled.div`
+    top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: ${colors.lightGrayGradient_20};
     backdrop-filter: blur(3px);
-    position: absolute;
+    position: fixed;
     z-index: 1000;
     width: 100%;
-    height: 100vw;
-
+    height: 100%;
+    width: 100%;
 `
 
 export const ModalContainer = styled.div`
@@ -23,7 +24,6 @@ export const ModalContainer = styled.div`
     box-shadow: 1px 1px 5px 5px ${colors.lightGrayGradient_40};
     width: 100vh;
     height: 80vh;
-    
 `
 
 export const Video = styled.div`
@@ -63,7 +63,7 @@ export const DescriptionModal = styled.div`
 `
 
 export const CloseIcon = styled.div`
-    position: fixed;
+    position: absolute;
     width: 30px;
     height: 30px;
     background-image: url('assets/svg/CloseIcon.svg');

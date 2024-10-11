@@ -11,7 +11,6 @@ export const ContentAulasContainer = styled.div`
 
 export const MotivationalPhrase = styled.p`
     color: white;
-    
     position: absolute;
     top: 20vh;
     left: 17%;
