@@ -7,7 +7,7 @@ interface LittleBallsProps {
 
 const LittleBalls:React.FC<LittleBallsProps> = ({isVertical}) => {
     return (
-        <S.ContainerBalls isVertical={isVertical}>
+        <S.ContainerBalls data-isvertical={isVertical}>
             <S.Balls/>
             <S.Balls/>
             <S.Balls/>

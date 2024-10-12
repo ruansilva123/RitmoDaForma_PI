@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { colors } from "../../../styles/Theme";
+import breakpoints from "../../../styles/Breakpoints";
 
 export const ExtraTaxStyle = styled.div`
     background-color: ${colors.lightGrayGradient_20};
@@ -20,6 +21,9 @@ export const ExtraTaxStyle = styled.div`
 export const TitleTax = styled.p`
     font-size: 14px;
     color: ${colors.darkGray};
+    @media ${breakpoints.xs} {
+        font-size: 12px;
+    }
 `
 
 export const Price = styled.p`
@@ -28,4 +32,8 @@ export const Price = styled.p`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: "QuickSilver";
+
+    @media ${breakpoints.xs} {
+        font-size: 14px;
+    }
 `

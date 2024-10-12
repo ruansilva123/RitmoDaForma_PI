@@ -7,7 +7,7 @@ import TitleRitmoDaForma from "../../../components/Home/TitleRitmoDaForma/TitleR
 import React, { forwardRef } from "react";
 
 const ApresentationContainer = forwardRef<HTMLDivElement>(
-    (props, ref) => {
+    (_, ref) => {
         return (
             <S.ApresentationContainerStyle ref={ref} >
                 <S.ApresentationContent>

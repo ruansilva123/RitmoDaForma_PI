@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import breakpoints from "../../../styles/Breakpoints"
 
 export const PaymentPlansContainerStyle = styled.section`
     width: 100%;
@@ -11,18 +12,22 @@ export const PaymentPlansContainerStyle = styled.section`
 
 export const ContainerTitlePaymentPlans = styled.div`
     padding-inline: 120px;
-    padding-block: clamp(50px, 24vh, 24vh);
+    padding-block: clamp(50px, 18vw, 18vw);
     width: 100%;
     max-width: 1500px;
-`
+    display: flex;
+    flex-direction: column;
 
-export const ImageWaveWhite = styled.img`
-    position: absolute;
-    bottom: -27%;
-    right: 0;
-    height: 35%;
-    min-height: 315px;
-    z-index: 0;
-    transform: rotate(180deg);
-    width: 100%;
+    @media ${breakpoints.md} {
+        padding-inline: 80px;
+    }
+
+    @media ${breakpoints.sm} {
+        padding-inline: 55px;
+    }
+
+    @media ${breakpoints.xs} {
+        align-items: center;
+        padding-inline: 15px;
+    }
 `
