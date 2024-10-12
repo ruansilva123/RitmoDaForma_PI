@@ -9,14 +9,13 @@ export const ContainerBalls = styled.div<ContainerBallsProps>`
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1vh;
-    height: 5vh;
+    gap: 10px;
     transform: ${ props => props["data-isvertical"] ? "rotate(90deg)" : "rotate(0deg)"};
 `
 
 export const Balls = styled.div`
-    height: 18px;
-    width: 18px;
-    border-radius: 20px;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
     border: 1px solid ${colors.lightRed};
 `

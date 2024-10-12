@@ -56,7 +56,7 @@ export const Description = styled.p`
         font-size: 16px;
     }
 
-    @media ${breakpoints.md} {
+    @media ${breakpoints.bs} {
         font-size: 14px;
     }
 
