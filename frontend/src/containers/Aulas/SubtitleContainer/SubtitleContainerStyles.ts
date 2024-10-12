@@ -9,7 +9,7 @@ export const ImageWaveWhite = styled.img`
     position: absolute;
     bottom: 52%;
     right: 0;
-    height: 45%;
+    height: 40%;
 `
 
 export const BackgroundSubTitleContainer = styled.div`
@@ -19,7 +19,7 @@ export const BackgroundSubTitleContainer = styled.div`
 
     @media ${breakpoints.xs} {
         padding-top: 50px; 
-        margin-top: 40%;
+        margin-top: 45%;
     }
 
     display: flex;
