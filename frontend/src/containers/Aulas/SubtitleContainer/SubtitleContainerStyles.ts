@@ -16,10 +16,10 @@ export const ImageWaveWhite = styled.img`
 export const BackgroundSubTitleContainer = styled.div`
     padding-top: 10vw; 
     padding-inline: 120px; 
-    margin-top: clamp(10px, 36vh, 36vh);
+    margin-top: clamp(20px, 36vh, 36vh);
 
-    @media ${breakpoints.md} {
-        margin-top: 10px;
+    @media ${breakpoints.bs} {
+        margin-top: 60px;
     }
 
     display: flex;
