@@ -17,6 +17,11 @@ export const BackgroundSubTitleContainer = styled.div`
     padding-top: 10vw; 
     padding-inline: 120px; 
     margin-top: clamp(10px, 36vh, 36vh);
+
+    @media ${breakpoints.md} {
+        margin-top: 10px;
+    }
+
     display: flex;
     justify-content: center;
 
