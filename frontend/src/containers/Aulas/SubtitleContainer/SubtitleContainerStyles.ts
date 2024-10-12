@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import breakpoints from "../../../styles/Breakpoints";
 
-
 export const SubtitleContainerStyle = styled.section`
     height: 100%;    
 `
@@ -18,8 +17,9 @@ export const BackgroundSubTitleContainer = styled.div`
     padding-inline: 120px; 
     margin-top: clamp(20px, 36vh, 36vh);
 
-    @media ${breakpoints.bs} {
-        margin-top: 60px;
+    @media ${breakpoints.xs} {
+        padding-top: 50px; 
+        margin-top: 350px; 
     }
 
     display: flex;
