@@ -7,7 +7,7 @@ interface ImageWaveWhiteProps {
 
 export const ImageWaveWhite = styled.img<ImageWaveWhiteProps>`
     position: absolute;
-    bottom: ${props => props["data-bottom"]};
+    bottom: 52%;
     right: 0vh;
     height: 40vh;
     transform: ${props => props["data-invertwave"] ? "rotate(180deg)" : "rotate(0deg)"};

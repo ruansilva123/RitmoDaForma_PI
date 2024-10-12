@@ -4,6 +4,7 @@ import breakpoints from "../../styles/Breakpoints";
 
 export const AulasBackground = styled.main`  
     background-image: ${colors.gradientDarkGray};
+    min-height: 768px;
 `;
 
 export const ContentAulasContainer = styled.div`
