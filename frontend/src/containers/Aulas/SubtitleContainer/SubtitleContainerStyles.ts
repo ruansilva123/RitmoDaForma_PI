@@ -19,7 +19,7 @@ export const BackgroundSubTitleContainer = styled.div`
 
     @media ${breakpoints.xs} {
         padding-top: 50px; 
-        margin-top: 45%;
+        margin-top: 55%;
     }
 
     display: flex;
