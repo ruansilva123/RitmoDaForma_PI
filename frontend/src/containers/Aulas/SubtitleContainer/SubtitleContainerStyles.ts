@@ -1,8 +1,16 @@
 import styled from "styled-components";
 import breakpoints from "../../../styles/Breakpoints";
 
+
 export const SubtitleContainerStyle = styled.section`
-    height: 100%;    
+    height: 100%;
+`
+
+export const ImageWaveWhite = styled.img`
+    position: absolute;
+    bottom: 52%;
+    right: 0;
+    height: 40%;
 `
 
 export const BackgroundSubTitleContainer = styled.div`
