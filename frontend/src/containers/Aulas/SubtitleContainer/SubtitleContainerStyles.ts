@@ -3,20 +3,20 @@ import breakpoints from "../../../styles/Breakpoints";
 
 
 export const SubtitleContainerStyle = styled.section`
-    height: 100%;
+    height: 100%;    
 `
 
 export const ImageWaveWhite = styled.img`
     position: absolute;
     bottom: 52%;
-    right: 0;
+    right: 0vh;
     height: 40%;
 `
 
 export const BackgroundSubTitleContainer = styled.div`
     padding-top: 10vw; 
     padding-inline: 120px; 
-    margin-top: clamp(50px, 36vh, 36vh);
+    margin-top: clamp(10px, 36vh, 36vh);
     display: flex;
     justify-content: center;
 
