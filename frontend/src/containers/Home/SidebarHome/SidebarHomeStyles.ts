@@ -1,15 +1,28 @@
 import styled from "styled-components";
+import breakpoints from "../../../styles/Breakpoints";
 
 export const SidebarHomeStyle = styled.aside`
-        position: fixed;
-        width: 65px;
-        height: 90vh;
-        display: flex;
-        align-items: center;
-        justify-content: end;
-        z-index: 2;
-        mix-blend-mode: difference;
-    `
+    position: fixed;
+    width: 65px;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    z-index: 2;
+    mix-blend-mode: difference;
+
+    @media ${breakpoints.md} {
+        width: 40px;
+    }
+
+    @media ${breakpoints.sm} {
+        width: 30px;
+    }
+
+    @media ${breakpoints.xs} {
+        display: none;
+    }
+`
 
 export const List = styled.ul`
     display: flex;

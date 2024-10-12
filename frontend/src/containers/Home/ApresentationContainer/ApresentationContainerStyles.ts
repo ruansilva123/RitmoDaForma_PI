@@ -1,13 +1,18 @@
 import styled from "styled-components";
-import { colors } from "../../../styles/Theme";
+import breakpoints from "../../../styles/Breakpoints";
 
 export const ApresentationContainerStyle = styled.section`
     padding-left: 85px;
     height: 90vh;
+    min-height: 520px;
     width: 100%;
     display: flex;
     position: relative;
     justify-content: center;
+
+    @media ${breakpoints.md} {
+        padding-left: 0px;
+    }
 `
 
 export const ApresentationContent = styled.div`
@@ -25,7 +30,10 @@ export const DescriptionContainer = styled.div`
     justify-content: center;
     align-items: center;
     color: white;
-    
+
+    @media ${breakpoints.md} {
+        width: 100%;
+    }
 `
 
 export const Title = styled.h1`
@@ -38,10 +46,23 @@ export const Description = styled.p`
     max-width: 1600px;
     justify-content: center;
     text-align: justify;
-    width: 55%;
+    width: 60%;
     z-index: 1;
     margin-bottom: 50px;
-    font-size: 1.1rem;
+    font-size: 18px;
+
+    @media ${breakpoints.md} {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    @media ${breakpoints.md} {
+        font-size: 14px;
+    }
+
+    @media ${breakpoints.xs} {
+        font-size: 12px;
+    }
 `
 
 export const ImagesExample = styled.div`
@@ -57,6 +78,10 @@ export const ImagesExample = styled.div`
         height: 90%;
         display: flex;
         max-height: 700px;
+    }
+
+    @media ${breakpoints.md} {
+        display: none;
     }
 `
 
@@ -74,7 +99,7 @@ export const ImageManTrainingContainer = styled.div`
 
 export const ImageWaveWhite = styled.img`
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     right: 0;
     height: 35%;
     z-index: 0;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { colors } from "../../../styles/Theme";
 
 interface ContainerBallsProps {
-    isVertical: boolean,
+    "data-isvertical": boolean,
 }
 
 export const ContainerBalls = styled.div<ContainerBallsProps>`
@@ -11,7 +11,7 @@ export const ContainerBalls = styled.div<ContainerBallsProps>`
     align-items: center;
     gap: 1vh;
     height: 5vh;
-    transform: ${ props => props.isVertical ? "rotate(90deg)" : "rotate(0deg)"};
+    transform: ${ props => props["data-isvertical"] ? "rotate(90deg)" : "rotate(0deg)"};
 `
 
 export const Balls = styled.div`

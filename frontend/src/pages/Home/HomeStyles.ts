@@ -8,7 +8,6 @@ export const HomePageStyle = styled.div`
 export const Main = styled.main`
   display: flex;
   height: 100%;
-  
 `;
 
 export const ContentHome = styled.div`

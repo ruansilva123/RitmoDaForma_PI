@@ -9,7 +9,7 @@ interface ImageWaveWhiteProps {
 
 const ImageWaveWhite: React.FC<ImageWaveWhiteProps> = ({invertWave, bottom}) => {
   return (
-    <S.ImageWaveWhite src={WaveWhite} bottom={bottom} invertWave={invertWave ? invertWave : false}>
+    <S.ImageWaveWhite src={WaveWhite} data-bottom={bottom} data-invertwave={invertWave ? invertWave : false}>
     </S.ImageWaveWhite>
   );
 };

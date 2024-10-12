@@ -2,9 +2,10 @@ import * as S from "./ContactsContainerStyles"
 import { forwardRef } from "react";
 import SubTitle from "../../../components/global/SubTitle/SubTitle";
 import CardContactsContainer from "../CardContactsContainer/CardContactsContainer";
+import WaveWhiteInvert from "../../../../public/assets/svg/WaveWhiteInvert.svg"
 
 const ContactsContainer = forwardRef<HTMLDivElement>(
-    (props, ref) => {
+    (_, ref) => {
         return (
             <S.ContactsContainerStyle ref={ref}>
                 <S.ContentContacts>
@@ -13,6 +14,7 @@ const ContactsContainer = forwardRef<HTMLDivElement>(
                     </div>
                     <CardContactsContainer/>
                 </S.ContentContacts>
+                <S.ImageWaveWhite src={WaveWhiteInvert}/>
             </S.ContactsContainerStyle>
         );
     }

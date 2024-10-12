@@ -9,10 +9,6 @@ interface SidebarHomeProps {
 
 const SidebarHome: React.FC<SidebarHomeProps> = ({ sectionRefAboutUs, sectionRefPlans, sectionRefContacts }) => {
 
-  const scrollAmout: number = 0;
-  const scrollStep: number = -10;
-  const currentScroll: number = 100;
-
   const smoothScroll = () => {
     window.scrollTo({
       top: 0,

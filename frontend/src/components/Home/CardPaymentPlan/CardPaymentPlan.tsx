@@ -15,9 +15,8 @@ const CardPaymentPlan:React.FC<CardPaymentPlan>  = ({handleChangeFirstCard, titl
   const price = unitPrice.slice(2, -2)
   const decimalValue = unitPrice.slice(-2);
 
-
   return (
-    <S.CardPaymentPlanStyle firstCard={firstCard} onMouseOver={() => handleChangeFirstCard(false)} onMouseLeave={() => handleChangeFirstCard(true)} >
+    <S.CardPaymentPlanStyle data-firstcard={firstCard} onMouseOver={() => handleChangeFirstCard(false)} onMouseLeave={() => handleChangeFirstCard(true)} >
       <S.TitlePlanStyle>{titlePlan} <span>{parcelValue}</span></S.TitlePlanStyle>
       <S.UnitPriceStyle>
         <span>{currency}</span>

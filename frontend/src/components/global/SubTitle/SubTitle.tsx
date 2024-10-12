@@ -10,7 +10,7 @@ interface SubTitleProps {
 const SubTitle: React.FC<SubTitleProps> = ({subTitle, mainTitle, darkMode}) => {
     return (
         <>
-            <S.SubTitleStyle darkMode={darkMode ? darkMode : false} >{subTitle}</S.SubTitleStyle>
+            <S.SubTitleStyle data-darkmode={darkMode ? darkMode : false} >{subTitle}</S.SubTitleStyle>
             <S.MainTitle>{mainTitle}</S.MainTitle>
         </>
 

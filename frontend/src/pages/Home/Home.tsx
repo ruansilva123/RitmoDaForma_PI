@@ -22,7 +22,7 @@ const Home = () => {
             sectionRefAboutUs={sectionRefAboutUs} 
             sectionRefPlans={sectionRefPlans}
             sectionRefContacts={sectionRefContacts}
-            />
+          />
           <ApresentationContainer ref={sectionRefAboutUs}/>
           <PaymentPlansContainer ref={sectionRefPlans}/>
           <ContactsContainer ref={sectionRefContacts}/>

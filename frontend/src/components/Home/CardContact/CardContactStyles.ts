@@ -1,25 +1,45 @@
 import styled from "styled-components";
 import { colors } from "../../../styles/Theme";
+import breakpoints from "../../../styles/Breakpoints";
 
 export const CardContactStyle = styled.div`
-    /* background-color: white; */
-    width: 20vw;
-    max-width: 200px;
-    min-width: 220px;
+    max-width: 220px;
     max-height: 250px;
+    padding-bottom: 50px;
+    @media ${breakpoints.sm} {
+        padding-bottom: 0px;
+    }
 `
 
 export const TitleContact = styled.div`
     display: flex;
-    gap: 20px;
+    gap: 15px;
     margin-bottom: 25px;
     color: white;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 18px;
     align-items: center;
+
+    @media ${breakpoints.md} {
+        font-size: 16px;
+    }
+
+    @media ${breakpoints.sm} {
+        font-size: 14px;
+    }
+
+    @media ${breakpoints.xs} {
+        margin-bottom: 15px;
+        gap: 10px;
+        font-size: 12px;
+    }
 
     &>img{
         width: 40px;
+
+        @media ${breakpoints.md} {
+            width: 30px;
+        }
     }
 
     &>a{
@@ -28,10 +48,22 @@ export const TitleContact = styled.div`
             color: ${colors.lightRed};
         }
     }
-
 `
 
 export const DescriptionContact = styled.div`
     color: white;
     text-align: justify;
+    font-size: 18px;
+
+    @media ${breakpoints.md} {
+        font-size: 16px;
+    }
+
+    @media ${breakpoints.sm} {
+        font-size: 14px;
+    }
+
+    @media ${breakpoints.xs} {
+        font-size: 12px;
+    }
 `

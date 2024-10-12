@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { colors } from "../../../styles/Theme";
+import breakpoints from "../../../styles/Breakpoints";
 
 export const Title = styled.h1`
     caret-color: transparent;
@@ -21,21 +22,29 @@ export const TitleRitmoDown = styled.div`
 `
 
 export const TitleRitmoUp = styled.div`
-    margin-bottom: -30px;
+    margin-bottom: -22px;
     background: ${colors.gradientWhiteToGray};
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
     cursor: default;
+
+    @media ${breakpoints.md} {
+        margin-bottom: -16px;
+    }
 `
 
 export const TitleRitmo = styled.div`
-    font-size: clamp(18px, 8vw, 164px); 
+    font-size: clamp(80px, 9vw, 164px); 
     cursor: default;
+
+    @media ${breakpoints.xs} {
+        font-size: 60px;
+    }
 `
 
 export const DaForma = styled.div`
-    font-size: clamp(16px, 3vw, 64px); 
+    font-size: clamp(24px, 3vw, 64px); 
     font-family: "RacingSansOne";
     text-align: center;
     margin-top: -15px;
