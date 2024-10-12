@@ -9,7 +9,7 @@ export const ImageWaveWhite = styled.img`
     position: absolute;
     bottom: 52%;
     right: 0;
-    height: 40%;
+    height: 45%;
 `
 
 export const BackgroundSubTitleContainer = styled.div`
