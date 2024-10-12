@@ -24,7 +24,6 @@ export const ExtraTaxContainer = styled.div`
     display: flex;
     justify-content: center;
     gap: 10px;
-    width: 860px;
     width: 945px;
     margin: 30px auto;
     

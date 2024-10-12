@@ -42,6 +42,7 @@ export const ContentContacts = styled.div`
     @media ${breakpoints.xs} {
         align-items: center;
         padding-inline: 15px;
+        text-align: center;
     }
 `
 

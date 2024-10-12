@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import * as S from "./InfoCardStyles";
 import IconInfo from "../../../../public/assets/svg/Halter.svg";
 

@@ -7,7 +7,7 @@ const AulasCalendarContainer = () => {
   return (
     <S.AulasCalendarContainerStyle>
         <S.LegendCalendar>
-            <img src={calendar} alt="Ícone de calendário" width="35px" height="35px"/>
+            <img src={calendar} alt="Ícone de calendário"/>
             <p>Calendário das Aulas</p>
         </S.LegendCalendar>
         <S.HeaderAulasCalendar>

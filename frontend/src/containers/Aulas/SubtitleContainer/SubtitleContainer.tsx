@@ -9,7 +9,7 @@ const SubtitleContainer = () => {
         <ImageWaveWhite bottom="52vh"/>
         <S.BackgroundSubTitleContainer>
           <div>
-            <SubTitle subTitle="Participe das Nossas" mainTitle="Aulas Semanais"/>
+            <SubTitle subTitle="Participe das Nossas" mainTitle="Aulas"/>
           </div>
         </S.BackgroundSubTitleContainer>
     </S.SubtitleContainerStyle>
