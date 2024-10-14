@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import breakpoints from "../../../styles/Breakpoints";
 import { colors } from "../../../styles/Theme";
 
 export const BackgroundBlur = styled.div`
@@ -24,6 +25,12 @@ export const ModalContainer = styled.div`
     box-shadow: 1px 1px 5px 5px ${colors.lightGrayGradient_40};
     width: 100vh;
     height: 80vh;
+
+    @media ${breakpoints.sm}{
+        width: 40vh;
+        height: 40vh;
+    }
+
 `
 
 export const Video = styled.div`
@@ -32,6 +39,12 @@ export const Video = styled.div`
     width: 85vh;
     height: 40vh;
     margin: 6vh;
+
+    @media ${breakpoints.sm}{
+        width: 35vh;
+        height: 15vh;
+        margin: 2vh;
+    }
 `
 
 export const ContentModal = styled.div`
@@ -39,12 +52,21 @@ export const ContentModal = styled.div`
     width: 85vh;
     flex-direction: column;
     align-items: right;
+
+    @media ${breakpoints.sm}{
+        width: 35vh;
+    }
 `
 
 export const RedLine = styled.div`
     width: 85vh;
     height: 1px;
     background-color: ${colors.baseRed};
+
+    @media ${breakpoints.sm}{
+        width: 35vh;
+    }
+    
 `
 
 export const TitleModal = styled.div`
@@ -52,6 +74,10 @@ export const TitleModal = styled.div`
     font-family: 'Tahoma Bold';
     font-size: 30px;
     color: ${colors.darkGray};
+
+    @media ${breakpoints.sm}{
+        font-size: 18px;
+    }
 `
 
 export const DescriptionModal = styled.div`
@@ -60,6 +86,10 @@ export const DescriptionModal = styled.div`
     text-align: justify;
     font-size: 20px;
     color: ${colors.opacityDarkGray_60};
+
+    @media ${breakpoints.sm}{
+        font-size: 16px;
+    }
 `
 
 export const CloseIcon = styled.div`
@@ -74,6 +104,18 @@ export const CloseIcon = styled.div`
 
     &:hover{
         background-image: url('assets/svg/CloseIconHover.svg')
+    }
+
+    @media ${breakpoints.sm}{
+        width: 10px;
+        height: 10px;
+        margin-left: 37vh;
+        margin-top: 1vh;
+        background-image: url('assets/svg/CloseIconMobile.svg');
+
+        &:hover{ 
+            background-image: url('assets/svg/CloseIconMobileHover.svg')
+        }
     }
     
 `

@@ -14,6 +14,8 @@ export const InputSearchStyle = styled.input`
     background-repeat: no-repeat;
     background-position: 75vh;
     font-size: 18px;
+
+    
     
     &:focus{
        background-color: ${colors.lightGrayGradient_20};
@@ -28,6 +30,7 @@ export const InputSearchStyle = styled.input`
     }
 
     @media ${breakpoints.sm}{
-        background-position: 42vh;
+        font-size: 15px;
+        background-position: 37vh;
     }
 `

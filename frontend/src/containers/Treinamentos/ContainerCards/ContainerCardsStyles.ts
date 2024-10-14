@@ -27,5 +27,6 @@ export const ContainerCards = styled.div`
 
     @media ${breakpoints.sm}{
         grid: none;
+        gap: 1vh;
     }
 `

@@ -28,7 +28,7 @@ export const ContainerInfo = styled.div`
     }
 
     @media ${breakpoints.sm}{
-        font-size: 12px;
+        font-size: 14px;
     }
 
     @media ${breakpoints.xs}{
