@@ -3,14 +3,19 @@ import { colors } from "../../../styles/Theme";
 import breakpoints from "../../../styles/Breakpoints";
 
 export const ContainerTop = styled.div`
+    position: relative;
     margin-top: clamp(50px, 36vh, 36vh);
 `
 
 export const ImageWaveWhite = styled.img`
     position: absolute;
-    bottom: 52vh;
+    bottom: 99%;
     right: 0vh;
     height: 40vh;
+
+    @media ${breakpoints.sm}{
+        bottom: vh;
+    }
 `
 
 export const BackgroundContainerTop = styled.div`
@@ -44,6 +49,7 @@ export const ContainerSearch = styled.div`
     }
     
     @media ${breakpoints.sm}{
-        padding: 8vh;
+        margin-top: 4vh;
+        padding: 0vh;
     }
 `
