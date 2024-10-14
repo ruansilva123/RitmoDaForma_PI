@@ -8,10 +8,6 @@ export const CardsPlansContainerStyle = styled.div`
     }
 `
 
-export const CardsList = styled.div`
-
-`
-
 export const CardsLine = styled.div`
     display: flex;
     gap: 10px;
@@ -24,12 +20,19 @@ export const ExtraTaxContainer = styled.div`
     display: flex;
     justify-content: center;
     gap: 10px;
+    
     width: 945px;
     margin: 30px auto;
-    
+
+    @media (max-width: 1485px) { 
+        width: 75%;
+        min-width: 860px;
+    }   
+
     @media (max-width: 1100px) { 
         width: 570px;
-    }
+        min-width: 265px;
+    }   
 
     @media ${breakpoints.bs} { 
         flex-direction: column;
