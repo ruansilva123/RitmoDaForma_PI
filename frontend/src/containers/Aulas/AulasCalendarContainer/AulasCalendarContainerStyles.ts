@@ -113,6 +113,10 @@ export const AulasCalendarTable = styled.table`
         background-color: ${colors.darkRed};
         color: white;
         width: 10%;
+
+        @media ${breakpoints.xs}{
+            border: 1px solid ${colors.darkGray};
+        }
     }
 
     td{

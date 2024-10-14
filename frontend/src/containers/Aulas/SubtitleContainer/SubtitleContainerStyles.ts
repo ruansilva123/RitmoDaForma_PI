@@ -3,23 +3,26 @@ import breakpoints from "../../../styles/Breakpoints";
 
 export const SubtitleContainerStyle = styled.section`
     height: 100%;    
+    position: relative;
+    min-height: 100px;
 `
 
 export const ImageWaveWhite = styled.img`
     position: absolute;
-    bottom: 52%;
+    bottom: 99%;
     right: 0;
-    height: 40%;
+    height: 40vh;
+    min-height: 200px;
 `
 
 export const BackgroundSubTitleContainer = styled.div`
-    padding-top: 10vw; 
+    padding-top: 10%; 
     padding-inline: 120px; 
-    margin-top: clamp(20px, 36vh, 36vh);
+    margin-top: clamp(50px, 36vh, 36vh);
 
-    @media ${breakpoints.xs} {
-        padding-top: 50px; 
-        margin-top: 55%;
+    @media ${breakpoints.lt} {
+        padding-top: 20px; 
+        margin-top: 200px;
     }
 
     display: flex;
