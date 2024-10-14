@@ -57,7 +57,6 @@ const AulasCalendarContainer = () => {
             </tbody>
         </S.AulasCalendarTable>
         <InfoCard message="Fique atento nas mudanças de calendário de cada aula!"/>
-        <S.Input type="text" placeholder="AAAAAAAAAAAAAAAAAAA" />
     </S.AulasCalendarContainerStyle>
   );
 };
