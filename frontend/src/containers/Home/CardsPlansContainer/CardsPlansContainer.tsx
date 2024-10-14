@@ -18,7 +18,7 @@ const CardsPlansContainer = () => {
 
   return (
     <S.CardsPlansContainerStyle>
-      <S.CardsList>
+      <div>
         <S.CardsLine>
           <CardPaymentPlan handleChangeFirstCard={handleChangeFirstCard} firstCard={firstCardIsValid} titlePlan="Mensal" unitPrice="r$100,00" totalPrice="" />
           <CardPaymentPlan handleChangeFirstCard={handleChangeFirstCard} titlePlan="Família" unitPrice="r$90,00" totalPrice="" />
@@ -30,7 +30,7 @@ const CardsPlansContainer = () => {
           <CardPaymentPlan handleChangeFirstCard={handleChangeFirstCard} titlePlan="Semestral" unitPrice="r$80,00" totalPrice="Total: 480,00R$" parcelValue="6x de"/>
           <CardPaymentPlan handleChangeFirstCard={handleChangeFirstCard} titlePlan="Anual" unitPrice="r$70,00" totalPrice="Total: 840,00R$" parcelValue="12x de"/>
         </S.CardsLine>
-      </S.CardsList>
+      </div>
       <S.ExtraTaxContainer>
         <ExtraTax price="r$15,00" titleTax="Taxa de inscrição" />
         <ExtraTax price="r$15,00" titleTax="Aula avulsa"/>
