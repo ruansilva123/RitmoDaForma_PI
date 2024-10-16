@@ -1,8 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { GlobalStyles } from './styles/GlobalStyles';
-import Home from './pages/Home/Home';
-import Treinamentos from './pages/Treinamentos/Treinamentos';
-import Aulas from './pages/Aulas/Aulas';
+import Home from './pages/site/Home/Home';
+import Treinamentos from './pages/site/Treinamentos/Treinamentos';
+import Aulas from './pages/site/Aulas/Aulas';
+import AdminPortal from './pages/admin/AdminPortal/AdminPortal';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<Home />}/>
           <Route path="/aulas" element={<Aulas/>}/>
           <Route path="/treinamentos" element={<Treinamentos />}/>
+          <Route path="/admin" element={<AdminPortal />}/>
         </Routes>
       </Router>
     </>

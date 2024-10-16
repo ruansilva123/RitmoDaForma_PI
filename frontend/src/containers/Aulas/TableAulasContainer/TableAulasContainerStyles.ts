@@ -8,7 +8,7 @@ export const TableAulasContainerStyle = styled.div`
         margin-top: 50px;
     }
 
-    padding-bottom: 10vw;
+    margin-bottom: 10vw;
     padding-inline: 120px;
     display: flex;
     flex-direction: column;

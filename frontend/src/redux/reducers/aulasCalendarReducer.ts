@@ -7,7 +7,7 @@ const initialState = {
       { hour: '18:00', aulas: ['Funcional', 'Funcional', 'Funcional', 'Funcional', 'Funcional'] },
     ],
 };
-  
+
 const aulasCalendarReducer = (state = initialState, action: aulasCalendarActionType) => {
     switch (action.type) {
         case "UPDATE_AULA":
