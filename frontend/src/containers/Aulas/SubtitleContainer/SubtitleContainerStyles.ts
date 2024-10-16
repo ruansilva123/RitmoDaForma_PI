@@ -15,18 +15,17 @@ export const ImageWaveWhite = styled.img`
     min-height: 200px;
 `
 
-export const BackgroundSubTitleContainer = styled.div`
+export const TextContainer = styled.div`
     padding-top: 10%; 
     padding-inline: 120px; 
     margin-top: clamp(50px, 36vh, 36vh);
+    display: flex;
+    justify-content: center;
 
     @media ${breakpoints.lt} {
         padding-top: 20px; 
         margin-top: 200px;
     }
-
-    display: flex;
-    justify-content: center;
 
     &>div{
         width: 100%;

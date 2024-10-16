@@ -7,11 +7,11 @@ const SubtitleContainer = () => {
   return (
     <S.SubtitleContainerStyle>
         <S.ImageWaveWhite src={WaveWhite}/>
-        <S.BackgroundSubTitleContainer>
+        <S.TextContainer>
           <div>
             <SubTitle subTitle="Participe das Nossas" mainTitle="Aulas"/>
           </div>
-        </S.BackgroundSubTitleContainer>
+        </S.TextContainer>
     </S.SubtitleContainerStyle>
   );
 };

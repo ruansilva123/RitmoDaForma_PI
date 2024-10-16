@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import { colors } from "../../styles/Theme";
-import breakpoints from "../../styles/Breakpoints";
+import { colors } from "../../../styles/Theme";
+import breakpoints from "../../../styles/Breakpoints";
 
 export const AulasBackground = styled.main`  
     background-image: ${colors.gradientDarkGray};
-    min-height: 768px;
 `;
 
 export const ContentAulasContainer = styled.div`
@@ -30,7 +29,7 @@ export const MotivationalPhrase = styled.p`
 
 `
 
-export const WaveWhiteContainer = styled.div`
+export const WaveBlackContainer = styled.div`
     position: relative;
     display: flex;
     justify-content: end;

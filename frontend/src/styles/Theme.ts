@@ -9,6 +9,7 @@ export const colors = {
   opacityDarkGray_60: 'rgba(54,54,57,.6)',
   opacityDarkGray_20: 'rgba(59,57,54,.2)',
   lightGray: '#D9D9D9',
+  lightGrayGradient_60: 'rgba(217,217,217,.6)',
   lightGrayGradient_20: 'rgba(217,217,217,.2)',
   lightGrayGradient_40: 'rgba(217,217,217,.40)',
   opacityWhite: 'rgba(255,255,255,.2)',
