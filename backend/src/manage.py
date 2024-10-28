@@ -9,7 +9,6 @@ def runserver():
     import uvicorn
     uvicorn.run("app.main:app", log_level="info", reload=True)
     # Remove reload true when back-end is deployed
-    # Add IP and port
 
 
 @app.command()
