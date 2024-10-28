@@ -48,8 +48,60 @@ const App = () => {
             image: "/assets/images/woman-halter.png",
             video: "",
         },
-        
-
+        {
+            title: "Bicicleta Ergonômica",
+            desc: "AAAAAA",
+            image: "/assets/images/woman-halter.png",
+            video: "",
+        },
+        {
+            title: "Bicicleta Ergonômica",
+            desc: "AAAAAA",
+            image: "/assets/images/woman-halter.png",
+            video: "",
+        },
+        {
+            title: "Bicicleta Ergonômica",
+            desc: "AAAAAA",
+            image: "/assets/images/woman-halter.png",
+            video: "",
+        },
+        {
+            title: "Bicicleta Ergonômica",
+            desc: "AAAAAA",
+            image: "/assets/images/woman-halter.png",
+            video: "",
+        },
+        {
+            title: "Bicicleta Ergonômica",
+            desc: "AAAAAA",
+            image: "/assets/images/woman-halter.png",
+            video: "",
+        },
+        {
+            title: "Bicicleta Ergonômica",
+            desc: "AAAAAA",
+            image: "/assets/images/woman-halter.png",
+            video: "",
+        },
+        {
+            title: "Bicicleta Ergonômica",
+            desc: "AAAAAA",
+            image: "/assets/images/woman-halter.png",
+            video: "",
+        },
+        {
+            title: "Bicicleta Ergonômica",
+            desc: "AAAAAA",
+            image: "/assets/images/woman-halter.png",
+            video: "",
+        },
+        {
+            title: "Bicicleta Ergonômica",
+            desc: "AAAAAA",
+            image: "/assets/images/woman-halter.png",
+            video: "",
+        },
     ]);
 
     return (
@@ -76,16 +128,13 @@ const Card = (props: CardProps) => {
     }
 
     return (
-        <>
-            <S.ContainerCard onClick={() => handleCloseModal({title, desc, video})}>
-                <S.ImageCard src={image} alt={title} />
-                <S.ContentCard>
-                    <S.TitleCard>{title}</S.TitleCard>
-                    <S.DescriptionCard>{desc}</S.DescriptionCard>
-                </S.ContentCard>
-            </S.ContainerCard>
-        </>
-
+        <S.ContainerCard onClick={() => handleCloseModal({title, desc, video})}>
+            <S.ImageCard src={image} alt={title} />
+            <S.ContentCard>
+                <S.TitleCard>{title}</S.TitleCard>
+                <S.DescriptionCard>{desc}</S.DescriptionCard>
+            </S.ContentCard>
+        </S.ContainerCard>
     );
 };
 

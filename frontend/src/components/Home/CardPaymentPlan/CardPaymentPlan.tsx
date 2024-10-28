@@ -5,12 +5,11 @@ interface CardPaymentPlan {
   firstCard?: boolean,
   titlePlan: string,
   unitPrice: string,
-  totalPrice?: string,
   parcelValue?: string,
   handleChangeFirstCard: (isHover: boolean) => void;
 }
 
-const CardPaymentPlan:React.FC<CardPaymentPlan>  = ({handleChangeFirstCard, titlePlan, unitPrice, totalPrice, parcelValue, firstCard}) => {
+const CardPaymentPlan:React.FC<CardPaymentPlan>  = ({handleChangeFirstCard, titlePlan, unitPrice, parcelValue, firstCard}) => {
   const currency = unitPrice.slice(0, 2);
   const price = unitPrice.slice(2, -2)
   const decimalValue = unitPrice.slice(-2);
@@ -23,7 +22,6 @@ const CardPaymentPlan:React.FC<CardPaymentPlan>  = ({handleChangeFirstCard, titl
         {price}
         <span>{decimalValue}</span>
       </S.UnitPriceStyle>
-      <S.TotalPriceStyle>{totalPrice}</S.TotalPriceStyle>
     </S.CardPaymentPlanStyle>
   );
 };

@@ -4,9 +4,11 @@ import breakpoints from "../../../styles/Breakpoints";
 
 export const NavbarContainer = styled.nav`
     display: flex;
+    position: relative;
     width: 100%;
     height: 10vh;
     padding-inline: 20px;
+    z-index: 100;
 
     @media ${breakpoints.xs} {
         padding-inline: 5px;
