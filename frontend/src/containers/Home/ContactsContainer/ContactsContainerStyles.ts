@@ -14,10 +14,11 @@ export const ContentContacts = styled.div`
     padding-inline: 120px;
     padding-top: clamp(150px, 16vw, 15vw);
     padding-bottom: clamp(50px, 7vw, 7vw);
+    
     width: 100%;
     max-width: 1500px;
     display: flex;
-    gap: 14vw;
+    gap: 250px;
     align-items: center;
 
     @media (max-width: 1200px) {

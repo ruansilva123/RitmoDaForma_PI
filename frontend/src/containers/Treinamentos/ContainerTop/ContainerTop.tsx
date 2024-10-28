@@ -10,7 +10,9 @@ const ContainerTop = () => {
         <S.ContainerTop>
             <S.ImageWaveWhite src={WaveWhite2} alt="" />
             <S.BackgroundContainerTop>
-                <SubTitle subTitle="Aprenda com nossos" mainTitle="treinamentos"/>
+                <S.ContainerSubtitle>
+                    <SubTitle subTitle="Aprenda com nossos" mainTitle="treinamentos"/>
+                </S.ContainerSubtitle>
                 <S.ContainerSearch>
                     <InputSearch />
                 </S.ContainerSearch>
