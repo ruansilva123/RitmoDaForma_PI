@@ -8,7 +8,7 @@ export const NavbarContainer = styled.nav`
     width: 100%;
     height: 10vh;
     padding-inline: 20px;
-    z-index: 100;
+    z-index: 98;
 
     @media ${breakpoints.xs} {
         padding-inline: 5px;
