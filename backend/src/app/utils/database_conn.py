@@ -2,7 +2,7 @@ from app.core.database import DatabaseSession
 from sqlalchemy.orm import Session
 
 
-def generator_connect_db():
+def get_connect_db():
     db = DatabaseSession()
     try:
         yield db
