@@ -23,50 +23,38 @@ export const ModalContainer = styled.div`
     background-color: white;
     border-radius: 1vh;
     box-shadow: 1px 1px 5px 5px ${colors.lightGrayGradient_40};
-    width: 100vh;
-    height: 80vh;
+    width: 95%;
+    height: 100vw;
+    min-width: 280px;
+    min-height: 350px;
+    max-width: 900px;
+    max-height: 700px;
+    position: relative;
 
     @media ${breakpoints.sm}{
-        width: 40vh;
-        height: 40vh;
+        height: 400px;
     }
-
 `
 
 export const Video = styled.div`
     background-color: black;
     border-radius: 1vh;
-    width: 85vh;
-    height: 40vh;
-    margin: 6vh;
-
-    @media ${breakpoints.sm}{
-        width: 35vh;
-        height: 15vh;
-        margin: 2vh;
-    }
+    width: 85%;
+    height: 45%;
+    margin: 5%;
 `
 
 export const ContentModal = styled.div`
     display: flex;
-    width: 85vh;
+    width: 85%;
     flex-direction: column;
     align-items: right;
-
-    @media ${breakpoints.sm}{
-        width: 35vh;
-    }
 `
 
 export const RedLine = styled.div`
-    width: 85vh;
+    width: 100%;
     height: 1px;
     background-color: ${colors.baseRed};
-
-    @media ${breakpoints.sm}{
-        width: 35vh;
-    }
-    
 `
 
 export const TitleModal = styled.div`
@@ -94,28 +82,39 @@ export const DescriptionModal = styled.div`
 
 export const CloseIcon = styled.div`
     position: absolute;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     background-image: url('assets/svg/CloseIcon.svg');
     background-repeat: no-repeat;
-    margin-left: 95vh;
-    margin-top: 1.5vh;
+    margin-left: 93%;
+    margin-top: 2%;
     cursor: pointer;
+    background-size: cover;
 
     &:hover{
         background-image: url('assets/svg/CloseIconHover.svg')
     }
 
+    @media ${breakpoints.bs}{
+        width: 20px;
+        height: 20px;
+    }
+
     @media ${breakpoints.sm}{
-        width: 10px;
-        height: 10px;
-        margin-left: 37vh;
-        margin-top: 1vh;
+        width: 15px;
+        height: 15px;
         background-image: url('assets/svg/CloseIconMobile.svg');
 
         &:hover{ 
             background-image: url('assets/svg/CloseIconMobileHover.svg')
         }
+    }
+
+    @media ${breakpoints.xs}{
+        width: 12px;
+        height: 12px;
+        margin-left: 92%;
+        margin-top: 3%;
     }
     
 `
