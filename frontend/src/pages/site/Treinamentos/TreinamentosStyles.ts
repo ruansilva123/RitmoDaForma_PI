@@ -22,3 +22,7 @@ export const ImageWaveBlack = styled.img`
   width: 70%;
   max-width: 1200px;
 `
+
+export const TreinamentoWhiteBackground = styled.div`
+  background-color: white;
+`

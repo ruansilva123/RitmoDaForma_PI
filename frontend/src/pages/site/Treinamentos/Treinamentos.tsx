@@ -6,6 +6,7 @@ import { ModalProvider } from '../../../contexts/ModalProvider';
 import MouseFollower from '../../../components/global/MouseFollower/MouseFollower';
 import WaveBlack from '../../../../public/assets/svg/WaveBlack.svg';
 
+
 const Treinamentos = () => {
     return (
         <S.SectionBackground>
@@ -13,11 +14,13 @@ const Treinamentos = () => {
             <ModalProvider>
                 <S.TreinamentoBackground>
                     <Navbar></Navbar>
-                    <ContainerTop></ContainerTop>
-                    <ContainerCards></ContainerCards>
-                    <S.WaveBlackContainer>
-                        <S.ImageWaveBlack src={WaveBlack}/>
-                    </S.WaveBlackContainer>
+                    <S.TreinamentoWhiteBackground>
+                        <ContainerTop></ContainerTop>
+                        <ContainerCards></ContainerCards>    
+                        <S.WaveBlackContainer>
+                            <S.ImageWaveBlack src={WaveBlack}/>
+                        </S.WaveBlackContainer>
+                    </S.TreinamentoWhiteBackground>
                 </S.TreinamentoBackground>
             </ModalProvider>
         </S.SectionBackground>

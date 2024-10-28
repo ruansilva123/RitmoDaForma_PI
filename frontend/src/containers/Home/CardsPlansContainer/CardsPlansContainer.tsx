@@ -20,15 +20,15 @@ const CardsPlansContainer = () => {
     <S.CardsPlansContainerStyle>
       <div>
         <S.CardsLine>
-          <CardPaymentPlan handleChangeFirstCard={handleChangeFirstCard} firstCard={firstCardIsValid} titlePlan="Mensal" unitPrice="r$100,00" totalPrice="" />
-          <CardPaymentPlan handleChangeFirstCard={handleChangeFirstCard} titlePlan="Família" unitPrice="r$90,00" totalPrice="" />
-          <CardPaymentPlan handleChangeFirstCard={handleChangeFirstCard} titlePlan="Promocional" unitPrice="r$80,00" totalPrice="" />
-          <CardPaymentPlan handleChangeFirstCard={handleChangeFirstCard} titlePlan="10 Meses" unitPrice="r$70,00" totalPrice="Total: 700,00R$" parcelValue="10x de"/>
+          <CardPaymentPlan handleChangeFirstCard={handleChangeFirstCard} firstCard={firstCardIsValid} titlePlan="Mensal" unitPrice="r$100,00"/>
+          <CardPaymentPlan handleChangeFirstCard={handleChangeFirstCard} titlePlan="Família" unitPrice="r$90,00"/>
+          <CardPaymentPlan handleChangeFirstCard={handleChangeFirstCard} titlePlan="Promocional" unitPrice="r$80,00"/>
+          <CardPaymentPlan handleChangeFirstCard={handleChangeFirstCard} titlePlan="10 Meses" unitPrice="r$70,00" parcelValue="10x de"/>
         </S.CardsLine>
         <S.CardsLine>
-          <CardPaymentPlan handleChangeFirstCard={handleChangeFirstCard} titlePlan="Trimestral" unitPrice="r$85,00" totalPrice="Total: 255,00R$" parcelValue="3x de"/>
-          <CardPaymentPlan handleChangeFirstCard={handleChangeFirstCard} titlePlan="Semestral" unitPrice="r$80,00" totalPrice="Total: 480,00R$" parcelValue="6x de"/>
-          <CardPaymentPlan handleChangeFirstCard={handleChangeFirstCard} titlePlan="Anual" unitPrice="r$70,00" totalPrice="Total: 840,00R$" parcelValue="12x de"/>
+          <CardPaymentPlan handleChangeFirstCard={handleChangeFirstCard} titlePlan="Trimestral" unitPrice="r$85,00" parcelValue="3x de"/>
+          <CardPaymentPlan handleChangeFirstCard={handleChangeFirstCard} titlePlan="Semestral" unitPrice="r$80,00" parcelValue="6x de"/>
+          <CardPaymentPlan handleChangeFirstCard={handleChangeFirstCard} titlePlan="Anual" unitPrice="r$70,00" parcelValue="12x de"/>
         </S.CardsLine>
       </div>
       <S.ExtraTaxContainer>

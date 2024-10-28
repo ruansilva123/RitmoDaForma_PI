@@ -11,7 +11,7 @@ const Aulas = () => {
         <Navbar></Navbar>
         <S.MotivationalPhrase>"Cada treino é um passo mais perto do seu objetivo."</S.MotivationalPhrase>
         <S.ContentAulasContainer>
-            <SubtitleContainer/>
+            <SubtitleContainer/>  
             <TableAulasContainer/>
             <S.WaveBlackContainer>
                 <S.ImageWaveBlack src={WaveBlack}/>
