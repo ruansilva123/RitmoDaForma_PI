@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { colors } from "../../../styles/Theme";
 import breakpoints from "../../../styles/Breakpoints";
 
 export const ContainerTop = styled.div`
@@ -12,27 +11,42 @@ export const ImageWaveWhite = styled.img`
     bottom: 99%;
     right: 0vh;
     height: 40vh;
+`
 
-    @media ${breakpoints.sm}{
-        bottom: vh;
+export const ContainerSubtitle = styled.div`
+    width: 100%;
+    max-width: 1500px;
+    @media ${breakpoints.xs} {
+        text-align: center;    
     }
 `
 
 export const BackgroundContainerTop = styled.div`
     background-color: white;
     width: 100%;
-    padding: 18vh 18vh 0vh 18vh;
+    padding-inline: 120px;
+    padding-top: 10vw;
 
-    @media ${breakpoints.sm}{
-        padding: 4vh;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     @media ${breakpoints.md}{
         bottom: 0vh;
+        padding-inline: 80px;
     }
-    
+
+    @media ${breakpoints.sm}{
+        padding: 4vh;
+        padding-inline: 55px;
+    }
+
     @media ${breakpoints.bg}{
         bottom: 0vh;
+    }
+
+    @media ${breakpoints.xs} {
+        padding-inline: 15px;
     }
 `
 
@@ -42,14 +56,13 @@ export const ContainerSearch = styled.div`
     justify-content: center;
     width: 100%;
     background-color: white;
-    padding: 10vh;
+    padding-block: 100px;
     
     @media ${breakpoints.md}{
-        bottom: 0vh;
+        padding-block: 50px;
     }
     
     @media ${breakpoints.sm}{
-        margin-top: 4vh;
-        padding: 0vh;
+        padding: 0px;
     }
 `

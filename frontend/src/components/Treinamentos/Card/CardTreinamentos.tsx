@@ -48,6 +48,7 @@ const App = () => {
             image: "/assets/images/woman-halter.png",
             video: "",
         },
+        
 
     ]);
 

@@ -3,34 +3,39 @@ import { colors } from "../../../styles/Theme";
 import breakpoints from "../../../styles/Breakpoints";
 
 export const InputSearchStyle = styled.input`
-    width: 80vh;
-    height: 5vh;
+    padding: 18px;
+    width: 700px;
+    margin-block: 30px;
+    border-radius: 10px;
     border: solid 1px ${colors.lightGray};
-    border-radius: 1vh;
     outline: none;
-    padding: 14px;  
     color: ${colors.darkGray};
+
     background-image: url('assets/svg/SearchIcon.svg');
     background-repeat: no-repeat;
-    background-position: 75vh;
+    background-position: 95%;
+    background-size: 20px;
+   
     font-size: 18px;
 
-    
-    
     &:focus{
        background-color: ${colors.lightGrayGradient_20};
     }
 
-    @media ${breakpoints.md}{
-        background-position: 40vh;
+    @media ${breakpoints.bg}{
+        width: 100%;
     }
 
-    @media ${breakpoints.lt}{
-        background-position: 22vh;
+    @media ${breakpoints.md}{
+        width: 100%;
+        font-size: 16px;
+    }
+
+    @media ${breakpoints.bs}{
+        font-size: 14px;
     }
 
     @media ${breakpoints.sm}{
-        font-size: 15px;
-        background-position: 37vh;
+        font-size: 14px;
     }
 `

@@ -7,31 +7,35 @@ import breakpoints from "../../../styles/Breakpoints";
 export const ContainerCard = styled.div`
     display: flex;
     border: 1px solid ${colors.lightGray}; 
-    border-radius: 1vh;
+    border-radius: 10px;
     height: 35vh;
+    max-height: 400px;
     flex-direction: column;
     align-items: center;
     cursor: pointer;
 
-    &:hover{
-        border: 2px solid ${colors.lightRed}; 
+    @media ${breakpoints.bg}{
+        height: 28vw;
     }
 
-    @media ${breakpoints.bg}{
-        margin: 0;
-    }
-    
     @media ${breakpoints.md}{
-        margin: 4vh;
+        height: 300px;
+    }
+
+    @media ${breakpoints.sm}{
+        width: 100%;
+    }
+
+    &:hover{
+        border: 2px solid ${colors.lightRed}; 
     }
 `
 
 export const ImageCard = styled.img`
     background-color: black;
-    border-radius: 1vh;
-    margin: 2vh;
-    height: 15vh;
-
+    border-radius: 10px;
+    margin-block: 20px;
+    height: 40%;
     width: 85%;
 `
 export const ContentCard = styled.div`
