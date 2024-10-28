@@ -22,7 +22,6 @@ export const ContainerSubtitle = styled.div`
 `
 
 export const BackgroundContainerTop = styled.div`
-    background-color: white;
     width: 100%;
     padding-inline: 120px;
     padding-top: 10vw;

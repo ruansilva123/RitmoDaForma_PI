@@ -8,7 +8,7 @@ export const ContainerCard = styled.div`
     display: flex;
     border: 1px solid ${colors.lightGray}; 
     border-radius: 10px;
-    height: 35vh;
+    height: 34vw;
     max-height: 400px;
     flex-direction: column;
     align-items: center;
@@ -24,6 +24,7 @@ export const ContainerCard = styled.div`
 
     @media ${breakpoints.sm}{
         width: 100%;
+        height: 350px;
     }
 
     &:hover{
@@ -37,12 +38,12 @@ export const ImageCard = styled.img`
     margin-block: 20px;
     height: 40%;
     width: 85%;
+    object-fit: cover;
 `
 export const ContentCard = styled.div`
     display: flex;
     flex-direction: column;
     align-items: right;
-
     width: 85%;
 `
 export const TitleCard = styled.div`

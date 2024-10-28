@@ -22,10 +22,10 @@ export const TextContainer = styled.div`
     display: flex;
     justify-content: center;
 
-    @media ${breakpoints.lt} {
+    /* @media ${breakpoints.lt} {
         padding-top: 20px; 
         margin-top: 200px;
-    }
+    } */
 
     &>div{
         width: 100%;
