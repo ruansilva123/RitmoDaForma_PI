@@ -5,7 +5,7 @@ app = typer.Typer()
 
 
 @app.command()
-def runserver(host : str = "0.0.0.0", port : str = 8000):
+def runserver(host : str = "0.0.0.0", port : int = 8000):
     import uvicorn
     print(port)
     print(host)
