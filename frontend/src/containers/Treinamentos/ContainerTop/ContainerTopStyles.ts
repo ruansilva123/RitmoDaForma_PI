@@ -9,8 +9,9 @@ export const ContainerTop = styled.div`
 export const ImageWaveWhite = styled.img`
     position: absolute;
     bottom: 99%;
-    right: 0vh;
+    right: 0;
     height: 40vh;
+    min-height: 200px;
 `
 
 export const ContainerSubtitle = styled.div`
@@ -24,7 +25,7 @@ export const ContainerSubtitle = styled.div`
 export const BackgroundContainerTop = styled.div`
     width: 100%;
     padding-inline: 120px;
-    padding-top: 10vw;
+    padding-top: 10%; 
 
     display: flex;
     flex-direction: column;
