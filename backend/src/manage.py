@@ -8,9 +8,10 @@ app = typer.Typer()
 def runserver(host : str = "0.0.0.0"):
     import uvicorn
     import os
-    
+
     port = os.getenv("PORT", 8000)
-    uvicorn.run("app.main:app", log_level="info", host=host, port=port, reload=True)
+
+    uvicorn.run("app.main:app", log_level="info", host=host, port=int(port), reload=True)
     # Remove reload true when back-end is deployed
 
 
