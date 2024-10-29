@@ -2,6 +2,7 @@ build:
   docker:
     web: Dockerfile.backend
     ports:
-      - "${PORT}:8000"
+      "8000": 
+        - "0.0.0.0"
     environment:
-      - PORT=8000
+      PORT: "8000"
