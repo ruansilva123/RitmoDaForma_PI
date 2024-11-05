@@ -2,12 +2,12 @@ FROM node:20.14.0-alpine
 
 WORKDIR /app
 
-COPY ./frontend/package*.json ./ 
+COPY ./package*.json ./ 
 
 RUN npm install
 
 EXPOSE $PORT
 
-COPY ./frontend/ ./
+COPY ./ ./
 
 CMD [ "npm", "run", "start" ]
