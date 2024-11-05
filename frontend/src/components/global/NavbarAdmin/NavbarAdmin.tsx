@@ -29,51 +29,51 @@ const NavbarAdmin = () => {
                 {
                 currentRoute == "/editar_planos" ?
                     <S.NavSelected>
-                    <Link to="/editar_planos">Planos</Link>
+                    <Link to="/admin/editar_planos">Planos</Link>
                     </S.NavSelected>
                 : 
                     <li>
-                    <Link to="/editar_planos">Planos</Link>
+                    <Link to="/admin/editar_planos">Planos</Link>
                     </li>
                 } 
                 {
-                    currentRoute == "/editar_aulas" ?
+                    currentRoute == "/admin/editar_aulas" ?
                     <S.NavSelected>
-                        <Link to="/editar_aulas">Aulas</Link>
+                        <Link to="/admin/editar_aulas">Aulas</Link>
                     </S.NavSelected>
                     : 
                     <li>
-                        <Link to="/editar_aulas" >Aulas</Link>
+                        <Link to="/admin/editar_aulas" >Aulas</Link>
                     </li>
                 }
                 {
-                    currentRoute == "/editar_tutoriais" ?
+                    currentRoute == "/admin/editar_tutoriais" ?
                     <S.NavSelected>
-                        <Link to="/editar_tutoriais">Tutoriais</Link>
+                        <Link to="/admin/editar_tutoriais">Tutoriais</Link>
                     </S.NavSelected>
                     : 
                     <li>
-                        <Link to="/editar_tutoriais" >Tutoriais</Link>
+                        <Link to="/admin/editar_tutoriais" >Tutoriais</Link>
                     </li>
                 }
                 {
-                    currentRoute == "/editar_contatos" ?
+                    currentRoute == "/admin/editar_contatos" ?
                     <S.NavSelected>
-                        <Link to="/editar_contatos">Contatos</Link>
+                        <Link to="/admin/editar_contatos">Contatos</Link>
                     </S.NavSelected>
                     : 
                     <li>
-                        <Link to="/editar_contatos">Contatos</Link>
+                        <Link to="/admin/editar_contatos">Contatos</Link>
                     </li>
                 }
                 {
-                    currentRoute == "/sair" ?
+                    currentRoute == "/admin/sair" ?
                     <S.NavSelected>
-                        <Link to="/sair">Sair</Link>
+                        <Link to="/admin/sair">Sair</Link>
                     </S.NavSelected>
                     : 
                     <li>
-                        <Link to="/sair">Sair</Link>
+                        <Link to="/admin/sair">Sair</Link>
                     </li>
                 }
                     

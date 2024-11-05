@@ -1,0 +1,13 @@
+FROM node:20.14.0-alpine
+
+WORKDIR /app
+
+COPY ./frontend/package*.json ./ 
+
+RUN npm install
+
+EXPOSE $PORT
+
+COPY ./frontend/ ./
+
+CMD [ "npm", "run", "start" ]

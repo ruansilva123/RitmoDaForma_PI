@@ -11,7 +11,7 @@ export const InputSearchStyle = styled.input`
     outline: none;
     color: ${colors.darkGray};
 
-    background-image: url('assets/svg/SearchIcon.svg');
+    background-image: url('../../../../public/assets/svg/SearchIcon.svg');
     background-repeat: no-repeat;
     background-position: 97%;
     background-size: 20px;
@@ -27,7 +27,6 @@ export const InputSearchStyle = styled.input`
     }
 
     @media ${breakpoints.md}{
-        width: 100%;
         font-size: 16px;
         background-size: 18px;
     }
