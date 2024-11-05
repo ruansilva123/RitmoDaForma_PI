@@ -1,11 +1,12 @@
 import React from 'react';
 import * as S from "./SubtitleAdminPortalContainerStyles";
-import WaveWhite from "../../../../public/assets/svg/WaveWhite.svg";
+
+import WaveWhite from '../../../components/global/WaveWhite/WaveWhite';
 
 const SubtitleAdminPortalContainer = () => {
   return (
     <S.SubtitleAdminPortalContainerStyle>
-        <S.ImageWaveWhite src={WaveWhite}/>
+        <WaveWhite/>
         <S.TextAdminPortalContainer>
             <S.SubtitleAdminPortal>O que você precisa Modificar?</S.SubtitleAdminPortal>
         </S.TextAdminPortalContainer>

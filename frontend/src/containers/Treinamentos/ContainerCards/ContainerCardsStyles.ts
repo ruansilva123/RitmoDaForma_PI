@@ -34,14 +34,15 @@ export const ContainerCards = styled.div`
 
     @media ${breakpoints.bg}{
         grid-template-columns: 32% 32% 32%;
-        gap: 30px;
+        gap: 15px;
     }
-     
+    
     @media ${breakpoints.md}{
         grid-template-columns: 46% 46%;
     }
 
     @media ${breakpoints.bs}{
+        gap: 20px;
         grid-template-columns: 49% 49%;
     }
 

@@ -17,7 +17,7 @@ const MenuAdminPortalContainer = () => {
             <Link to="/editar_contatos"><CardMenuAdminItem title="Contatos" icon={shareIcon}/></Link>
             
         </S.MenuAdminItens>
-        <InfoCard message="Selecione o campo que você deseja alterar no site!"/>
+        <InfoCard black message="Selecione o campo que você deseja alterar no site!"/>
     </S.MenuAdminPortalContainerStyle>
   );
 };
