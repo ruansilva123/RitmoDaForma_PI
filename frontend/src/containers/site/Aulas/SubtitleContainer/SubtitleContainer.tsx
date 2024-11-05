@@ -1,7 +1,7 @@
 import React from 'react';
 import * as S from "./SubtitleContainerStyles";
-import SubTitle from '../../../../components/global/SubTitle/SubTitle';
-import WaveWhite from "../../../../public/assets/svg/WaveWhite.svg";
+import SubTitle from '@/components/global/SubTitle/SubTitle';
+import WaveWhite from "/assets/svg/WaveWhite.svg";
 
 const SubtitleContainer = () => {
   return (

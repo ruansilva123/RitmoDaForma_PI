@@ -1,8 +1,8 @@
 import React from 'react';
 import * as S from './AulasCalendarContainerStyles';
 import calendar from "/assets/icons/calendar.png";
-import InfoCard from '../../../../components/global/InfoCard/InfoCard';
-import AulasCalendar from '../../../components/Aulas/AulasCalendar/AulasCalendar';
+import InfoCard from '@/components/global/InfoCard/InfoCard';
+import AulasCalendar from '@/components/site/Aulas/AulasCalendar/AulasCalendar';
 
 const AulasCalendarContainer = () => {
   return (

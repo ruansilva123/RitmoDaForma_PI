@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import breakpoints from "../../../styles/Breakpoints";
-import { colors } from "../../../styles/Theme";
+import breakpoints from "@/styles/Breakpoints";
+import { colors } from "@/styles/Theme";
 
 export const HeaderAulasCalendar = styled.div`
     margin: 0 auto;
