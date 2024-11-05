@@ -3,25 +3,25 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyles = createGlobalStyle`
   @font-face {
     font-family: 'Tahoma';
-    src: url('../../public/assets/fonts/tahoma/Tahoma_Regular.ttf') format('truetype');
+    src: url('/assets/fonts/tahoma/Tahoma_Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
   }
   @font-face {
     font-family: 'Tahoma Bold';
-    src: url('../../public/assets/fonts/tahoma/Tahomabd.ttf') format('truetype');
+    src: url('/assets/fonts/tahoma/Tahomabd.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
   }
   @font-face {
     font-family: 'Quicksilver';
-    src: url('../../public/assets/fonts/quicksilver/Quicksilver.ttf') format('truetype');
+    src: url('/assets/fonts/quicksilver/Quicksilver.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
   }
   @font-face {
     font-family: 'RacingSansOne';
-    src: url('../../public/assets/fonts/racingSansOne/RacingSansOne-Regular.ttf') format('truetype');
+    src: url('/assets/fonts/racingSansOne/RacingSansOne-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
   }

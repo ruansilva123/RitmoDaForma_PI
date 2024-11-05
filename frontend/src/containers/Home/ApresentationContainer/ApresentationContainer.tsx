@@ -1,7 +1,7 @@
 import * as S from "./ApresentationContainerStyles";
-import AthleticWoman from "../../../../public/assets/images/athletic-woman.png";
-import AthleticMan from "../../../../public/assets/images/athletic-man.png";
-import WaveWhite from "../../../../public/assets/svg/WaveWhite.svg";
+import AthleticWoman from "/assets/images/athletic-woman.png";
+import AthleticMan from "/assets/images/athletic-man.png";
+import WaveWhite from "/assets/svg/WaveWhite.svg";
 import ImagePersonTraining from "../../../components/Home/ImagePersonTraining/ImagePersonTraining";
 import TitleRitmoDaForma from "../../../components/Home/TitleRitmoDaForma/TitleRitmoDaForma";
 import React, { forwardRef } from "react";

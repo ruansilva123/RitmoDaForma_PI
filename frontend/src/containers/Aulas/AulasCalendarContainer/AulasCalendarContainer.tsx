@@ -1,6 +1,6 @@
 import React from 'react';
 import * as S from './AulasCalendarContainerStyles';
-import calendar from "../../../../public/assets/icons/calendar.png";
+import calendar from "/assets/icons/calendar.png";
 import InfoCard from '../../../components/global/InfoCard/InfoCard';
 import AulasCalendar from '../../../components/Aulas/AulasCalendar/AulasCalendar';
 

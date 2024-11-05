@@ -3,7 +3,7 @@ import Navbar from '../../../components/global/Navbar/Navbar';
 import SubtitleContainer from '../../../containers/Aulas/SubtitleContainer/SubtitleContainer';
 import TableAulasContainer from '../../../containers/Aulas/TableAulasContainer/TableAulasContainer';
 import MouseFollower from '../../../components/global/MouseFollower/MouseFollower';
-import WaveBlack from "../../../../public/assets/svg/WaveBlack.svg"
+import WaveBlack from "/assets/svg/WaveBlack.svg"
 
 const Aulas = () => {
   return (

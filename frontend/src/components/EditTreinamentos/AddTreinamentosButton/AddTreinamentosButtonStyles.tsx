@@ -11,6 +11,7 @@ export const AddTreinamentosButtonStyle = styled.input`
     padding: 18px;
     margin-block: 30px;
     font-size: 18px;
+    transition: all .2s ease-in-out;
 
     &:hover{
         color: white;

@@ -1,5 +1,5 @@
 import * as S from "./NavbarStyles";
-import logo from "../../../../public/assets/icons/logo.png";
+import logo from "/assets/icons/logo.png";
 import { useLocation } from "react-router-dom";
 import React from "react";
 import { LocationInterface } from "../../../types/types";
