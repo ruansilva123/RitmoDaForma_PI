@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import * as S from "./PricesTableContainerStyles";
-import money from "../../../../public/assets/icons/money.png";
+import money from "/assets/icons/money.png";
 import PriceTable from '../../../components/Aulas/PriceTable/PriceTable';
 import LittleBalls from '../../../components/global/LittleBalls/LittleBalls';
 

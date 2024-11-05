@@ -1,7 +1,7 @@
 import React from 'react';
 import * as S from './ContainerTopStyles';
 import SubTitle from '../../../components/global/SubTitle/SubTitle';
-import WaveWhite2 from "../../../../public/assets/svg/WaveWhite.svg";
+import WaveWhite2 from "/assets/svg/WaveWhite.svg";
 import InputSearch from '../../../components/Treinamentos/Search/Search';
 
 

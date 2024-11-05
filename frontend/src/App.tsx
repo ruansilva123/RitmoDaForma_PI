@@ -5,21 +5,24 @@ import Treinamentos from './pages/site/Treinamentos/Treinamentos';
 import Aulas from './pages/site/Aulas/Aulas';
 import AdminPortal from './pages/admin/AdminPortal/AdminPortal';
 import EditTreinamentos from './pages/admin/EditTreinamentos/EditTreinamentos';
+import { ModalProvider } from './contexts/ModalProvider';
 
 function App() {
   return (
     <>
       <GlobalStyles />
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/aulas" element={<Aulas/>}/>
-          <Route path="/treinamentos" element={<Treinamentos/>}/>
-          <Route path="/admin" element={<AdminPortal/>}/>
-          <Route path="/admin/editar_tutoriais" element={<EditTreinamentos/>}/>
-          <Route path="/admin/login" element={<Home/>}/>
-        </Routes>
-      </Router>
+      <ModalProvider>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/aulas" element={<Aulas/>}/>
+            <Route path="/treinamentos" element={<Treinamentos/>}/>
+            <Route path="/admin" element={<AdminPortal/>}/>
+            <Route path="/admin/editar_tutoriais" element={<EditTreinamentos/>}/>
+            <Route path="/admin/login" element={<Home/>}/>
+          </Routes>
+        </Router>
+      </ModalProvider>
     </>
   );
 }

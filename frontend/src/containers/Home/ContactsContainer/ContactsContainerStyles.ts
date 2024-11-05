@@ -7,7 +7,6 @@ export const ContactsContainerStyle = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
-    
 `
 
 export const ContentContacts = styled.div`

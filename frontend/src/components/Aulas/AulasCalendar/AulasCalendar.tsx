@@ -40,38 +40,6 @@ const AulasCalendar = () => {
                             </tr>
                         ))
                     }
-                    {/* <tr>
-                        <th>07:00</th>
-                        <td>Funcional</td>
-                        <td>Funcional</td>
-                        <td>Funcional</td>
-                        <td>Funcional</td>
-                        <td>Funcional</td>
-                    </tr>
-                    <tr>
-                        <th>12:00</th>
-                        <td>Funcional</td>
-                        <td>Funcional</td>
-                        <td>Funcional</td>
-                        <td>Funcional</td>
-                        <td>Funcional</td>
-                    </tr>
-                    <tr>
-                        <th>15:00</th>
-                        <td>Funcional</td>
-                        <td>Funcional</td>
-                        <td>Funcional</td>
-                        <td>Funcional</td>
-                        <td>Funcional</td>
-                    </tr>
-                    <tr>
-                        <th>18:00</th>
-                        <td>Funcional</td>
-                        <td>Funcional</td>
-                        <td>Funcional</td>
-                        <td>Funcional</td>
-                        <td>Funcional</td>
-                    </tr> */}
                 </tbody>
             </S.AulasCalendarTable>
         </>

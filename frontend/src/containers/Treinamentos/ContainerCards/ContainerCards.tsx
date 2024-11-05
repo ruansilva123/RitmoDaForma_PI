@@ -1,21 +1,21 @@
 import React from 'react';
 import * as S from './ContainerCardsStyles';
-import Card from '../../../components/Treinamentos/Card/CardTreinamentos';
-import InfoCard from '../../../components/global/InfoCard/InfoCard';
+import Card from '@/components/Treinamentos/CardTreinamentos/CardTreinamentos';
+import InfoCard from '@/components/global/InfoCard/InfoCard';
 
 interface ContainerCardsProps {
-    EditCards?: boolean,
+    isEditCards?: boolean,
 }
 
-const ContainerCards: React.FC<ContainerCardsProps> = ({ EditCards }) => {
+const ContainerCards: React.FC<ContainerCardsProps> = ({ isEditCards }) => {
     return (
         <S.BackgroundCards>
             <S.ContainerCards>
-                <Card></Card>
+                <Card isEditCards></Card>
             </S.ContainerCards>
             {
-                EditCards ? 
-                    <InfoCard black message="Todo treinamento cadastrado será renderizado na página do usuário!"/>  
+                isEditCards ? 
+                    <InfoCard black message="Toda operação nesta sessão irá refletir na página do usuário!"/>  
                 :
                     <InfoCard message="Todos os equipamentos acima estão disponíveis na academia Ritmo da Forma!"/>  
             }   

@@ -1,7 +1,7 @@
 import React from "react";
 import * as S from "./InfoCardStyles";
-import IconInfo from "../../../../public/assets/svg/Halter.svg";
-import IconInfoHover from "../../../../public/assets/svg/HalterHover.svg";
+import IconInfo from "/assets/svg/Halter.svg";
+import IconInfoHover from "/assets/svg/HalterHover.svg";
 
 
 interface InfoCardProps {

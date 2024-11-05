@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "../../../styles/Theme";
+import { colors } from "@/styles/Theme";
 
 export const AdminPortalBackground = styled.div`
     background-color: ${colors.darkRed};
@@ -20,6 +20,3 @@ export const ImageWaveRed = styled.img`
     width: 70%;
     max-width: 1200px;
 `;
-
-export const InforCardContainer = styled.div`
-`

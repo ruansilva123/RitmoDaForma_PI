@@ -1,7 +1,12 @@
-import {createContext, useContext, useState} from "react";
-import Modal from "../components/Treinamentos/Modal/Modal";
+// Libs
+import React, {createContext, useContext, useState} from "react";
 
+// Components
+import * as S from "./ModalProviderStyles";
+
+// Types
 import { contextReturModal, contentModal } from "../types/types";
+
 
 interface ModalProviderProps {
     children: React.ReactNode
@@ -10,30 +15,36 @@ interface ModalProviderProps {
 const modalContext = createContext<contextReturModal>({
     isOpen: false, 
     content: {video: "", title: "",desc: ""}, 
-    openModal: () => {}, 
+    openModal: (currentModal: React.ReactNode) => {}, 
     closeModal: () => {}
 });
 
 export const ModalProvider: React.FC<ModalProviderProps> = ({children}) => {
     const [isOpen, setIsOpen] = useState(false);
-    const [content, setContent] = useState<contentModal | null>(null);
+    const [currentModal, setCurrentModal] = useState<React.ReactNode>(<></>);
 
-    const openModal = (newContent: contentModal) => {
+    const openModal = (selectedModal: React.ReactNode) => {
         setIsOpen(true);
-        setContent(newContent);
+        setCurrentModal(selectedModal)
     }
 
     const closeModal = () => {
         setIsOpen(false);
-        setContent(null);
     }
 
     return (
-        <modalContext.Provider value={{ isOpen, content, openModal, closeModal }}>
+        <modalContext.Provider value={{ isOpen, openModal, closeModal }}>
             {children}
             {
                 isOpen && 
-                <Modal content={content} closeModal={closeModal} />
+                <S.ContainerPopUp>
+                        <S.BackgroundPopup>
+                            {currentModal}
+                        </S.BackgroundPopup>    
+                    <S.BackgroundBlur onClick={() => closeModal()}>
+                    </S.BackgroundBlur>
+                </S.ContainerPopUp>
+                
             }
         </modalContext.Provider>
     )

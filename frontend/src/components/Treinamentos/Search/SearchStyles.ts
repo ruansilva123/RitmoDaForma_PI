@@ -4,14 +4,15 @@ import breakpoints from "../../../styles/Breakpoints";
 
 export const InputSearchStyle = styled.input`
     padding: 18px;
-    width: 800px;
+    width: 100%;
+    max-width: 800px;
     margin-block: 30px;
     border-radius: 10px;
     border: solid 1px ${colors.lightGray};
     outline: none;
     color: ${colors.darkGray};
 
-    background-image: url('../../../../public/assets/svg/SearchIcon.svg');
+    background-image: url('/assets/svg/SearchIcon.svg');
     background-repeat: no-repeat;
     background-position: 97%;
     background-size: 20px;

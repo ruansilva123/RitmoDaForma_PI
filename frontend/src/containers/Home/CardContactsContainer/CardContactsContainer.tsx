@@ -1,9 +1,9 @@
 import React from "react";
 import * as S from "./CardContactsContainerStyles";
 import CardContact from "../../../components/Home/CardContact/CardContact";
-import instagram from "../../../../public/assets/icons/instagram.png";
-import phone from "../../../../public/assets/icons/phone.png";
-import whats from "../../../../public/assets/icons/whats.png";
+import instagram from "/assets/icons/instagram.png";
+import phone from "/assets/icons/phone.png";
+import whats from "/assets/icons/whats.png";
 
 const CardContactsContainer = () => {
   return (
