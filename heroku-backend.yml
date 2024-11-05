@@ -1,9 +1,0 @@
-# run Back-end
-build:
-  docker:
-    web: Dockerfile.backend
-  
-# run Front-end
-build:
-  docker:
-    web: Dockerfile.frontend
