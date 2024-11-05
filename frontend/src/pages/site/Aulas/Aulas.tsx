@@ -1,7 +1,7 @@
 import * as S from "./AulasStyle"
 import Navbar from '../../../components/global/Navbar/Navbar';
-import SubtitleContainer from '../../../containers/Aulas/SubtitleContainer/SubtitleContainer';
-import TableAulasContainer from '../../../containers/Aulas/TableAulasContainer/TableAulasContainer';
+import SubtitleContainer from '../../../containers/site/Aulas/SubtitleContainer/SubtitleContainer';
+import TableAulasContainer from '../../../containers/site/Aulas/TableAulasContainer/TableAulasContainer';
 import MouseFollower from '../../../components/global/MouseFollower/MouseFollower';
 import WaveBlack from "/assets/svg/WaveBlack.svg"
 

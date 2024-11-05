@@ -1,8 +1,8 @@
 import * as S from "./AdminPortalStyles";
-import SubtitleAdminPortalContainer from '@/containers/AdminPortal/SubtitleAdminPortalContainer/SubtitleAdminPortalContainer';
+import SubtitleAdminPortalContainer from '@/containers/Admin/AdminPortal/SubtitleAdminPortalContainer/SubtitleAdminPortalContainer';
 import NavbarAdmin from '@/components/global/NavbarAdmin/NavbarAdmin';
 import WaveRed from "/assets/svg/WaveRed.svg";
-import MenuAdminPortalContainer from "@/containers/AdminPortal/MenuAdminPortalContainer/MenuAdminPortalContainer";
+import MenuAdminPortalContainer from "@/containers/Admin/AdminPortal/MenuAdminPortalContainer/MenuAdminPortalContainer";
 
 const AdminPortal = () => {
   return (
