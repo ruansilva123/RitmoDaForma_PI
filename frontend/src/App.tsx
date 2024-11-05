@@ -17,6 +17,7 @@ function App() {
           <Route path="/treinamentos" element={<Treinamentos/>}/>
           <Route path="/admin" element={<AdminPortal/>}/>
           <Route path="/admin/editar_tutoriais" element={<EditTreinamentos/>}/>
+          <Route path="/admin/login" element={<Home/>}/>
         </Routes>
       </Router>
     </>

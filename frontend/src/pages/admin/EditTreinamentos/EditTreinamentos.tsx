@@ -4,7 +4,7 @@ import WaveRed from "../../../components/global/WaveRed/WaveRed";
 import ContainerCards from "../../../containers/Treinamentos/ContainerCards/ContainerCards";
 import SubtitleAdminContainer from "../../../containers/global/SubtitleAdminContainer/SubtitleAdminContainer";
 import SearchAndAddContainer from "../../../containers/EditTreinamentos/SearchAndAddContainer/SearchAndAddContainer";
-import InputSearch from "../../../components/Treinamentos/Search/Search";
+
 
 const EditTreinamentos = () => {
   return (

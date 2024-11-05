@@ -4,7 +4,7 @@ import breakpoints from "../../../styles/Breakpoints";
 
 export const InputSearchStyle = styled.input`
     padding: 18px;
-    width: 700px;
+    width: 800px;
     margin-block: 30px;
     border-radius: 10px;
     border: solid 1px ${colors.lightGray};
