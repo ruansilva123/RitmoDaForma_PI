@@ -1,6 +1,6 @@
 import * as S from "./SearchAndAddContainerStyles";
-import InputSearch from '../../../components/site/Treinamentos/Search/Search';
-import AddTreinamentosButton from '../../../components/Admin/EditTreinamentos/AddTreinamentosButton/AddTreinamentosButton';
+import InputSearch from '@/components/site/Treinamentos/Search/Search';
+import AddTreinamentosButton from '@/components/admin/EditTreinamentos/AddTreinamentosButton/AddTreinamentosButton';
 
 
 

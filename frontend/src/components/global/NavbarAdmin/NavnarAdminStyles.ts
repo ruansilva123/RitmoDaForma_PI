@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "../../../styles/Theme";
+import { colors } from "@/styles/Theme";
 
 export const NavbarContainer = styled.nav`
     display: flex;

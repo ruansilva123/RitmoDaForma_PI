@@ -2,8 +2,8 @@ import React from 'react';
 import * as S from "./NavnarAdminStyles";
 import { Link } from 'react-router-dom';
 import { useLocation } from "react-router-dom";
-import { LocationInterface } from "../../../types/types";
-import logoWhite from "../../../../public/assets/icons/logoWhite.png"
+import { LocationInterface } from "@/types/types";
+import logoWhite from "/assets/icons/logoWhite.png"
 
 const NavbarAdmin = () => {
     const location: LocationInterface = useLocation();
@@ -67,13 +67,13 @@ const NavbarAdmin = () => {
                     </li>
                 }
                 {
-                    currentRoute == "/admin/sair" ?
+                    currentRoute == "/admin/login" ?
                     <S.NavSelected>
-                        <Link to="/admin/sair">Sair</Link>
+                        <Link to="/admin/login">Sair</Link>
                     </S.NavSelected>
                     : 
                     <li>
-                        <Link to="/admin/sair">Sair</Link>
+                        <Link to="/admin/login">Sair</Link>
                     </li>
                 }
                     
