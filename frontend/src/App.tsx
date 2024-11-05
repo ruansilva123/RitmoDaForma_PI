@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { GlobalStyles } from './styles/GlobalStyles';
 import Home from './pages/site/Home/Home';
+import Login from './pages/admin/Login/Login';
 import Treinamentos from './pages/site/Treinamentos/Treinamentos';
 import Aulas from './pages/site/Aulas/Aulas';
 import AdminPortal from './pages/admin/AdminPortal/AdminPortal';
@@ -17,7 +18,7 @@ function App() {
           <Route path="/treinamentos" element={<Treinamentos/>}/>
           <Route path="/admin" element={<AdminPortal/>}/>
           <Route path="/admin/editar_tutoriais" element={<EditTreinamentos/>}/>
-          <Route path="/admin/login" element={<Home/>}/>
+          <Route path="/admin/login" element={<Login/>}/>
         </Routes>
       </Router>
     </>
