@@ -1,8 +1,19 @@
+// Libs
 import React, { useState } from "react";
 import * as S from "./CardTreinamentosStyles";
+
+// Contexts
 import { useModal } from "@/contexts/ModalProvider";
+
+// Components
 import ModalTreinamentosView from "../ModalTreinamentosView/ModalTreinamentosView";
+import ModalEditTreinamento from "@/components/admin/EditTreinamentos/ModalEditTreinamento/ModalEditTreinamento";
+
+// Types
 import { contentModal } from "@/types/types";
+
+//Images
+import iconEdit from "/assets/icons/edit.png";
 
 interface CardProps {
     title: string;
@@ -13,7 +24,7 @@ interface CardProps {
 }
 
 interface appProps {
-    isEditCards: boolean
+    isEditCards?: boolean
 }
 
 const App: React.FC<appProps> = ({isEditCards}) => {
@@ -136,12 +147,18 @@ const Card = (props: CardProps) => {
         if(isEditCards){
             openModal(<ModalTreinamentosView content={newContent} closeModal={closeModal}/>)
         }else{
-            openModal(<ModalTreinamentosView content={newContent} closeModal={closeModal}/>)
+            openModal(<ModalEditTreinamento content={newContent} closeModal={closeModal}/>)
         }   
     }
 
     return (
         <S.ContainerCard onClick={() => handleOpenModal({title, desc, video})}>
+            {
+                isEditCards && 
+                <S.IconEditContainer>
+                    <img src={iconEdit} alt="Icon de edição" />
+                </S.IconEditContainer>
+            }
             <S.ImageCard src={image} alt={title} />
             <S.ContentCard>
                 <S.TitleCard>{title}</S.TitleCard>
@@ -150,24 +167,5 @@ const Card = (props: CardProps) => {
         </S.ContainerCard>
     );
 };
-
-// const CardEdit = (props: CardProps) => {
-//     const { title, desc, image, video } = props;
-//     const { openModal } = useModal();
-
-//     const handleCloseModal = (newContent: contentModal) => {
-//         openModal(newContent);
-//     }
-
-//     return (
-//         <S.ContainerCard onClick={() => handleCloseModal({title, desc, video})}>
-//             <S.ImageCard src={image} alt={title} />
-//             <S.ContentCard>
-//                 <S.TitleCard>{title}</S.TitleCard>
-//                 <S.DescriptionCard>{desc}</S.DescriptionCard>
-//             </S.ContentCard>
-//         </S.ContainerCard>
-//     );
-// };
 
 export default App;

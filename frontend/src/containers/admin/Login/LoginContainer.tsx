@@ -1,6 +1,6 @@
 import * as S from "./LoginContainerStyles"
-import Input from "@/components/admin/Input/Input";
-import Button from "@/components/admin/Button/Button";
+import Input from "@/components/admin/Login/Input/Input";
+import Button from "@/components/admin/Login/Button/Button";
 const LoginContainer = () =>{
     return(
         <S.BackgroundLogin>
