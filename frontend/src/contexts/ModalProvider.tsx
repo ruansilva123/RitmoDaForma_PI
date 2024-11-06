@@ -5,7 +5,7 @@ import React, {createContext, useContext, useState} from "react";
 import * as S from "./ModalProviderStyles";
 
 // Types
-import { contextReturModal, contentModal } from "../types/types";
+import { contextReturModal } from "../types/types";
 
 
 interface ModalProviderProps {

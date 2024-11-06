@@ -4,7 +4,7 @@ import AthleticMan from "/assets/images/athletic-man.png";
 import WaveWhite from "/assets/svg/WaveWhite.svg";
 import ImagePersonTraining from "../../../../components/site/Home/ImagePersonTraining/ImagePersonTraining";
 import TitleRitmoDaForma from "../../../../components/site/Home/TitleRitmoDaForma/TitleRitmoDaForma";
-import React, { forwardRef } from "react";
+import { forwardRef } from "react";
 
 const ApresentationContainer = forwardRef<HTMLDivElement>(
     (_, ref) => {

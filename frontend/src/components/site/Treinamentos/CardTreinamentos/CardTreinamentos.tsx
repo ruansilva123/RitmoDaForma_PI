@@ -131,7 +131,10 @@ const Card = (props: CardProps) => {
     const { openModal, closeModal } = useModal();
 
     const handleOpenModal = (newContent: contentModal) => {
-        openModal(<ModalTreinamentosView content={newContent} closeModal={closeModal}/>)
+        isEditCards ? 
+            openModal(<ModalTreinamentosView content={newContent} closeModal={closeModal}/>)
+        :
+            openModal(<ModalTreinamentosView content={newContent} closeModal={closeModal}/>)
     }
 
     return (
