@@ -4,7 +4,7 @@ import { colors } from "@/styles/Theme";
 export const BackgroundLogin = styled.div`
     display: flex;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     background-color: white;
     flex-direction: column;
     justify-content: center;
