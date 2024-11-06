@@ -11,7 +11,7 @@ const ContainerCards: React.FC<ContainerCardsProps> = ({ isEditCards }) => {
     return (
         <S.BackgroundCards>
             <S.ContainerCards>
-                <Card isEditCards></Card>
+                <Card></Card>
             </S.ContainerCards>
             {
                 isEditCards ? 
