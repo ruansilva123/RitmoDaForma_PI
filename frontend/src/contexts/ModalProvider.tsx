@@ -13,9 +13,8 @@ interface ModalProviderProps {
 }
 
 const modalContext = createContext<contextReturModal>({
-    isOpen: false, 
-    content: {video: "", title: "",desc: ""}, 
-    openModal: (currentModal: React.ReactNode) => {}, 
+    isOpen: false,
+    openModal: () => {}, 
     closeModal: () => {}
 });
 
@@ -23,12 +22,12 @@ export const ModalProvider: React.FC<ModalProviderProps> = ({children}) => {
     const [isOpen, setIsOpen] = useState(false);
     const [currentModal, setCurrentModal] = useState<React.ReactNode>(<></>);
 
-    const openModal = (selectedModal: React.ReactNode) => {
+    const openModal: (currentModal: React.ReactNode) => void = (selectedModal: React.ReactNode) => {
         setIsOpen(true);
         setCurrentModal(selectedModal)
     }
 
-    const closeModal = () => {
+    const closeModal: () => void = () => {
         setIsOpen(false);
     }
 

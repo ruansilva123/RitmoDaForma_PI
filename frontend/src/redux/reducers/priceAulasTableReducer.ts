@@ -1,9 +1,11 @@
+import { priceAulasType } from "@/types/types";
+
 const initialState = {
     datas: [
     ],
 };
 
-const priceAulasTableReducer = (state = initialState, action) => {
+const priceAulasTableReducer = (state = initialState, action: priceAulasType) => {
     switch (action.type) {
         case "UPDATE_PRICE_AULA":
             return {
@@ -16,4 +18,3 @@ const priceAulasTableReducer = (state = initialState, action) => {
 };
 
 export default priceAulasTableReducer;
-  
