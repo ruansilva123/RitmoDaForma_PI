@@ -1,4 +1,3 @@
-import React from 'react';
 import * as S from './HomeStyles';
 import Navbar from '../../../components/global/Navbar/Navbar';
 import ApresentationContainer from '../../../containers/site/Home/ApresentationContainer/ApresentationContainer';

@@ -1,8 +1,7 @@
-import React from 'react';
 import * as S from "./AulasCalendarStyles";
 import { useSelector } from 'react-redux';
 // import { updateAulaCalendar } from '../../../redux/actions/aulasCalendarActions';
-import { rootStateType } from '../../../types/types';
+import { rootStateType } from '@/types/types';
 
 const AulasCalendar = () => {
     // const dispatch = useDispatch();

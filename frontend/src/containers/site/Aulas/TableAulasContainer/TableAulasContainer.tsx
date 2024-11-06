@@ -1,4 +1,3 @@
-import React from 'react';
 import * as S from "./TableAulasContainerStyles";
 import AulasCalendarContainer from '../AulasCalendarContainer/AulasCalendarContainer';
 import PricesTableContainer from '../PricesTableContainer/PricesTableContainer';

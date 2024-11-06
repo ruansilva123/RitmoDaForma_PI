@@ -1,7 +1,6 @@
-import React from "react";
 import * as S from "./LoginContainerStyles"
-import Input from "../../../components/admin/Input/Input";
-import Button from "../../../components/admin/Button/Button";
+import Input from "@/components/admin/Input/Input";
+import Button from "@/components/admin/Button/Button";
 const LoginContainer = () =>{
     return(
         <S.BackgroundLogin>

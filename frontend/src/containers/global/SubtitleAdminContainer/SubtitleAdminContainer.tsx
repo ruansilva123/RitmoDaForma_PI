@@ -1,4 +1,3 @@
-import React from 'react';
 import * as S from "./SubtitleAdminContainerStyles";
 
 import WaveWhite from '../../../components/global/WaveWhite/WaveWhite';

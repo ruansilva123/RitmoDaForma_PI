@@ -1,4 +1,3 @@
-import React from "react";
 import * as S from "./CardContactsContainerStyles";
 import CardContact from "../../../../components/site/Home/CardContact/CardContact";
 import instagram from "/assets/icons/instagram.png";
