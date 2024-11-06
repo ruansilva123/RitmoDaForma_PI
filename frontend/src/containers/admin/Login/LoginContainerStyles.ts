@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { colors } from "../../../styles/Theme";
-import breakpoints from "../../../styles/Breakpoints";
+import { colors } from "@/styles/Theme";
 
 export const BackgroundLogin = styled.div`
     display: flex;

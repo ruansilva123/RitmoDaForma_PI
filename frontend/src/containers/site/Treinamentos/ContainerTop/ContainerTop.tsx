@@ -1,8 +1,7 @@
-import React from 'react';
 import * as S from './ContainerTopStyles';
-import SubTitle from '../../../../components/global/SubTitle/SubTitle';
+import SubTitle from '@/components/global/SubTitle/SubTitle';
 import WaveWhite2 from "/assets/svg/WaveWhite.svg";
-import InputSearch from '../../../../components/site/Treinamentos/Search/Search';
+import InputSearch from '@/components/site/Treinamentos/Search/Search';
 
 
 const ContainerTop = () => {

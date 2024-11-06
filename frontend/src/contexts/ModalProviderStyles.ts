@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import breakpoints from "../styles/Breakpoints"
 import { colors } from "../styles/Theme"
 
 export const ContainerPopUp = styled.div`
