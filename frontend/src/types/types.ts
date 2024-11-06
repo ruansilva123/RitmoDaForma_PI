@@ -5,9 +5,8 @@ export type contentModal = {
 }
 
 export type contextReturModal = {
-    isOpen: boolean, 
-    content: contentModal | null, 
-    openModal: (newContent: contentModal) => void, 
+    isOpen: boolean,  
+    openModal: (currentModal: React.ReactNode) => void, 
     closeModal: () => void
 }
 
@@ -27,6 +26,11 @@ export type aulasCalendarType = {
 export type aulasCalendarActionType = {
     type: string,
     payload: { hour: string, aulas: string },
+}
+
+export type priceAulasType = {
+    type: string,
+    payload: { price: string },
 }
 
 export interface aulasStateType {

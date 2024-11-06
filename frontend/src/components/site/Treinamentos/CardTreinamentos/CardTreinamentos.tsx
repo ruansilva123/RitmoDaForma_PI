@@ -17,6 +17,8 @@ interface appProps {
 }
 
 const App: React.FC<appProps> = ({isEditCards}) => {
+    console.log(isEditCards) 
+
     const [treinos] = useState([
         {
             title: "Halteres",
@@ -131,10 +133,11 @@ const Card = (props: CardProps) => {
     const { openModal, closeModal } = useModal();
 
     const handleOpenModal = (newContent: contentModal) => {
-        isEditCards ? 
+        if(isEditCards){
             openModal(<ModalTreinamentosView content={newContent} closeModal={closeModal}/>)
-        :
+        }else{
             openModal(<ModalTreinamentosView content={newContent} closeModal={closeModal}/>)
+        }   
     }
 
     return (
