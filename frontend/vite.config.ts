@@ -9,5 +9,10 @@ export default defineConfig({
     alias: {
       '@': resolve(__dirname, 'src'),
     },
+<<<<<<< HEAD
   }
+=======
+  },
+  base: './',
+>>>>>>> upstream/main
 });
