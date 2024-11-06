@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { colors } from './Theme';
 
 export const GlobalStyles = createGlobalStyle`
   @font-face {
@@ -29,6 +30,24 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    /* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: none;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: ${colors.opacityDarkGray_60};
+  border-radius: 20px;
+
+  &:hover{
+    background-color: ${colors.darkGray}
+  }
+}
   }
   body {
     font-family: 'Tahoma', 'Arial', 'Sans-serif';
