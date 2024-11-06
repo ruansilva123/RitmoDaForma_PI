@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "backend-dependencies"
+version = "0.1.0"
+description = "Dependencies necessary to carry out the project."
+authors = ["RuanCarlosSilva <143547755+ruansilva123@users.noreply.github.com>"]
+license = "MIT Licence"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,12 @@
+class Settings:
+
+    """ SUPABASE CONNECTION """
+
+    SUPABASE_URL = ""
+    SUPABASE_KEY = ""
+
+
+    """ SUPABASE JWT CONNECTIONS """
+
+    SUPABASE_JWT_SECRET = ""
+    VERIFY_ACCESS_TOKEN = ""
