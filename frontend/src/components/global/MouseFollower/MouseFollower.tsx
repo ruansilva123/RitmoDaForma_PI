@@ -3,7 +3,7 @@ import { Follower } from './MouseFollowerStyles';
 
 const MouseFollower = () => {
     const [opacity, setOpacity] = useState<number>(0);
-    let timer: number;
+    let timer: ReturnType<typeof setTimeout>;
 
     useEffect(() => {
         const handleMouseMove = (e: MouseEvent) => {

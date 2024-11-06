@@ -1,4 +1,3 @@
-import React from 'react';
 import * as S from "./NavnarAdminStyles";
 import { Link } from 'react-router-dom';
 import { useLocation } from "react-router-dom";

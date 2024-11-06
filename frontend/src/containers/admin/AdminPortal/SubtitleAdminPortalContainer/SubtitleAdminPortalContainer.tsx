@@ -1,7 +1,6 @@
-import React from 'react';
 import * as S from "./SubtitleAdminPortalContainerStyles";
 
-import WaveWhite from '../../../../components/global/WaveWhite/WaveWhite';
+import WaveWhite from '@/components/global/WaveWhite/WaveWhite';
 
 const SubtitleAdminPortalContainer = () => {
   return (
