@@ -1,26 +1,26 @@
-name: Sync Fork with Upstream
+# name: Sync Fork with Upstream
 
-on:
-  push:
-    repository: https://github.com/ruansilva123/RitmoDaForma_PI.git
-    branches:
-      - main
+# on:
+#   push:
+#     repository: https://github.com/ruansilva123/RitmoDaForma_PI.git
+#     branches:
+#       - main
 
-jobs:
-  sync:
-    runs-on: ubuntu-latest
+# jobs:
+#   sync:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: Check out the repository
-        uses: actions/checkout@v2
+#     steps:
+#       - name: Check out the repository
+#         uses: actions/checkout@v2
 
-      - name: Set up Git
-        uses: actions/setup-git@v1
+#       - name: Set up Git
+#         uses: actions/setup-git@v1
 
-      - name: Fetch changes from upstream
-        run: |
-          git remote add upstream https://github.com/ruansilva123/RitmoDaForma_PI.git
-          git fetch upstream
-          git checkout main
-          git merge upstream/main
-          git push origin main
+#       - name: Fetch changes from upstream
+#         run: |
+#           git remote add upstream https://github.com/ruansilva123/RitmoDaForma_PI.git
+#           git fetch upstream
+#           git checkout main
+#           git merge upstream/main
+#           git push origin main
