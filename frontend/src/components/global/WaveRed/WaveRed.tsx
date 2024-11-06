@@ -1,5 +1,5 @@
 import * as S from "./WaveRedStyles";
-import WaveRedImage from "../../../../public/assets/svg/WaveRed.svg";
+import WaveRedImage from "/assets/svg/WaveRed.svg";
 
 const WaveRed = () => {
   return (

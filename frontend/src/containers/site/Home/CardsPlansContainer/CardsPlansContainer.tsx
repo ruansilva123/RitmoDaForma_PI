@@ -1,7 +1,7 @@
 import { useState } from "react";
 import * as S from "./CardsPlansContainerStyles";
-import CardPaymentPlan from '../../../../components/site/Home/CardPaymentPlan/CardPaymentPlan';
-import ExtraTax from '../../../../components/site/Home/ExtraTax/ExtraTax';
+import CardPaymentPlan from '@/components/site/Home/CardPaymentPlan/CardPaymentPlan';
+import ExtraTax from '@/components/site/Home/ExtraTax/ExtraTax';
 
 const CardsPlansContainer = () => {
 

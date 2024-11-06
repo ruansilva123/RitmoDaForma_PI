@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import breakpoints from "../../../../styles/Breakpoints";
+import breakpoints from "@/styles/Breakpoints";
 
 export const CardsPlansContainerStyle = styled.div`
     margin-top: 100px;
