@@ -33,6 +33,7 @@ import { rootStateType } from '@/types/types';
 const App: React.FC<appProps> = ({isEditCards}) => { 
     const { datas } = useSelector((state: rootStateType) => state.treinamentos);
 
+    console.log(datas)
     return (
         <>
             {
@@ -53,7 +54,7 @@ const App: React.FC<appProps> = ({isEditCards}) => {
 };
 
 const Card = (props: CardProps) => {
-    const { title, description, videoEquipment, imageEquipment, isEditCards } = props;
+    const { title, description, videoEquipment, imageEquipment, isEditCards } = props;    
     const { openModal, closeModal } = useModal();
 
     const handleOpenModal = (newContent: treinamentosType) => {

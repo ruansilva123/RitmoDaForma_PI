@@ -66,9 +66,9 @@ const ModalEditTreinamento: React.FC<ModalProps> = ({closeModal, content}) =>{
         }
     }, [isOpen])
 
-    function lockScroll() {
-        if(window.scrollY > 800){
-            window.scrollTo(0, 800);
+    const lockScroll = () => {
+        if(window.scrollY > 450){
+            window.scrollTo(0, 450);
         }
     }
 
@@ -96,7 +96,7 @@ const ModalEditTreinamento: React.FC<ModalProps> = ({closeModal, content}) =>{
                                     name="videoEquipment"
                                     onChange={(e) => {handleFormChange("videoEquipment", e.target.value)}}
                                     accept="video/*"
-                                    placeholder="Escolha um vídeo"
+                                    placeholder={formData.videoEquipment}
                                 />
                             </S.UploadInputLabel>
                             
