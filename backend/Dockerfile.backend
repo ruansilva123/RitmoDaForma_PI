@@ -2,9 +2,10 @@ FROM python:3.11-alpine
 
 WORKDIR /app
 
-COPY ./backend/requirements.txt ./
+COPY ./backend/pyproject.toml ./
+COPY ./backend/poetry.lock ./
 
-RUN pip install --no-cache-dir -r requirements.txt
+RUN poetry install
 
 EXPOSE $PORT
 
