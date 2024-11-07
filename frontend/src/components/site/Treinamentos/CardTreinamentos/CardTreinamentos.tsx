@@ -1,173 +1,89 @@
-import React, { useState } from "react";
+// Libs
+import React from "react";
 import * as S from "./CardTreinamentosStyles";
+
+// Contexts
 import { useModal } from "@/contexts/ModalProvider";
+
+// Components
 import ModalTreinamentosView from "../ModalTreinamentosView/ModalTreinamentosView";
-import { contentModal } from "@/types/types";
+import ModalEditTreinamento from "@/components/admin/EditTreinamentos/ModalEditTreinamento/ModalEditTreinamento";
+
+// Types
+import { treinamentosType } from "@/types/types";
+
+//Images
+import iconEdit from "/assets/icons/edit.png";
 
 interface CardProps {
-    title: string;
-    desc: string;
-    image: string;
-    video: string;
-    isEditCards: boolean;
+    title: string,
+    description: string,
+    videoEquipment: string,
+    imageEquipment: string,
+    isEditCards?: boolean,
 }
 
 interface appProps {
-    isEditCards: boolean
+    isEditCards?: boolean
 }
 
-const App: React.FC<appProps> = ({isEditCards}) => {
-    console.log(isEditCards) 
+import { useSelector } from 'react-redux';
+import { rootStateType } from '@/types/types';
 
-    const [treinos] = useState([
-        {
-            title: "Halteres",
-            desc: "Fortalecimento dos músculos e flexibilidade",
-            image: "/assets/images/woman-halter.png",
-            video: "",
-        },
-        {
-            title: "Barra Olímpica",
-            desc: "Rebeca Andrade",
-            image: "/assets/images/woman-halter.png",
-            video: "",
-        },
-        {
-            title: "Bicicleta Ergonômica",
-            desc: "AAAAAA",
-            image: "/assets/images/woman-halter.png",
-            video: "",
-        },
-        {
-            title: "Bicicleta Ergonômica",
-            desc: "AAAAAA",
-            image: "/assets/images/woman-halter.png",
-            video: "",
-        },
-        {
-            title: "Bicicleta Ergonômica",
-            desc: "AAAAAA",
-            image: "/assets/images/woman-halter.png",
-            video: "",
-        },
-        {
-            title: "Bicicleta Ergonômica",
-            desc: "AAAAAA",
-            image: "/assets/images/woman-halter.png",
-            video: "",
-        },
-        {
-            title: "Bicicleta Ergonômica",
-            desc: "AAAAAA",
-            image: "/assets/images/woman-halter.png",
-            video: "",
-        },
-        {
-            title: "Bicicleta Ergonômica",
-            desc: "AAAAAA",
-            image: "/assets/images/woman-halter.png",
-            video: "",
-        },
-        {
-            title: "Bicicleta Ergonômica",
-            desc: "AAAAAA",
-            image: "/assets/images/woman-halter.png",
-            video: "",
-        },
-        {
-            title: "Bicicleta Ergonômica",
-            desc: "AAAAAA",
-            image: "/assets/images/woman-halter.png",
-            video: "",
-        },
-        {
-            title: "Bicicleta Ergonômica",
-            desc: "AAAAAA",
-            image: "/assets/images/woman-halter.png",
-            video: "",
-        },
-        {
-            title: "Bicicleta Ergonômica",
-            desc: "AAAAAA",
-            image: "/assets/images/woman-halter.png",
-            video: "",
-        },
-        {
-            title: "Bicicleta Ergonômica",
-            desc: "AAAAAA",
-            image: "/assets/images/woman-halter.png",
-            video: "",
-        },
-        {
-            title: "Bicicleta Ergonômica",
-            desc: "AAAAAA",
-            image: "/assets/images/woman-halter.png",
-            video: "",
-        },
-        {
-            title: "Bicicleta Ergonômica",
-            desc: "AAAAAA",
-            image: "/assets/images/woman-halter.png",
-            video: "",
-        },
-    ]);
+const App: React.FC<appProps> = ({isEditCards}) => { 
+    const { datas } = useSelector((state: rootStateType) => state.treinamentos);
 
     return (
         <>
-            {treinos.map((treino, index) => (
-                <Card
-                    key={index}
-                    title={treino.title}
-                    desc={treino.desc}
-                    image={treino.image}
-                    video={treino.video}
-                    isEditCards
-                />
-            ))}
+            {
+                datas && 
+                datas.map((item: treinamentosType, index: number) => (
+                    <Card
+                        key={index}
+                        title={item.title}
+                        description={item.description}
+                        videoEquipment={item.videoEquipment}
+                        imageEquipment={item.imageEquipment}
+                        isEditCards={isEditCards}
+                    />
+                ))
+            }
         </>
     );
 };
 
 const Card = (props: CardProps) => {
-    const { title, desc, image, video, isEditCards } = props;
+    const { title, description, videoEquipment, imageEquipment, isEditCards } = props;
     const { openModal, closeModal } = useModal();
 
-    const handleOpenModal = (newContent: contentModal) => {
-        if(isEditCards){
-            openModal(<ModalTreinamentosView content={newContent} closeModal={closeModal}/>)
-        }else{
-            openModal(<ModalTreinamentosView content={newContent} closeModal={closeModal}/>)
-        }   
+    const handleOpenModal = (newContent: treinamentosType) => {
+        window.scrollTo({
+            top: 0
+        });
+        setTimeout(() => {
+            if(!isEditCards){
+                openModal(<ModalTreinamentosView content={newContent} closeModal={closeModal}/>)
+            }else{
+                openModal(<ModalEditTreinamento content={newContent} closeModal={closeModal}/>)
+            }       
+        }, .3);
     }
 
     return (
-        <S.ContainerCard onClick={() => handleOpenModal({title, desc, video})}>
-            <S.ImageCard src={image} alt={title} />
+        <S.ContainerCard onClick={() => handleOpenModal({title, description, videoEquipment, imageEquipment})}>
+            {
+                isEditCards && 
+                <S.IconEditContainer>
+                    <img src={iconEdit} alt="Icon de edição" />
+                </S.IconEditContainer>
+            }
+            <S.ImageCard src={imageEquipment} alt={title} />
             <S.ContentCard>
                 <S.TitleCard>{title}</S.TitleCard>
-                <S.DescriptionCard>{desc}</S.DescriptionCard>
+                <S.DescriptionCard>{description}</S.DescriptionCard>
             </S.ContentCard>
         </S.ContainerCard>
     );
 };
-
-// const CardEdit = (props: CardProps) => {
-//     const { title, desc, image, video } = props;
-//     const { openModal } = useModal();
-
-//     const handleCloseModal = (newContent: contentModal) => {
-//         openModal(newContent);
-//     }
-
-//     return (
-//         <S.ContainerCard onClick={() => handleCloseModal({title, desc, video})}>
-//             <S.ImageCard src={image} alt={title} />
-//             <S.ContentCard>
-//                 <S.TitleCard>{title}</S.TitleCard>
-//                 <S.DescriptionCard>{desc}</S.DescriptionCard>
-//             </S.ContentCard>
-//         </S.ContainerCard>
-//     );
-// };
 
 export default App;

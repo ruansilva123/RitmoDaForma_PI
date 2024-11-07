@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import breakpoints from "../../../../styles/Breakpoints";
+import breakpoints from "@/styles/Breakpoints";
 
 export const ApresentationContainerStyle = styled.section`
     padding-left: 85px;
