@@ -14,6 +14,19 @@ export const IconEditContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all .2s ease-in-out;
+
+    @media ${breakpoints.bg}{
+        width: 50px;
+        height: 50px;
+        top: -15px;
+        right: -15px;
+        
+        &>img{
+            width: 20px;
+            height: 20px;
+        }
+    }    
 `
 
 export const ContainerCard = styled.div`
@@ -40,8 +53,11 @@ export const ContainerCard = styled.div`
         height: 350px;
     }
 
+    transition: all .2s ease-in-out;
+
     &:hover{
         border: 2px solid ${colors.lightRed}; 
+        
     }
 
     &:hover ${IconEditContainer}{
@@ -69,7 +85,6 @@ export const TitleCard = styled.div`
     color: ${colors.darkGray};
 
 `
-
 
 export const DescriptionCard = styled.div`
     margin-top: 1vh;
