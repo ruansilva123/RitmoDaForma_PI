@@ -1,10 +1,10 @@
 FROM python:3.11-alpine
 
-RUN apk add --no-cache gcc libc-dev musl-dev
+# RUN apk add --no-cache gcc libc-dev musl-dev
 
 WORKDIR /app
 
-RUN pip install poetry
+RUN pip install "poetry"
 
 COPY ./pyproject.toml ./
 COPY ./poetry.lock ./
