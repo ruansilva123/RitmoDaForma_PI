@@ -15,7 +15,7 @@ export const BackgroundBlur = styled.div`
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: ${colors.lightGrayGradient_20};
+    background-color: ${colors.darkGrayOpacity_10};
     backdrop-filter: blur(3px);
     z-index: 99;
 `
@@ -36,7 +36,7 @@ export const ModalContainer = styled.div`
     align-items: center;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 1px 1px 5px 5px ${colors.lightGrayGradient_40};
+    box-shadow: 1px 1px 5px 5px ${colors.lightGrayGradient_20};
     
     width: 55%;
     height: 40vw;
@@ -54,8 +54,7 @@ export const ModalContainer = styled.div`
 
     @media ${breakpoints.md}{
         width: 70%;
-        height: 80vh;   
-        
+        height: 80vh;      
     }
 
     @media ${breakpoints.bs}{
@@ -75,6 +74,10 @@ export const Video = styled.div`
     width: 100%;
     height: 50%;
     margin: 5% 0% 20px 0%;
+    
+    @media ${breakpoints.md}{
+        height: 40%;
+    }
 `
 
 export const ContentModal = styled.div`
@@ -115,43 +118,5 @@ export const DescriptionModal = styled.div`
 
     @media ${breakpoints.xs} {
         font-size: 10px;
-    }
-`
-
-export const CloseIcon = styled.div`
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    background-image: url('/assets/svg/CloseIcon.svg');
-    background-repeat: no-repeat;
-    margin-left: 93%;
-    margin-top: 2%;
-    cursor: pointer;
-    background-size: cover;
-
-    &:hover{
-        background-image: url('/assets/svg/CloseIconHover.svg')
-    }
-
-    @media ${breakpoints.bs}{
-        width: 16px;
-        height: 16px;
-    }
-
-    @media ${breakpoints.sm}{
-        width: 14px;
-        height: 14px;
-        background-image: url('/assets/svg/CloseIconMobile.svg');
-
-        &:hover{ 
-            background-image: url('/assets/svg/CloseIconMobileHover.svg')
-        }
-    }
-
-    @media ${breakpoints.xs}{
-        width: 12px;
-        height: 12px;
-        margin-left: 92%;
-        margin-top: 3%;
     }
 `

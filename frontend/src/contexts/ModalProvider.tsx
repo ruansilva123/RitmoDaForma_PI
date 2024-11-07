@@ -36,14 +36,9 @@ export const ModalProvider: React.FC<ModalProviderProps> = ({children}) => {
             {children}
             {
                 isOpen && 
-                <S.ContainerPopUp>
-                        <S.BackgroundPopup>
-                            {currentModal}
-                        </S.BackgroundPopup>    
-                    <S.BackgroundBlur onClick={() => closeModal()}>
-                    </S.BackgroundBlur>
-                </S.ContainerPopUp>
-                
+                <>
+                    {currentModal}    
+                </>
             }
         </modalContext.Provider>
     )
