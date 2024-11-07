@@ -1,7 +1,7 @@
 import * as S from "./MenuAdminPortalContainerStyles";
 import InfoCard from "@/components/global/InfoCard/InfoCard";
 import CardMenuAdminItem from "@/components/admin/AdminPortal/CardMenuAdminItem/CardMenuAdminItem";
-import paymentPlanIcon from "/public/assets/icons/payment_plan.png"
+import paymentPlanIcon from "/assets/icons/payment-plan.png"
 import videoIcon from "/assets/icons/video.png"
 import shareIcon from "/assets/icons/share.png"
 import calendar from "/assets/icons/calendar.png"

@@ -2,8 +2,8 @@ import * as S from "./ApresentationContainerStyles";
 import AthleticWoman from "/assets/images/athletic-woman.png";
 import AthleticMan from "/assets/images/athletic-man.png";
 import WaveWhite from "/assets/svg/WaveWhite.svg";
-import ImagePersonTraining from "../../../../components/site/Home/ImagePersonTraining/ImagePersonTraining";
-import TitleRitmoDaForma from "../../../../components/site/Home/TitleRitmoDaForma/TitleRitmoDaForma";
+import ImagePersonTraining from "@/components/site/Home/ImagePersonTraining/ImagePersonTraining";
+import TitleRitmoDaForma from "@/components/site/Home/TitleRitmoDaForma/TitleRitmoDaForma";
 import { forwardRef } from "react";
 
 const ApresentationContainer = forwardRef<HTMLDivElement>(

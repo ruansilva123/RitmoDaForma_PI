@@ -11,6 +11,7 @@ export const CardMenuAdminItemStyle = styled.div`
     cursor: pointer;
     height: 150px;
     position: relative;
+    transition: all .2s ease-in-out;
 
     &:hover{
         opacity: 100%;

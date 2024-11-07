@@ -1,6 +1,6 @@
 import * as S from "./PaymentPlansContainerStyles";
 import { forwardRef } from "react";
-import Subtitle from "../../../../components/global/SubTitle/SubTitle";
+import Subtitle from "@/components/global/SubTitle/SubTitle";
 import CardsPlansContainer from "../CardsPlansContainer/CardsPlansContainer";
 
 const PaymentPlansContainer = forwardRef<HTMLDivElement>(
