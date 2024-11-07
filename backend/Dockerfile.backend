@@ -2,13 +2,13 @@ FROM python:3.11-alpine
 
 WORKDIR /app
 
-COPY ./backend/pyproject.toml ./
-COPY ./backend/poetry.lock ./
+COPY ./pyproject.toml ./
+COPY ./poetry.lock ./
 
 RUN poetry install
 
 EXPOSE $PORT
 
-COPY ./backend/ ./
+COPY ./ ./
 
 CMD [ "python", "src/manage.py", "runserver", "--host", "0.0.0.0"]
