@@ -6,6 +6,7 @@ export const colors = {
   baseRed: '#BF3220',
   darkGray: '#363639',
   intensifyDarkGray: '#262423',
+  opacityDarkGray_80: 'rgba(54,54,57,.8)',
   opacityDarkGray_60: 'rgba(54,54,57,.6)',
   opacityDarkGray_20: 'rgba(59,57,54,.2)',
   lightGray: '#D9D9D9',
@@ -17,4 +18,5 @@ export const colors = {
   gradientWhiteToGray: 'linear-gradient(to bottom, white 50%, #3B3936)',
   gradientRed: 'linear-gradient(to bottom, rgba(132,3,22,.2) 40%, #A6041C, rgba(255,255,255,.5))',
   gradientRed_20: 'linear-gradient(to bottom, rgba(166,4,28, .5) 1%, #A6041C, rgba(64,2,11))',
+  darkGrayOpacity_10: "rgba(62,62,62,.1)",
 };

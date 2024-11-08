@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { colors } from "../../../styles/Theme";
-import breakpoints from "../../../styles/Breakpoints";
+import { colors } from "@/styles/Theme";
+import breakpoints from "@/styles/Breakpoints";
 
 interface subTitle {
     "data-darkmode": boolean,
