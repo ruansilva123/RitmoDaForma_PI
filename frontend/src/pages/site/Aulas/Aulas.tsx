@@ -4,12 +4,13 @@ import SubtitleContainer from '@/containers/site/Aulas/SubtitleContainer/Subtitl
 import TableAulasContainer from '@/containers/site/Aulas/TableAulasContainer/TableAulasContainer';
 import MouseFollower from '@/components/global/MouseFollower/MouseFollower';
 import WaveBlack from "/assets/svg/WaveBlack.svg"
+import { MotivationalPhrase } from "./AulasStyle";
 
 const Aulas = () => {
   return (
     <S.AulasBackground>
         <Navbar></Navbar>
-        <S.MotivationalPhrase>"Cada treino é um passo mais perto do seu objetivo."</S.MotivationalPhrase>
+        <MotivationalPhrase>"Cada treino é um passo mais perto do seu objetivo."</MotivationalPhrase>
         <S.ContentAulasContainer>
             <SubtitleContainer/>  
             <TableAulasContainer/>
