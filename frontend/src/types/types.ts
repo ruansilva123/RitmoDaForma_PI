@@ -1,13 +1,6 @@
-export type contentModal = {
-    video: string, 
-    title: string,
-    desc: string
-}
-
 export type contextReturModal = {
-    isOpen: boolean, 
-    content: contentModal | null, 
-    openModal: (newContent: contentModal) => void, 
+    isOpen: boolean,  
+    openModal: (currentModal: React.ReactNode) => void, 
     closeModal: () => void
 }
 
@@ -29,10 +22,37 @@ export type aulasCalendarActionType = {
     payload: { hour: string, aulas: string },
 }
 
+export type priceAulasType = {
+    type: string,
+    payload: { price: string },
+}
+
+export type treinamentosActionType = {
+    type: string,
+    payload: {
+        title: string, 
+        desc: string, 
+        image: string, 
+        video: string
+    }
+}
+
+export type treinamentosType = {
+    title: string,
+    description: string,
+    imageEquipment: string,
+    videoEquipment: string,
+}
+
 export interface aulasStateType {
-    datas: aulasCalendarType[];
-  }
+    datas: aulasCalendarType[],   
+}
+
+export interface treinamentosStateType {
+    datas: treinamentosType[],
+}
   
 export interface rootStateType {
-    aulas: aulasStateType;
+    aulas: aulasStateType,
+    treinamentos: treinamentosStateType,
 }

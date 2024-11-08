@@ -1,4 +1,4 @@
-import { aulasCalendarActionType } from "../../types/types";
+import { aulasCalendarActionType } from "@/types/types";
 const initialState = {
     datas: [
       { hour: '07:00', aulas: ['Funcional', 'Funcional', 'Funcional', 'Funcional', 'Funcional'] },
