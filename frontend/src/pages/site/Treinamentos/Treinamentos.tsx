@@ -4,7 +4,7 @@ import ContainerTop from '@/containers/site/Treinamentos/ContainerTop/ContainerT
 import ContainerCards from '@/containers/site/Treinamentos/ContainerCards/ContainerCards';
 import MouseFollower from '@/components/global/MouseFollower/MouseFollower';
 import WaveBlack from '/assets/svg/WaveBlack.svg';
-
+import { MotivationalPhrase } from '../Aulas/AulasStyle';
 
 const Treinamentos = () => {
     return (
@@ -12,6 +12,7 @@ const Treinamentos = () => {
             <MouseFollower/>
             <S.TreinamentoBackground>
                 <Navbar></Navbar>
+                <MotivationalPhrase>"Desistir é um hábito que você não pode cultivar."</MotivationalPhrase>
                 <S.TreinamentoWhiteBackground>
                     <ContainerTop></ContainerTop>
                     <ContainerCards></ContainerCards>    
