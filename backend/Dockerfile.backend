@@ -1,13 +1,18 @@
 FROM python:3.11-alpine
 
+# RUN apk add --no-cache gcc libc-dev musl-dev
+
 WORKDIR /app
 
-COPY ./backend/requirements.txt ./
+RUN pip install "poetry"
 
-RUN pip install --no-cache-dir -r requirements.txt
+COPY ./pyproject.toml ./
+COPY ./poetry.lock ./
+
+RUN poetry install
 
 EXPOSE $PORT
 
-COPY ./backend/ ./
+COPY ./ ./
 
 CMD [ "python", "src/manage.py", "runserver", "--host", "0.0.0.0"]
