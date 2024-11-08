@@ -1,9 +1,6 @@
 // Libs
 import React, {createContext, useContext, useState} from "react";
 
-// Components
-import * as S from "./ModalProviderStyles";
-
 // Types
 import { contextReturModal } from "../types/types";
 
