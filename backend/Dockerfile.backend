@@ -4,13 +4,13 @@ WORKDIR /app
 
 RUN pip install poetry
 
-COPY ./pyproject.toml ./poetry.lock ./
+COPY ./backend/pyproject.toml ./backend/poetry.lock ./
 
 RUN poetry install
 
 EXPOSE 8000
 
-COPY ./ ./
+COPY ./backend ./
 
 RUN ls -R /app
 
