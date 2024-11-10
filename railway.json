@@ -2,7 +2,8 @@
     "builds": [
       {
         "src": "backend/Dockerfile.backend",   
-        "use": "@railway/docker"       
+        "use": "@railway/docker",       
+        "disableNixpacks": true
       }
     ]
 }

@@ -2,8 +2,8 @@ from fastapi import APIRouter, status, Depends
 from fastapi.responses import JSONResponse
 
 from .schemas import LoginSchema
-from core.settings import SUPABASE
-from apps.login.crud import validate_access_token
+from src.core.settings import SUPABASE
+from src.apps.login.crud import validate_access_token
 
 
 router = APIRouter()
