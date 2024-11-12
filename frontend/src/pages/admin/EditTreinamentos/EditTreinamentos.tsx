@@ -13,7 +13,7 @@ const EditTreinamentos = () => {
     <S.EditTreinamentosBackground>
       <NavbarAdmin/>
       <S.ContentEditTreinamentos>
-        <SubtitleAdminContainer/>
+        <SubtitleAdminContainer text="Editar Vídeos de Treinamento" />
         <SearchAndAddContainer/>
         <ContainerCards isEditCards/>
         <WaveRed/>

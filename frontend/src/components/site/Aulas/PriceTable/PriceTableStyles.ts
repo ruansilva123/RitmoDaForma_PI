@@ -6,10 +6,14 @@ export const PriceTableStyle = styled.div`
     width: 100%;
 `
 
-export const HeaderPriceTable = styled.div`
+interface headerPriceTableProps {
+    "data-isedit"?: boolean
+}
+
+export const HeaderPriceTable = styled.div<headerPriceTableProps>`
     margin: 0 auto;
     border-radius: 10px;
-    background-color: ${colors.darkRed};
+    background-color: ${(props) => ( props["data-isedit"] ? colors.opacityDarkGray_80 : colors.darkRed)};
     color: white;
     
     display: flex; 
@@ -78,5 +82,30 @@ export const BodyPriceTable = styled.table`
         &:hover{
             background-color: ${colors.lightGrayGradient_40};
         }
+    }
+`
+
+export const EditPriceTableButtons = styled.div`
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    padding: 15px;
+
+    @media ${breakpoints.md} {
+        padding-inline: 10px;
+    }
+
+    @media ${breakpoints.bs} {
+        padding-inline: 5px;
+    }
+
+    @media ${breakpoints.xs} {
+        font-size: 14px;
+        padding-inline: 0px;
+        border-radius: 0%;
+    }
+
+    @media ${breakpoints.lt} {
+        font-size: 12px;
     }
 `

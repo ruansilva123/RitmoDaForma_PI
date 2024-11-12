@@ -1,4 +1,4 @@
-export const updateAulaCalendar = (time: string, aulas: string[]) => ({
+export const updateAulaCalendar = (hour: string, aulas: string[]) => ({
     type: 'UPDATE_AULA',
-    payload: { time, aulas },
+    payload: { hour, aulas },
 });
