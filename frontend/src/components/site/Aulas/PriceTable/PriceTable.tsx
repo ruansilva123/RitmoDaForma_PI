@@ -1,9 +1,16 @@
 import * as S from "./PriceTableStyles";
+import ButtonModal from "@/components/admin/Modal/ButtonModal/ButtonModal";
+import ButtonCancel from "@/components/admin/Modal/ButtonCancel/ButtonCancel";
 
-const PriceTable = () => {
+interface priceTableProps {
+    isEdit?: boolean,
+}
+
+const PriceTable: React.FC<priceTableProps> = ({isEdit}) => {
   return (
+    
     <S.PriceTableStyle>
-        <S.HeaderPriceTable>
+        <S.HeaderPriceTable data-isedit={isEdit} >
             2 Aulas Semanais
         </S.HeaderPriceTable>
         <S.BodyPriceTable>
@@ -22,7 +29,15 @@ const PriceTable = () => {
                 </tr>
             </tbody>
         </S.BodyPriceTable>
+        {
+            isEdit && 
+                <S.EditPriceTableButtons>
+                    <ButtonModal value="Editar" onClick={() => {}} />
+                    <ButtonCancel onClick={() => {}} />
+                </S.EditPriceTableButtons>
+        }
     </S.PriceTableStyle>
+    
   );
 };
 

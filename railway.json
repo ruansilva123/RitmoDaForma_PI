@@ -1,0 +1,8 @@
+{
+    "builds": [
+      {
+        "src": "backend/Dockerfile.backend",   
+        "use": "@railway/docker"       
+      }
+    ]
+}

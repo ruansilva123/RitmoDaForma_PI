@@ -1,6 +1,6 @@
 import * as S from "./ContactsContainerStyles"
 import { forwardRef } from "react";
-import SubTitle from "../../../../components/global/SubTitle/SubTitle";
+import SubTitle from "@/components/global/SubTitle/SubTitle";
 import CardContactsContainer from "../CardContactsContainer/CardContactsContainer";
 import WaveWhiteInvert from "/assets/svg/WaveWhiteInvert.svg"
 

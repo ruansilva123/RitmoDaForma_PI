@@ -10,4 +10,8 @@ EXPOSE $PORT
 
 COPY ./ ./
 
+<<<<<<< HEAD
 CMD [ "npm", "run", "start" ]
+=======
+CMD [ "npm", "run", "start" ]
+>>>>>>> upstream/main
