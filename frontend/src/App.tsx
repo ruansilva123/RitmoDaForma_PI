@@ -8,6 +8,7 @@ import Treinamentos from './pages/site/Treinamentos/Treinamentos';
 import Aulas from './pages/site/Aulas/Aulas';
 import AdminPortal from './pages/admin/AdminPortal/AdminPortal';
 import EditTreinamentos from './pages/admin/EditTreinamentos/EditTreinamentos';
+import EditAulas from './pages/admin/EditAulas/EditAulas';
 
 // Contexts
 import { ModalProvider } from './contexts/ModalProvider';
@@ -28,6 +29,7 @@ function App() {
             <Route path="/admin" element={<AdminPortal/>}/>
             <Route path="/admin/editar_tutoriais" element={<EditTreinamentos/>}/>
             <Route path="/admin/login" element={<Login/>}/>
+            <Route path="/admin/editar_aulas" element={<EditAulas/>} />
           </Routes>
         </Router>
       </ModalProvider>
