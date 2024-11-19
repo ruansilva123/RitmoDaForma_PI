@@ -79,8 +79,41 @@ export const BodyPriceTable = styled.table`
         border-radius: 10px;
         margin-top: 20px;
         text-align: center;
+        transition: all .3s ease-in-out;
         &:hover{
             background-color: ${colors.lightGrayGradient_40};
+        }
+
+        label {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            
+            input{
+
+                border: none;
+                background-color: transparent;
+                text-align: center;
+                outline: none;
+                font-size: clamp(16px, 1.2vw, 1.2rem); 
+                width: 50%;
+
+                @media ${breakpoints.md} {
+                    font-size: 16px;
+                }
+
+                @media ${breakpoints.bs} {
+                    font-size: 14px;
+                }
+
+                @media ${breakpoints.sm} {
+                    font-size: 12px;
+                }
+
+                @media ${breakpoints.xs}{
+                    font-size: 10px;
+                }
+                }
         }
     }
 `
@@ -97,12 +130,14 @@ export const EditPriceTableButtons = styled.div`
 
     @media ${breakpoints.bs} {
         padding-inline: 5px;
+        gap: 10px;
     }
 
     @media ${breakpoints.xs} {
         font-size: 14px;
         padding-inline: 0px;
         border-radius: 0%;
+        gap: 5px;
     }
 
     @media ${breakpoints.lt} {

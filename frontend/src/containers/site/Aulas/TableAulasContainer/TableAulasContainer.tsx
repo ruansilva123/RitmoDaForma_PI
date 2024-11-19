@@ -3,7 +3,7 @@ import AulasCalendarContainer from '../AulasCalendarContainer/AulasCalendarConta
 import PricesTableContainer from '../PricesTableContainer/PricesTableContainer';
 
 interface TableAulasContainerProps {
-  isEdit: boolean
+  isEdit?: boolean
 }
 
 const TableAulasContainer: React.FC<TableAulasContainerProps> = ({ isEdit }) => {

@@ -1,5 +1,5 @@
 // Libs
-import React from "react";
+import React, { useMemo } from "react";
 import * as S from "./CardTreinamentosStyles";
 
 // Contexts
@@ -33,24 +33,27 @@ import { rootStateType } from '@/types/types';
 const App: React.FC<appProps> = ({isEditCards}) => { 
     const { datas } = useSelector((state: rootStateType) => state.treinamentos);
 
-    console.log(datas)
-    return (
-        <>
-            {
-                datas && 
-                datas.map((item: treinamentosType, index: number) => (
-                    <Card
-                        key={index}
-                        title={item.title}
-                        description={item.description}
-                        videoEquipment={item.videoEquipment}
-                        imageEquipment={item.imageEquipment}
-                        isEditCards={isEditCards}
-                    />
-                ))
-            }
-        </>
-    );
+    const renderCards = useMemo(() => {
+        return (
+            <>
+                {
+                    datas && 
+                    datas.map((item: treinamentosType, index: number) => (
+                        <Card
+                            key={index}
+                            title={item.title}
+                            description={item.description}
+                            videoEquipment={item.videoEquipment}
+                            imageEquipment={item.imageEquipment}
+                            isEditCards={isEditCards}
+                        />
+                    ))
+                }
+            </>
+        );
+    }, [datas, isEditCards])
+
+    return <>{renderCards}</>;
 };
 
 const Card = (props: CardProps) => {

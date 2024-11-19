@@ -7,7 +7,6 @@ import { useSelector, useDispatch } from 'react-redux';
 
 // Components
 import ButtonModal from "@/components/admin/Modal/ButtonModal/ButtonModal";
-import ButtonCancel from "@/components/admin/Modal/ButtonCancel/ButtonCancel";
 
 // Style
 import * as S from "./AulasCalendarStyles";
@@ -26,12 +25,6 @@ const AulasCalendar: React.FC<AulasCalendarProps> = ({ isEdit }) => {
     const { datas } = useSelector((state: rootStateType) => state.aulas);
     const [ newDatasCalendar, setNewDatasCalendar ] = useState<aulasCalendarType[]>(datas);
 
-    const handleUpdateAula = () => {
-        newDatasCalendar.map((item) => {
-            dispatch(updateAulaCalendar(item.hour, item.aulas));
-        })
-    };
-
     const handleEditData = (
         event: ChangeEvent<HTMLInputElement>, 
         indexAula: number, 
@@ -47,7 +40,11 @@ const AulasCalendar: React.FC<AulasCalendarProps> = ({ isEdit }) => {
             )),
         }
         
-        setNewDatasCalendar(updatedCalendar);  
+        setNewDatasCalendar(updatedCalendar); 
+        dispatch(updateAulaCalendar(
+            updatedCalendar[indexWeek].hour, 
+            updatedCalendar[indexWeek].aulas
+        ));    
     }
 
     return (
@@ -96,7 +93,7 @@ const AulasCalendar: React.FC<AulasCalendarProps> = ({ isEdit }) => {
                 isEdit && 
                     <S.EditCalendarButtons>
                         <ButtonModal value="Editar" onClick={() => {}} />
-                        <ButtonCancel onClick={() => handleUpdateAula()} />
+                        <ButtonModal value="Cancel" isCancel onClick={() => {}} />
                     </S.EditCalendarButtons>
             }
         </>

@@ -1,44 +1,76 @@
+// Libs
+import { useState } from "react";
+
+// Style
 import * as S from "./PriceTableStyles";
+
+// Components
 import ButtonModal from "@/components/admin/Modal/ButtonModal/ButtonModal";
-import ButtonCancel from "@/components/admin/Modal/ButtonCancel/ButtonCancel";
+import MaskedInput from "@/components/admin/EditAulas/MaskedInput/MaskedInput";
+
+// Type
+import { paymentType, priceAulasItemType } from "@/types/types";
+
 
 interface priceTableProps {
     isEdit?: boolean,
+    aulaPrice: priceAulasItemType,
+    handleEditData: (daysForWeek: string, aulasPrice: paymentType) => void,
 }
 
-const PriceTable: React.FC<priceTableProps> = ({isEdit}) => {
-  return (
-    
-    <S.PriceTableStyle>
-        <S.HeaderPriceTable data-isedit={isEdit} >
-            2 Aulas Semanais
-        </S.HeaderPriceTable>
-        <S.BodyPriceTable>
-            <tbody>
-                <tr>
-                    <td>Semestral</td>
-                    <td>R$ 130,00</td>
-                </tr>
-                <tr>
-                    <td>Trimestral</td>
-                    <td>R$ 140,00</td>
-                </tr>
-                <tr>
-                    <td>Mensal</td>
-                    <td>R$ 160,00</td>
-                </tr>
-            </tbody>
-        </S.BodyPriceTable>
-        {
-            isEdit && 
-                <S.EditPriceTableButtons>
-                    <ButtonModal value="Editar" onClick={() => {}} />
-                    <ButtonCancel onClick={() => {}} />
-                </S.EditPriceTableButtons>
-        }
-    </S.PriceTableStyle>
-    
-  );
+const PriceTable: React.FC<priceTableProps> = ({isEdit, aulaPrice, handleEditData}) => {
+    const [price, setPrice] = useState(aulaPrice.payment);
+
+    const handleEditPrice = (value: string, index: number) => {
+        const newPrice = [...price];
+
+        newPrice[index].price = Number(value);
+        setPrice(newPrice);
+        handleEditData(aulaPrice.daysForWeek, newPrice[index]);
+    }
+
+    return (
+        <S.PriceTableStyle>
+            <S.HeaderPriceTable data-isedit={isEdit} >
+                {aulaPrice.daysForWeek}
+            </S.HeaderPriceTable>
+            <S.BodyPriceTable>
+                <tbody>
+                    {price.map((item, index) => (
+                        <tr key={index}>
+                            <td>{item.paymentForMonth}</td>
+                            <td>    
+                                <label>
+                                    <span>R$ </span>
+                                    {
+                                        isEdit ? 
+                                            <MaskedInput
+                                                value={String(item.price.toFixed(2))}
+                                                index={index}
+                                                onChange={handleEditPrice}
+                                            />
+                                        :
+                                            <input 
+                                                type="text"
+                                                value={`R$ ${String(item.price.toFixed(2))}`} 
+                                                disabled 
+                                            />
+                                    }
+                                </label>
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
+            </S.BodyPriceTable>
+            {
+                isEdit && 
+                    <S.EditPriceTableButtons>
+                        <ButtonModal value="Editar" onClick={() => {}} />
+                        <ButtonModal isCancel value="Cancelar" onClick={() => {}} />
+                    </S.EditPriceTableButtons>
+            }
+        </S.PriceTableStyle>
+    );
 };
 
 export default PriceTable;

@@ -89,6 +89,7 @@ export const AulasCalendarTable = styled.table<aulasCalendarTableProps>`
     td{
         border: 1px solid ${colors.darkGray};
         width: 15%;
+        transition: all .3s ease-in-out;
         &:hover{
             background-color: ${colors.lightGrayGradient_40};
         }
@@ -136,7 +137,8 @@ export const AulasCalendarTable = styled.table<aulasCalendarTableProps>`
 export const EditCalendarButtons = styled.div`
     display: flex;
     gap: 20px;
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     margin-inline: 15px;
 
     @media ${breakpoints.md} {

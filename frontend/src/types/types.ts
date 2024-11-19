@@ -22,9 +22,22 @@ export type aulasCalendarActionType = {
     payload: { hour: string, aulas: string },
 }
 
+export type paymentType = {
+    paymentForMonth: string,
+    price: number,
+}
+
+export type priceAulasItemType = {
+    daysForWeek: string, 
+    payment: paymentType[]
+}
+
 export type priceAulasType = {
     type: string,
-    payload: { price: string },
+    payload: { 
+        daysForWeek: string, 
+        payment: paymentType 
+    },
 }
 
 export type treinamentosActionType = {
@@ -51,8 +64,13 @@ export interface aulasStateType {
 export interface treinamentosStateType {
     datas: treinamentosType[],
 }
+
+export interface aulasPriceStateType {
+    datas: priceAulasItemType[],
+}
   
 export interface rootStateType {
     aulas: aulasStateType,
     treinamentos: treinamentosStateType,
+    aulasPrice: aulasPriceStateType,
 }

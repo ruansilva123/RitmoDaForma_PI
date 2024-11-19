@@ -4,7 +4,6 @@ import InfoCard from '@/components/global/InfoCard/InfoCard';
 import AulasCalendar from '@/components/site/Aulas/AulasCalendar/AulasCalendar';
 import editRed from "/assets/icons/edit-red.png"
 
-
 interface AulasCalendarContainer {
   isEdit?: boolean,
 }
