@@ -15,7 +15,7 @@ const ModalTreinamentosView: React.FC<ModalProps> = ({closeModal, content}) =>{
                 <S.ModalContainer>
                     <CloseIcon closeModal={() => closeModal()}/>
                     <S.ContentModal>
-                        <S.Video>
+                        <S.Video >
                             <iframe 
                                 width="100%" 
                                 height="100%" 

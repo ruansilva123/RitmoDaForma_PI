@@ -6,7 +6,7 @@ const initialState = {
             title: "Halteres",
             description: "Fortalecimento dos músculos e flexibilidade",
             imageEquipment: "/assets/images/equipments/maquina-elevacao-pelvica.jpeg",
-            videoEquipment: "https://www.youtube.com/embed/GhJfOuoJn1A?si=5JPgxf6qAj4bRETe",
+            videoEquipment: "assets/videos/teste.mp4",
         },
         {
             title: "Halteres",

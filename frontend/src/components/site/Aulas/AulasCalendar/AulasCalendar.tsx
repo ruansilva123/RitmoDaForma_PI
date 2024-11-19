@@ -1,20 +1,55 @@
+// Redux
+import { updateAulaCalendar } from '@/redux/actions/aulasCalendarActions';
+
+// Libs
+import { useState } from "react";
+import { useSelector, useDispatch } from 'react-redux';
+
+// Components
+import ButtonModal from "@/components/admin/Modal/ButtonModal/ButtonModal";
+
+// Style
 import * as S from "./AulasCalendarStyles";
-import { useSelector } from 'react-redux';
-// import { updateAulaCalendar } from '../../../redux/actions/aulasCalendarActions';
+
+// Types
 import { rootStateType } from '@/types/types';
+import { aulasCalendarType } from "@/types/types";
+import { ChangeEvent } from "react";
 
-const AulasCalendar = () => {
-    // const dispatch = useDispatch();
+interface AulasCalendarProps {
+    isEdit?: boolean,
+}
+
+const AulasCalendar: React.FC<AulasCalendarProps> = ({ isEdit }) => {
+    const dispatch = useDispatch();
     const { datas } = useSelector((state: rootStateType) => state.aulas);
+    const [ newDatasCalendar, setNewDatasCalendar ] = useState<aulasCalendarType[]>(datas);
 
-    // const handleUpdateAula = (hour: string) => {
-    //     const newAulas = ['Yoga', 'Pilates', 'Funcional', 'Dança', 'Crossfit'];
-    //     dispatch(updateAulaCalendar(hour, newAulas));
-    // };
+    const handleEditData = (
+        event: ChangeEvent<HTMLInputElement>, 
+        indexAula: number, 
+        indexWeek: number 
+    ) => {
+        const { value } = event.target;
+        const updatedCalendar = [...newDatasCalendar];
+
+        updatedCalendar[indexWeek] = {
+            ...updatedCalendar[indexWeek],
+            aulas: updatedCalendar[indexWeek].aulas.map((aula, index) => (
+                index === indexAula ? value : aula
+            )),
+        }
+        
+        setNewDatasCalendar(updatedCalendar); 
+        dispatch(updateAulaCalendar(
+            updatedCalendar[indexWeek].hour, 
+            updatedCalendar[indexWeek].aulas
+        ));    
+    }
 
     return (
         <>
-            <S.HeaderAulasCalendar>
+            <S.HeaderAulasCalendar data-isedit={isEdit}>
                 <div>
                     <span>Seg</span>
                     <span>Ter</span>
@@ -24,16 +59,29 @@ const AulasCalendar = () => {
                     <span>Horário</span>
                 </div>
             </S.HeaderAulasCalendar>
-            <S.AulasCalendarTable>
+            <S.AulasCalendarTable data-isedit={isEdit}>
                 <tbody>
                     {   
-                        datas && 
-                        datas.map((item) => (
+                        newDatasCalendar && 
+                        newDatasCalendar.map((item, indexWeek) => (
                             <tr key={item.hour}>
                                 <th>{item.hour}</th>
-                                {item.aulas.map((aula) => (
-                                    <td>
-                                        {aula}
+                                {item.aulas.map((aula, indexAula) => (
+                                    <td key={indexAula}>
+                                        <label >
+                                            {
+                                                isEdit ? 
+                                                    <input 
+                                                        value={aula} 
+                                                        onChange={
+                                                            (e) => {
+                                                                handleEditData(e, indexAula, indexWeek)
+                                                            }} 
+                                                    />
+                                                :
+                                                    <input value={aula} disabled />
+                                            }
+                                        </label>
                                     </td>
                                 ))}
                             </tr>
@@ -41,6 +89,13 @@ const AulasCalendar = () => {
                     }
                 </tbody>
             </S.AulasCalendarTable>
+            {
+                isEdit && 
+                    <S.EditCalendarButtons>
+                        <ButtonModal value="Editar" onClick={() => {}} />
+                        <ButtonModal value="Cancel" isCancel onClick={() => {}} />
+                    </S.EditCalendarButtons>
+            }
         </>
     );
 };

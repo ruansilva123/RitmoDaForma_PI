@@ -1,10 +1,32 @@
+// libs
 import { useEffect, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+
+// Redix
+import { updatePriceAulasTable } from '@/redux/actions/priceAulasTableActions';
+
+// Styles
 import * as S from "./PricesTableContainerStyles";
-import money from "/assets/icons/money.png";
+
+// Components
 import PriceTable from '@/components/site/Aulas/PriceTable/PriceTable';
 import LittleBalls from '@/components/global/LittleBalls/LittleBalls';
 
-const PricesTableContainer = () => {
+// Images
+import money from "/assets/icons/money.png";
+import editRed from "/assets/icons/edit-red.png";
+
+// Types
+import { rootStateType, paymentType } from '@/types/types';
+
+interface PricesTableContainer {
+    isEdit?: boolean,
+}
+
+const PricesTableContainer: React.FC<PricesTableContainer> = ({ isEdit }) => {
+    const { datas } = useSelector((state: rootStateType) => state.aulasPrice);
+    const dispatch = useDispatch();
+
     const [size, setSize] = useState({
         width: window.innerWidth,
         height: window.innerHeight,
@@ -25,27 +47,40 @@ const PricesTableContainer = () => {
         };
     }, []);
 
+    const handleEditData = (
+        daysForWeek: string, 
+        aulasPrice: paymentType
+    ) => {
+        dispatch(updatePriceAulasTable(daysForWeek, aulasPrice));
+    }
+
     return (
         <S.PricesTableContainerStyle>
             <S.LegendPricesTable>
-                <img src={money} alt="Ícone de moedas" width="30px"/>
+                {
+                    isEdit ?
+                        <img src={editRed} alt="Ícone de moedas" width="30px"/>
+                    :
+                        <img src={money} alt="Ícone de moedas" width="30px"/>
+                }
+                    
                 <p>Tabela de Preços</p>
             </S.LegendPricesTable>
             <div>
                 <S.LinePriceTableContainer>
-                    <PriceTable/>
-
-                    {size.width > 800 && 
+                    <PriceTable handleEditData={handleEditData} aulaPrice={datas[0]} isEdit={isEdit}/> 
+                    
+                    {size.width > 800 && !isEdit && 
                         <LittleBalls isVertical/>
                     }
-                    <PriceTable/>
+                    <PriceTable handleEditData={handleEditData} aulaPrice={datas[1]} isEdit={isEdit}/> 
                 </S.LinePriceTableContainer>
                 <S.LinePriceTableContainer>
-                    <PriceTable/>
-                    {size.width > 800 && 
+                    <PriceTable handleEditData={handleEditData} aulaPrice={datas[2]} isEdit={isEdit}/> 
+                    {size.width > 800 && !isEdit &&
                         <LittleBalls isVertical/>
                     }
-                    <PriceTable/>
+                    <PriceTable handleEditData={handleEditData} aulaPrice={datas[3]} isEdit={isEdit}/> 
                 </S.LinePriceTableContainer>
             </div>
         </S.PricesTableContainerStyle>

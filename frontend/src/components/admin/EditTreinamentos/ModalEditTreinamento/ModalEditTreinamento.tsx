@@ -12,7 +12,6 @@ import TitleModal from "../../Modal/TitleModal/TitleModal";
 import CloseIcon from "../../Modal/CloseIcon/CloseIcon";
 import InputModal from "../../Modal/InputModal/InputModal";
 import ButtonModal from "../../Modal/ButtonModal/ButtonModal";
-import ButtonCancel from "../../Modal/ButtonCancel/ButtonCancel";
 
 // Images
 import imageUpload from "/assets/icons/image-upload.png";
@@ -67,8 +66,8 @@ const ModalEditTreinamento: React.FC<ModalProps> = ({closeModal, content}) =>{
     }, [isOpen])
 
     const lockScroll = () => {
-        if(window.scrollY > 450){
-            window.scrollTo(0, 450);
+        if(window.scrollY > 600){
+            window.scrollTo(0, 600);
         }
     }
 
@@ -130,7 +129,9 @@ const ModalEditTreinamento: React.FC<ModalProps> = ({closeModal, content}) =>{
                                     value="Criar"
                                     onClick={() => {}}
                                 />
-                                <ButtonCancel
+                                <ButtonModal
+                                    isCancel
+                                    value="Cancelar"
                                     onClick={() => {}}
                                 />
                             </S.ContainerButtonsForm>
