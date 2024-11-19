@@ -144,3 +144,28 @@ export const EditPriceTableButtons = styled.div`
         font-size: 12px;
     }
 `
+
+export const EditPriceTableButtons = styled.div`
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    padding: 15px;
+
+    @media ${breakpoints.md} {
+        padding-inline: 10px;
+    }
+
+    @media ${breakpoints.bs} {
+        padding-inline: 5px;
+    }
+
+    @media ${breakpoints.xs} {
+        font-size: 14px;
+        padding-inline: 0px;
+        border-radius: 0%;
+    }
+
+    @media ${breakpoints.lt} {
+        font-size: 12px;
+    }
+`

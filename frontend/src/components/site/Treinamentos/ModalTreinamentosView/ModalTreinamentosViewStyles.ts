@@ -75,7 +75,7 @@ export const Video = styled.div`
     height: 50%;
     overflow: hidden;
     margin: 5% 0% 20px 0%;
-
+    
     @media ${breakpoints.md}{
         height: 40%;
     }
