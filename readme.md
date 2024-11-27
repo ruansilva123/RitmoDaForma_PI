@@ -80,11 +80,11 @@ O site Ritmo da Forma está sob a licença [MIT LICENSE](LICENCE).
 
 ## Autores :black_nib:
 
-@ruansilva123
-@daniwells
-@lewinott
-@gabrilhos
-@guiycatsu
+@ruansilva123 - Desenvolvedor Backend <br>
+@daniwells - Desenvolvedor Frontend <br>
+@lewinott - Desenvolvedor Frontend <br>
+@gabrilhos - Facilidador <br>
+@guiycatsu - Facilidador <br>
 
 ## Gratidão :gift:
 
