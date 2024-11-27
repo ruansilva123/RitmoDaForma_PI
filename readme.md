@@ -65,7 +65,6 @@ Ainda no diretório "/backend" execute o comando:
 
     Python src/manage.py runserver
 
-
 Com isso todo o sistema já estará em execução e você pode conferir o site.
 
 ## 📌 (Título) - Informações importantes sobre a aplicação (exemplo) 📌
@@ -80,11 +79,11 @@ O site Ritmo da Forma está sob a licença [MIT LICENSE](LICENCE).
 
 ## Autores :black_nib:
 
-@ruansilva123 - Desenvolvedor Backend <br>
-@daniwells - Desenvolvedor Frontend <br>
-@lewinott - Desenvolvedor Frontend <br>
-@gabrilhos - Facilidador <br>
-@guiycatsu - Facilidador <br>
+[@ruansilva123](https://github.com/ruansilva123) - Desenvolvedor Backend <br>
+[@daniwells](https://github.com/daniwells) - Desenvolvedor Frontend <br>
+[@lewinott](https://github.com/lewinott) - Desenvolvedor Frontend <br>
+[@gabrilhos](https://github.com/gabrilhos) - Facilidador <br>
+[@guiycatsu](https://github.com/guiycatsu) - Facilidador <br>
 
 ## Gratidão :gift:
 
