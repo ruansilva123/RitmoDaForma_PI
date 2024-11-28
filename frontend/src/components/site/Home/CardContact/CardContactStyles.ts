@@ -11,7 +11,8 @@ export const CardContactStyle = styled.div`
     }
 `
 
-export const TitleContact = styled.div`
+export const TitleContact = styled.p`
+    word-break: break-word;
     display: flex;
     gap: 15px;
     margin-bottom: 25px;
