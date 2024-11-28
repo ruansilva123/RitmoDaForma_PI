@@ -1,6 +1,7 @@
 // Libs
 import React, { useMemo } from "react";
 import * as S from "./CardTreinamentosStyles";
+import { useSelector } from 'react-redux';
 
 // Contexts
 import { useModal } from "@/contexts/ModalProvider";
@@ -11,6 +12,7 @@ import ModalEditTreinamento from "@/components/admin/EditTreinamentos/ModalEditT
 
 // Types
 import { treinamentosType } from "@/types/types";
+import { rootStateType } from '@/types/types';
 
 //Images
 import iconEdit from "/assets/icons/edit.png";
@@ -24,21 +26,23 @@ interface CardProps {
 }
 
 interface appProps {
-    isEditCards?: boolean
+    isEditCards?: boolean,
 }
 
-import { useSelector } from 'react-redux';
-import { rootStateType } from '@/types/types';
 
 const App: React.FC<appProps> = ({isEditCards}) => { 
-    const { datas } = useSelector((state: rootStateType) => state.treinamentos);
+    const { datas, searchTerm } = useSelector((state: rootStateType) => state.treinamentos);
+
+    const filteredEquipments = datas.filter(equipment =>
+        equipment.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
 
     const renderCards = useMemo(() => {
         return (
             <>
                 {
-                    datas && 
-                    datas.map((item: treinamentosType, index: number) => (
+                    datas &&
+                    filteredEquipments.map((item: treinamentosType, index: number) => (
                         <Card
                             key={index}
                             title={item.title}
@@ -51,7 +55,7 @@ const App: React.FC<appProps> = ({isEditCards}) => {
                 }
             </>
         );
-    }, [datas, isEditCards])
+    }, [datas, isEditCards, filteredEquipments])
 
     return <>{renderCards}</>;
 };

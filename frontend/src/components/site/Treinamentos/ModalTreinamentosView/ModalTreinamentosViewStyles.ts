@@ -72,7 +72,7 @@ export const Video = styled.div`
     background-color: black;
     border-radius: 10px;
     width: 100%;
-    height: 50%;
+    height: 60%;
     overflow: hidden;
     margin: 5% 0% 20px 0%;
     

@@ -1,8 +1,17 @@
 import * as S from "./SearchStyles";
 
-const InputSearch = () => {
+interface InputSearchProps {
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void,
+    value: string,
+}
+
+const InputSearch: React.FC<InputSearchProps> = ({onChange, value}) => {
     return (
-        <S.InputSearchStyle placeholder="Pesquise pelo seu equipamento aqui" type="search"/>
+        <S.InputSearchStyle 
+            value={value}
+            onChange={onChange} 
+            placeholder="Pesquise pelo seu equipamento aqui" 
+            type="search"/>
     );
 };
 
