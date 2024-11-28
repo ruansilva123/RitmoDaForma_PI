@@ -10,7 +10,7 @@ const SearchAndAddContainer = () => {
   return (
     <S.SearchAndAddContainerStyle>
         <S.SearchAndAddContent>
-            <S.SearchContainer><InputSearch/></S.SearchContainer>
+            <S.SearchContainer><InputSearch onChange={() => {}} value=""/></S.SearchContainer>
             <S.AddTreinamentoContainer>
                 <AddTreinamentosButton
                   value="Novo treinamento"
