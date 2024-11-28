@@ -23,13 +23,13 @@ const initialState = {
         {
             "title": "Alongamento Deitado",
             "description": "Exercício de alongamento realizado em posição deitada, focado em relaxar a musculatura e melhorar a flexibilidade.",
-            "imageEquipment": "/assets/images/equipments/halteres.jpeg",
+            "imageEquipment": "/assets/images/equipments/alongamento-deitado.png",
             "videoEquipment": "https://www.youtube.com/embed/fw_PYrHFsGQ?si=8xOjJ7njccCK2_La"
         },
         {
             "title": "Alongamento em Pé",
             "description": "Exercício de alongamento realizado em pé, ideal para aquecer e alongar diferentes grupos musculares antes ou após o treino.",
-            "imageEquipment": "/assets/images/equipments/halteres.jpeg",
+            "imageEquipment": "/assets/images/equipments/alongamento-em-pe.png",
             "videoEquipment": "https://www.youtube.com/embed/SlvQc1KLMys?si=kPnD-JbAfLEEQ8sx"
         },
         {
@@ -88,10 +88,10 @@ const initialState = {
         },
         {
             "title": "Desenvolvimento Máquina",
-            "description": "",
+            "description": "Máquina projetada para exercícios de fortalecimento dos ombros e parte superior do peitoral, promovendo estabilidade e segurança nos movimentos.",
             "imageEquipment": "/assets/images/equipments/desenvolvimento-maquina.jpeg",
             "videoEquipment": "https://www.youtube.com/embed/DpXJ41nt1lQ?si=yV7IpeHzYlb4uFlb"
-        },
+        },        
         {
             "title": "Remada Sentado Máquina",
             "description": "Equipamento para fortalecer os músculos das costas, especialmente o latíssimo do dorso, com suporte para maior estabilidade.",
@@ -137,7 +137,7 @@ const initialState = {
         {
             "title": "Polia 2",
             "description": "Versão compacta de polia, ideal para exercícios de força e alongamento.",
-            "imageEquipment": "/assets/images/equipments/polia 2.jpeg",
+            "imageEquipment": "/assets/images/equipments/polia-2.jpeg",
             "videoEquipment": "https://www.youtube.com/embed/Z80L_VlHFxg?si=h1jx77tjx7cYNgpv"
         },
         {
@@ -291,6 +291,7 @@ const initialState = {
             "videoEquipment": "https://www.youtube.com/embed/K5NTVPezKOg?si=8HRK-PaXFyKp-uKy"
         },
     ],
+    searchTerm: "",
 };
 
 const treinamentosReducer = (state = initialState, action: treinamentosActionType) => {
@@ -299,6 +300,11 @@ const treinamentosReducer = (state = initialState, action: treinamentosActionTyp
             return {
                 ...state,
                 datas: [...state.datas, action.payload]
+            };
+        case "SEARCH_EQUIPAMENT":
+            return {
+                ...state,
+                searchTerm: action.payload
             };
         default:
             return state;

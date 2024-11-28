@@ -63,6 +63,7 @@ export interface aulasStateType {
 
 export interface treinamentosStateType {
     datas: treinamentosType[],
+    searchTerm: string,
 }
 
 export interface aulasPriceStateType {

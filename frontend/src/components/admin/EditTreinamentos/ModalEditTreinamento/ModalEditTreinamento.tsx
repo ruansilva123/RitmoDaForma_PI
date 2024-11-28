@@ -98,7 +98,6 @@ const ModalEditTreinamento: React.FC<ModalProps> = ({closeModal, content}) =>{
                                     placeholder={formData.videoEquipment}
                                 />
                             </S.UploadInputLabel>
-                            
                             <S.UploadInputLabel htmlFor="imageEquipment">
                                 {formData.imageEquipment}
                                 <S.IconUpload src={imageUpload} alt="" />
