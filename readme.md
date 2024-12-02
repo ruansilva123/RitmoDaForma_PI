@@ -67,11 +67,17 @@ Ainda no diretório "/backend" execute o comando:
 
 Com isso todo o sistema já estará em execução e você pode conferir o site.
 
-## 📌 (Título) - Informações importantes sobre a aplicação (exemplo) 📌
+## Informações importantes sobre a aplicação 📌
 
-Esse é o local para você preencher com outras informações que possam ser importantes para a aplicação. Coloquei um exemplo de título, mas você deve preencher de acordo com a necessidade do projeto. Pode ser que não seja necessário.
+### Frotend
+#### Redux
+Nem todo gerenciamento de estado da aplicação está utilizando o Redux, estruturas mais simples também fazem parte, como a API context para os modais, além do hook useState. Porém, o redux centraliza todos os estados e elementos que interagem diretamente com o backend, como os vídeos de treinamentos, o calendários das aulas, planos de pagamento e contatos.
 
-Um bom exemplo: se você estiver construindo uma API, liste as rotas da aplicação e quais serão os seus retornos. Isso facilita para quem vai consumir a API.
+#### Sessão de Admin e Usuário
+O site consta com sessões e páginas para o usuário final e para o administrador, resposável por cadastrar os vídeos e outras dinâmicas, e isto se reflete também na organização do código o qual constará diretórios de <b>"admin"</b>, direcionados para os componentes relacionados ao sistema do administrador e diretórios de <b>"site"</b>, direcionados ao usuário final.
+
+<img width="212" alt="image" src="https://github.com/user-attachments/assets/d9b364d1-c4da-47c1-827c-2615fe4590a7">
+
 
 ## Licença :page_with_curl:
 
