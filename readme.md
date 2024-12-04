@@ -9,14 +9,14 @@ Link do site: <b><a>https://ritmodaforma.vercel.app/</a></b>
 ## Tecnologias Utilizadas :hammer:
 ### Frontend
 * [Typescript](https://www.typescriptlang.org/) - Linguagem
-* [React](https://github.com/golang/go) - Framework frontend
-* [StyledComponents](https://www.mysql.com/) - Framework CSS
-* [Redux](https://www.mysql.com/) - Tecnologia para o gerenciamento de estado
+* [React](https://react.dev/) - Framework frontend
+* [StyledComponents](https://styled-components.com/) - Framework CSS
+* [Redux](https://redux.js.org/) - Tecnologia para o gerenciamento de estado
 ### Backend
-* [Python](https://www.mysql.com/) - Linguagem
-* [FastAPI](https://www.mysql.com/) - Framework backend
+* [Python](https://www.python.org/) - Linguagem
+* [FastAPI](https://fastapi.tiangolo.com/) - Framework backend
 * [Supabase](https://supabase.com/) - Banco de dados e autenticação
-* [Poetry](https://www.mysql.com/) - Gerenciador de pacotes
+* [Poetry](https://python-poetry.org/) - Gerenciador de pacotes
 
 ## Dependências :arrow_up:
 ### Frontend
