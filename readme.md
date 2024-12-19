@@ -82,8 +82,8 @@ O site Ritmo da Forma está sob a licença [MIT LICENSE](LICENCE).
 [@ruansilva123](https://github.com/ruansilva123) - Desenvolvedor Backend <br>
 [@daniwells](https://github.com/daniwells) - Desenvolvedor Frontend <br>
 [@lewinott](https://github.com/lewinott) - Desenvolvedor Frontend <br>
-[@gabrilhos](https://github.com/gabrilhos) - Facilidador <br>
-[@guiycatsu](https://github.com/guiycatsu) - Facilidador <br>
+[@gabrilhos](https://github.com/gabrilhos) - Facilidador/Comunicador <br>
+[@guiycatsu](https://github.com/guiycatsu) - Facilidador/Comunicador <br>
 
 ## Gratidão :gift:
 
