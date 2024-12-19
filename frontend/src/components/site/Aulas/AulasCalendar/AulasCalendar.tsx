@@ -51,12 +51,12 @@ const AulasCalendar: React.FC<AulasCalendarProps> = ({ isEdit }) => {
         <>
             <S.HeaderAulasCalendar data-isedit={isEdit}>
                 <div>
+                    <span>Horário</span>
                     <span>Seg</span>
                     <span>Ter</span>
                     <span>Qua</span>
                     <span>Qui</span>
                     <span>Sex</span>
-                    <span>Horário</span>
                 </div>
             </S.HeaderAulasCalendar>
             <S.AulasCalendarTable data-isedit={isEdit}>
