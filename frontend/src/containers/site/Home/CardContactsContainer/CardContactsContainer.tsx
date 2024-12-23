@@ -11,7 +11,7 @@ const CardContactsContainer = () => {
         altIcon="Instagram ícone" 
         icon={instagram} 
         contact="@academiaritmodaforma" 
-        description="Nos siga no instagram para saber receber nossas novidades!"
+        description="Nos siga no instagram para saber nossas novidades!"
         link="https://www.instagram.com/academiaritmodaforma/"
       />
       <CardContact
