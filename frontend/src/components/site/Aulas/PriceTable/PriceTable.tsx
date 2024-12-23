@@ -52,7 +52,7 @@ const PriceTable: React.FC<priceTableProps> = ({isEdit, aulaPrice, handleEditDat
                                         :
                                             <input 
                                                 type="text"
-                                                value={`R$ ${String(item.price.toFixed(2))}`} 
+                                                value={`${String(item.price.toFixed(2))}`} 
                                                 disabled 
                                             />
                                     }
