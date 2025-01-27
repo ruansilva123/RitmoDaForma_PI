@@ -20,15 +20,15 @@ Link do site: <b><a>https://ritmodaforma.vercel.app/</a></b>
 
 ## Dependências :arrow_up:
 ### Frontend
-    Node - Versão: v20.14.0
-    Npm - Versão: 10.7.0
+    Node - Versão: ^20.14.0
+    Npm - Versão: ^10.7.0
 
 Bibliotecas utilizadas: [package.json](frontend/package.json)
 
 ### Backend
-    Pip - Versão: X.X
-    Poetry - Versão: 
-    Python - Versão: 
+    Python - Versão: ^1.12.1
+    Pip - Versão: ^24.2
+    Poetry - Versão: ^ 1.8
 
 Bibliotecas utilizadas: [poetry.toml](backend/pyproject.toml)
 
