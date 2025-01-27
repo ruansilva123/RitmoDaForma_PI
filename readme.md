@@ -32,7 +32,7 @@ Bibliotecas utilizadas: [package.json](frontend/package.json)
 
 Bibliotecas utilizadas: [poetry.toml](backend/pyproject.toml)
 
-## Como rodar o projeto :mortar_board:
+## Como executar o projeto :mortar_board:
 
 Certifique-se de possuir o <b>git</b> instalado e configurado, além de um editor de texto compatível, recomendamos o <b>Visual Studio Code</b>.
 
