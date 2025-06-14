@@ -9,30 +9,30 @@ Link do site: <b><a>https://ritmodaforma.vercel.app/</a></b>
 ## Tecnologias Utilizadas :hammer:
 ### Frontend
 * [Typescript](https://www.typescriptlang.org/) - Linguagem
-* [React](https://github.com/golang/go) - Framework frontend
-* [StyledComponents](https://www.mysql.com/) - Framework CSS
-* [Redux](https://www.mysql.com/) - Tecnologia para o gerenciamento de estado
+* [React](https://react.dev/) - Framework frontend
+* [StyledComponents](https://styled-components.com/) - Framework CSS
+* [Redux](https://redux.js.org/) - Tecnologia para o gerenciamento de estado
 ### Backend
-* [Python](https://www.mysql.com/) - Linguagem
-* [FastAPI](https://www.mysql.com/) - Framework backend
+* [Python](https://www.python.org/) - Linguagem
+* [FastAPI](https://fastapi.tiangolo.com/) - Framework backend
 * [Supabase](https://supabase.com/) - Banco de dados e autenticação
-* [Poetry](https://www.mysql.com/) - Gerenciador de pacotes
+* [Poetry](https://python-poetry.org/) - Gerenciador de pacotes
 
 ## Dependências :arrow_up:
 ### Frontend
-    Node - Versão: v20.14.0
-    Npm - Versão: 10.7.0
+    Node - Versão: ^20.14.0
+    Npm - Versão: ^10.7.0
 
 Bibliotecas utilizadas: [package.json](frontend/package.json)
 
 ### Backend
-    Pip - Versão: X.X
-    Poetry - Versão: 
-    Python - Versão: 
+    Python - Versão: ^1.12.1
+    Pip - Versão: ^24.2
+    Poetry - Versão: ^ 1.8
 
 Bibliotecas utilizadas: [poetry.toml](backend/pyproject.toml)
 
-## Como rodar o projeto :mortar_board:
+## Como executar o projeto :mortar_board:
 
 Certifique-se de possuir o <b>git</b> instalado e configurado, além de um editor de texto compatível, recomendamos o <b>Visual Studio Code</b>.
 
@@ -67,11 +67,17 @@ Ainda no diretório "/backend" execute o comando:
 
 Com isso todo o sistema já estará em execução e você pode conferir o site.
 
-## 📌 (Título) - Informações importantes sobre a aplicação (exemplo) 📌
+## Informações importantes sobre a aplicação 📌
 
-Esse é o local para você preencher com outras informações que possam ser importantes para a aplicação. Coloquei um exemplo de título, mas você deve preencher de acordo com a necessidade do projeto. Pode ser que não seja necessário.
+### Frotend
+#### Redux
+Nem todo gerenciamento de estado da aplicação está utilizando o Redux, estruturas mais simples também fazem parte, como a API context para os modais, além do hook useState. Porém, o redux centraliza todos os estados e elementos que interagem diretamente com o backend, como os vídeos de treinamentos, o calendários das aulas, planos de pagamento e contatos.
 
-Um bom exemplo: se você estiver construindo uma API, liste as rotas da aplicação e quais serão os seus retornos. Isso facilita para quem vai consumir a API.
+#### Sessão de Admin e Usuário
+O site consta com sessões e páginas para o usuário final e para o administrador, resposável por cadastrar os vídeos e outras dinâmicas, e isto se reflete também na organização do código o qual constará diretórios de <b>"admin"</b>, direcionados para os componentes relacionados ao sistema do administrador e diretórios de <b>"site"</b>, direcionados ao usuário final.
+
+<img width="212" alt="image" src="https://github.com/user-attachments/assets/d9b364d1-c4da-47c1-827c-2615fe4590a7">
+
 
 ## Licença :page_with_curl:
 

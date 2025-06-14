@@ -10,7 +10,7 @@ const InputSearch: React.FC<InputSearchProps> = ({onChange, value}) => {
         <S.InputSearchStyle 
             value={value}
             onChange={onChange} 
-            placeholder="Pesquise pelo seu equipamento aqui" 
+            placeholder="Pesquise pelo equipamento aqui" 
             type="search"/>
     );
 };
