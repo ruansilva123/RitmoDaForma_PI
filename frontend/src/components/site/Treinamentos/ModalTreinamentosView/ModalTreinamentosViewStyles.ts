@@ -37,19 +37,19 @@ export const ModalContainer = styled.div`
     background-color: white;
     border-radius: 10px;
     box-shadow: 1px 1px 5px 5px ${colors.lightGrayGradient_20};
-    
+
     width: 55%;
     height: 40vw;
     min-width: 280px;
     max-width: 900px;
-    max-height: 700px;
+    max-height: 600px;
     min-height: 350px;
     position: relative;
     z-index: 100;
 
     @media ${breakpoints.bg}{
         width: 60%;
-        height: 90vh;   
+        height: 95vh;   
     }
 
     @media ${breakpoints.md}{
@@ -65,6 +65,10 @@ export const ModalContainer = styled.div`
     @media ${breakpoints.sm}{
         width: 90%;
         height: 60vh;   
+    }
+
+    @media ${breakpoints.xs}{
+        min-height: 250px;
     }
 `
 
