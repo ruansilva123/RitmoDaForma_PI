@@ -43,7 +43,7 @@ export const ModalContainer = styled.div`
     min-width: 280px;
     max-width: 900px;
     max-height: 600px;
-    min-height: 350px;
+    min-height: 400px;
     position: relative;
     z-index: 100;
 
@@ -69,6 +69,7 @@ export const ModalContainer = styled.div`
 
     @media ${breakpoints.xs}{
         min-height: 250px;
+        max-height: 300px;
     }
 `
 
@@ -102,7 +103,7 @@ export const RedLine = styled.div`
 export const TitleModal = styled.div`
     margin-bottom: 10px;
     font-family: 'Tahoma Bold';
-    font-size: 20px;
+    font-size: 24px;
     color: ${colors.darkGray};
 
     @media ${breakpoints.sm}{
@@ -114,14 +115,10 @@ export const DescriptionModal = styled.div`
     margin-top: 10px;
     font-family: 'Tahoma';
     text-align: justify;
-    font-size: 14px;
+    font-size: 16px;
     color: ${colors.opacityDarkGray_60};
 
     @media ${breakpoints.sm}{
         font-size: 12px;
-    }
-
-    @media ${breakpoints.xs} {
-        font-size: 10px;
     }
 `
