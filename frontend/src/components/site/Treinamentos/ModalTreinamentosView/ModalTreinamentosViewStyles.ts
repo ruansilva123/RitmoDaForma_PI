@@ -68,8 +68,8 @@ export const ModalContainer = styled.div`
     }
 
     @media ${breakpoints.xs}{
-        min-height: 250px;
-        max-height: 300px;
+        min-height: 300px;
+        max-height: 350px;
     }
 `
 
@@ -82,7 +82,7 @@ export const Video = styled.div`
     margin: 5% 0% 20px 0%;
     
     @media ${breakpoints.md}{
-        height: 40%;
+        height: 50%;
     }
 `
 
