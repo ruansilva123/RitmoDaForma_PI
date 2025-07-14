@@ -7,30 +7,16 @@ Link do site: <b><a>https://ritmodaforma.vercel.app/</a></b>
 ![image](https://github.com/user-attachments/assets/6bfa9d74-ff61-4b87-a303-0660ff01b435)
 
 ## Tecnologias Utilizadas :hammer:
-### Frontend
 * [Typescript](https://www.typescriptlang.org/) - Linguagem
 * [React](https://react.dev/) - Framework frontend
 * [StyledComponents](https://styled-components.com/) - Framework CSS
 * [Redux](https://redux.js.org/) - Tecnologia para o gerenciamento de estado
-### Backend
-* [Python](https://www.python.org/) - Linguagem
-* [FastAPI](https://fastapi.tiangolo.com/) - Framework backend
-* [Supabase](https://supabase.com/) - Banco de dados e autenticação
-* [Poetry](https://python-poetry.org/) - Gerenciador de pacotes
 
 ## Dependências :arrow_up:
-### Frontend
     Node - Versão: ^20.14.0
     Npm - Versão: ^10.7.0
 
 Bibliotecas utilizadas: [package.json](frontend/package.json)
-
-### Backend
-    Python - Versão: ^1.12.1
-    Pip - Versão: ^24.2
-    Poetry - Versão: ^ 1.8
-
-Bibliotecas utilizadas: [poetry.toml](backend/pyproject.toml)
 
 ## Como executar o projeto :mortar_board:
 
@@ -41,8 +27,7 @@ No terminal, primeiro selecione um diretório o qual você irá adicionar o proj
 
     git clone https://github.com/ruansilva123/RitmoDaForma_PI.git
 
-### Frontend
-#### 🔴 2. Instalar dependências frontend
+#### 🔴 2. Instalar dependências
 Certifique-se de possuir o NPM e o Node configurados. Na raiz do proejeto navegue até o diretório frontend e realize a instalação das dependências.
 
     cd frontend
@@ -53,23 +38,10 @@ Ainda no diretório "/frontend" execute o comando:
 
     npm run dev
 
-### Backend
-#### 🔴 4. Instalar dependências backend
-Certifique-se de possuir o pip instalado e configurados. <b>Primeiramente abra outro terminal</b> e na raiz do proejeto navegue até o diretório backend e realize a instalação das dependências.
-
-    pip install poetry
-    poetry install
-
-#### 🔴 5. Executar backend
-Ainda no diretório "/backend" execute o comando:
-
-    Python src/manage.py runserver
-
 Com isso todo o sistema já estará em execução e você pode conferir o site.
 
 ## Informações importantes sobre a aplicação 📌
 
-### Frotend
 #### Redux
 Nem todo gerenciamento de estado da aplicação está utilizando o Redux, estruturas mais simples também fazem parte, como a API context para os modais, além do hook useState. Porém, o redux centraliza todos os estados e elementos que interagem diretamente com o backend, como os vídeos de treinamentos, o calendários das aulas, planos de pagamento e contatos.
 
